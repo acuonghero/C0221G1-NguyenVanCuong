@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Biến, kiểu dữ liệu và toán tử</title>
+</head>
+<body>
+    <script>
+        let vatly = parseInt(prompt('Môn vật lý'));
+        let hoahoc = parseInt(prompt('Môn hóa học'));
+        let sinhhoc = parseInt(prompt('Môn sinh học'));
+        let tb = (vatly + hoahoc + sinhhoc) / 3;
+        let sum = vatly + hoahoc + sinhhoc;
+        document.writeln('Điểm trung bình :' + tb);
+        document.writeln('<br>Tổng điểm :'+ sum );
+    </script>
+
+
+
+
+    <script>
+        let oC = parseInt(prompt('Nhập độ C'));
+        let oF = oC * 9 / 5 + 32;
+        document.writeln('<br>độ F' + oF);
+    </script>
+
+
+
+
+    <script>
+        let b = parseInt(prompt('Nhập bán kính :'));
+        let pi = 3.14;
+        let d = b * b * pi;
+        document.write('<br>Diện tích hình tròn :' + d);
+    </script>
+
+
+
+    <script>
+        let C = b * 2 * pi;
+        document.write('<br>Chu vi hình tròn :' + C);
+    </script>
+</body>
+</html>
