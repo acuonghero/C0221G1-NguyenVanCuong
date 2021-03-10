@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính cước điện thoại cho một hộ gia đình với các thông số đã cho</title>
+</head>
+<body>
+    <script>
+        let minute = parseInt(prompt('Số phút đã gọi'))
+        if (minute <= 50){
+            alert('Cước điện thoại là' + (25000 + minute * 600))
+        }else {
+            alert('Cước điện thoại là' + (25000 + 50 * 600 + (minute - 50) * 400))
+        }
+    </script>
+</body>
+</html>

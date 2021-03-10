@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực của học sinh dựa trên các điểm bài kiểm tra, điểm thi giữa kỳ, điểm thi cuối kỳ</title>
+</head>
+<body>
+    <script>
+        let  diemKt = parseFloat(prompt("Nhập điểm kiểm tra"));
+        let  diemGk = parseFloat(prompt("Nhập điểm thi giữa kỳ"));
+        let  diemCk = parseFloat(prompt("Nhập điểm thi cuối kỳ"));
+        let tb = (diemKt + diemGk + diemCk) / 3;
+        if (tb >= 8){
+            alert('Hạng A')
+        }else if (tb >= 6.5){
+            alert('Hạng B')
+        }else if (tb >= 5){
+            alert('Hạng C')
+        }else if(tb >= 3.5){
+            alert('Hạng D')
+        }else {
+            alert('Ở lại lớp')
+        }
+    </script>
+</body>
+</html>

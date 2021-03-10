@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Máy tính đơn giản</title>
+</head>
+<body>
+    <input disabled style="text-align: right" id="number" type="text" placeholder="0" width="55%">
+    <br><br>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="1">1</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="2">2</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="3">3</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="+">+</button>
+    <br><br>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="4">4</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="5">5</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="6">6</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="-">-</button>
+    <br><br>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="7">7</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="8">8</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="9">9</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="*">x</button>
+    <br><br>
+    <button style="width: 35px; height: 35px" onclick="xoa(value)">C</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="0">0</button>
+    <button style="width: 35px; height: 35px" onclick="ketqua(value)" value="=">=</button>
+    <button style="width: 35px; height: 35px" onclick="nhap(value)" value="/">/</button>
+    <script>
+        let number = null;
+        function nhap(value) {
+            document.getElementById("number").value += value;
+        }
+        function ketqua() {
+            document.getElementById("number").value = eval(document.getElementById("number").value);
+        }
+        function xoa() {
+            document.getElementById("number").value= ''
+        }
+    </script>
+</body>
+</html>

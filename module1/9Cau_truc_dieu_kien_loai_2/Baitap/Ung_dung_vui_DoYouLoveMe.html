@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng vui DoYouLoveMe</title>
+</head>
+<body>
+    <h2 style="margin-left: 100px">Do You Love Me?</h2>
+    <button id="yes" onclick="canClick()" style="margin-left: 100px">Yes</input>
+    <button id="no" onmouseover="cannotClick()" style="margin-left: 20px; position: absolute">No</button>
+<script>
+    function canClick() {
+        alert("<3");
+
+    }function cannotClick()
+        {
+            let x = Math.round(Math.random() * window.innerWidth);
+            let y = Math.round(Math.random() * window.innerHeight);
+            document.getElementById('no').style.left = x + 'px';
+            document.getElementById('no').style.top = y + 'px';
+        }
+
+
+</script>
+</body>
+</html>
