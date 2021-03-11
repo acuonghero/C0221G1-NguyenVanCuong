@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Hiển thị các số nguyên tố đầu tiên</title>
+</head>
+<body>
+<script>
+    let num=prompt("nhập số lượng ") ;
+    let count =0;
+    let n = 0;
+    let ketQua = '';
+    while(count<num){
+
+        let kiemTra = true;
+        if (n < 2) {
+            kiemTra = false;
+        } else {
+            for (let i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    kiemTra = false;
+                    break;
+                }
+            }
+        }
+        if (kiemTra) {
+            count++;
+            ketQua += n + "<br>";
+        }
+        n++;
+    }
+    document.write(ketQua);
+
+</script>
+</body>
+</html>
