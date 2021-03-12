@@ -5,21 +5,17 @@
     <title>Hiển thị ra 20 số trong dãy fibonacci đầu tiên.</title>
 </head>
 <body>
-    <script>
-        let a = 1;
-        let b = 0;
-        let temp = 0;
-        let kq ="";
-        let i;
-        for(i = 0 ;i < 20;i++){
-            temp = a;
-            a = a + b;
-            b = temp;
-            kq += temp;
-
-        }
-        document.write(kq);
-
-    </script>
+<script>
+    let a = 0;
+    let b = 1;
+    document.writeln(a+"<br>");
+    document.writeln(b+"<br>");
+    for ( let  i= 0 ; i < 20 ; i ++ ){
+        let sum = a + b;
+        a = b;
+        b = sum;
+        document.write(b + "<br>");
+    }
+</script>
 </body>
 </html>

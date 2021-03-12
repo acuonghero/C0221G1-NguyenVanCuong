@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+<form>
+    <input id="nhap1" width="30%" type="text"></input>
+    <input id="nhap2" width="30%" type="text"></input>
+    <input id="nhap" type="button" onclick="play()" value="Chơi"></input>
+    <input type="reset" value="Chơi lại"></input>
+    <script>
+        function play() {
+            let nhap1 = document.getElementById("nhap1").value;
+            let nhap2 = document.getElementById("nhap2").value;
+            let doanSo = parseInt(prompt("nhập số dự đoán"));
+            let random = Math.floor((Math.random() * (nhap2 - nhap1)) + nhap1);
+            while (true) {
+                if (doanSo = random) {
+                    alert("you win");
+                    break;
+                } else {
+                    alert("you lost");
+                    break;
+                }
+            }
+        }
+    </script>
+</form>
+</body>
+</html>

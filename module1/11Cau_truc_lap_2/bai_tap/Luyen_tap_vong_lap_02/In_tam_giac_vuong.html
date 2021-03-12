@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>In tam giác vuông</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("nhap"));
+        for (let i = 1; i <= num; i++){
+            for (let j = 1; j <= i; j++){
+                document.write("*");
+            }document.write("<br>");
+        }
+        document.write("<hr>");
+        // for (let i = num; i >= 1;  i--){
+        //     for (let j = 1; j <= i ; j++){
+        //         document.write("*");
+        //     }document.write("<br>");
+        // }
+        for (let i = 0;i <= num;i++){
+            for (let j = 1; j <= num; j++){
+                if (j <= num - i){
+                    document.write("*");
+                }else {
+                    document.write("&nbsp;&nbsp");
+                }
+            }document.write("<br>");
+        }
+        document.write("<hr>");
+        document.write("<hr>");
+        for (let i = 1 ; i <= num; i ++){
+            for ( let j = 1 ; j <= num ; j++) {
+                if (j <= num - i){
+                    document.write("&nbsp;&nbsp");
+                }else {
+                    document.write("*");
+                }
+            }document.write("<br>");
+        }
+        document.write("<hr>");
+        for (let i = 1;i <= num;i++){
+            for (let j = 1; j <= num; j++){
+                if (j < i){
+                    document.write("&nbsp;&nbsp");
+                }else {
+                    document.write("*");
+                }
+            }document.write("<br>");
+        }
+        document.write("<hr>");
+
+    </script>
+</body>
+</html>
