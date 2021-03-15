@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo và thao tác với mảng</title>
+</head>
+<body>
+<input type="text" id="txt">
+<input type="button" value="Add" onclick="add_element_to_array()">
+<input type="button" onclick="xuat()" value="Display">
+<div id="ketQua"></div>
+    <script>
+        let x = 0;
+        let array = Array();
+        function add_element_to_array() {
+            array = document.getElementById("txt").value;
+            alert("Giá trị : " + array[x] + " đã nhập" );
+            x++;
+            document.getElementById("txt").value = "";
+        }
+        function xuat() {
+            let e = "<hr>";
+            for (let i = 0; i < array.length; i++){
+                e += "Vị trí " + i + " = " + "Giá trị " + array[i] + "<br/>";
+            }document.getElementById("ketQua").innerHTML = e;
+        }
+    </script>
+</body>
+</html>

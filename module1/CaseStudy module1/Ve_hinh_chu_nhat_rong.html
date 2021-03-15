@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vẽ hình chữ nhật rỗng</title>
+</head>
+<body>
+<script>
+    let x = parseInt(prompt("nhập chiều dài"));
+    let y = parseInt(prompt("nhập chiều rộng"));
+    for (let i = 0; i < x; i++){
+        for (let j = 0; j < y; j++){
+            if (i === 0 || i === x - 1 || j === 0 || j === y - 1){
+                document.write("*")
+            }else {
+                document.write("&nbsp;&nbsp")
+            }
+        }document.write("<br>")
+    }
+</script>
+</body>
+</html>
