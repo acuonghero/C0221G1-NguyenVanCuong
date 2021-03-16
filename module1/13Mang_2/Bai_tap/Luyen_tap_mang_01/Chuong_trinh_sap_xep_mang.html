@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình sắp xếp mảng</title>
+</head>
+<body>
+<script>
+    let num = prompt("Nhập chuỗi cách nhau bằng dấu (,)");
+    let arr = num.split(",");
+    arr = arr.sort(function(a,b){return b - a});
+    document.write(arr);
+</script>
+</body>
+</html>

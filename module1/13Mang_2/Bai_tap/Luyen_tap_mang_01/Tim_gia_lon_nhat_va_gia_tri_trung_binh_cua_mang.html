@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất và giá trị trung bình của mảng</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhập giá trị của mảng cách nhau bằng dấu (,)");
+    let arr = num.split(",");
+    let kQ = "";
+    let trungBinh = 0;
+    let max = arr[0u];
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] > max){
+            max = arr[i];
+            kQ = max;
+        }
+        sum += parseInt(arr[i]);
+
+    }   trungBinh = sum/arr.length;
+    document.write("giá trị lớn nhất là " + kQ);
+    document.write("<br>");
+    document.write("Giá trị trung bình là " + trungBinh);
+
+</script>
+</body>
+</html>

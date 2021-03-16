@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm giá trị lớn nhất trong mảng</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhập các phần tử của mảng cách nhau bằng dấu (,)");
+    let arr = num.split(",");
+    let max = arr[0];
+    let kQ = "";
+    for (let i = 0; i < arr.length; i++){
+         if (arr[i] > max){
+            max = arr[i];
+            kQ = max;
+            index = i;
+        }
+    }document.write("Phần tử có giá trị lớn nhất là " + kQ);
+    document.write("<br>");
+    document.write("có vị trí là " + index);
+</script>
+</body>
+</html>

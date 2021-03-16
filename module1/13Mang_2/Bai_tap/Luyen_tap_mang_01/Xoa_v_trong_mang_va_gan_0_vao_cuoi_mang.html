@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let num = prompt("Nhập chuỗi cách nhau bằng dấu (,)");
+    let arr = num.split(",");
+
+    for (let i = 0; i < arr.length; i++) {
+        let v = prompt("Nhập phần tử muốn kiểm tra");
+        for (let j = 0; j < arr.length; j++) {
+            if (v == arr[j]) {
+                let c = arr[j];
+                let v = c;
+                c = arr[j];
+            }
+            arr = arr.pop();
+        }
+        document.write(arr[i])
+    }
+</script>
+</body>
+</html>

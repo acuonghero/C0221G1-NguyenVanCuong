@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chương trình kiểm tra</title>
+</head>
+<body>
+<script>
+    let num = prompt("Nhập chuỗi cách nhau bằng dấu (,)");
+    let arr = num.split(",");
+    let v = prompt("Nhập phần tử muốn kiểm tra");
+    let check = true;
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] === v) {
+            check = true;
+            break;
+        } else {
+            check = false;
+        }
+    }
+    if (check) {
+        document.write("V is in the array")
+    } else {
+        document.write("V is not in the array")
+    }
+
+</script>
+</body>
+</html>

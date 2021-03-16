@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển</title>
+</head>
+<body>
+<script>
+    let word = [prompt("Enter text")];
+    let check = false;
+    let index;
+    let english = [
+        'hello',
+        'good bye',
+        'welcome'
+    ];
+    let vietnamese = [
+        'xin chào',
+        'tạm biệt',
+        'chào mừng'
+    ];
+    for (let i = 0; i <= english.length; i++) {
+        if (word == english[i]) {
+            index = i;
+            check = true;
+            break;
+        }
+    }
+    if (check) {
+        alert(english[index] + '=' + vietnamese[index])
+    } else {
+        alert('không tìm thấy')
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết chương trình đếm số nguyên âm trong một chuỗi</title>
+</head>
+<body>
+<script>
+    let num = prompt("nhập chuỗi cách nhau bằng dấu (,)");
+    let arr = num.split(",");
+    let count = 0;
+    let kQ = '';
+    for (let i = 0; i < arr.length; i++){
+        if (arr[i] < 0){
+           kQ = count++;
+        }else {
+            kQ = '';
+        }
+    }if (kQ = ''){
+        document.write("không tìm thấy")
+    }else {
+        document.write("có " + count + " số nguyên âm");
+    }
+
+</script>
+</body>
+</html>
