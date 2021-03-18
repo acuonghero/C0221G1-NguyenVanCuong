@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra ký tự có nằm trong mảng</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = parseInt(prompt("Length"))
+    for (let i = 0; i < n; i++) {
+        arr[i] = prompt("phập ký tự vào")
+    }
+
+    function kiemTra(nhap) {
+        let kQ = -1;
+        if (arr.indexOf(nhap) !== -1) {
+            kQ = true;
+        }
+        return kQ;
+    }
+
+
+    let nhapVao = prompt("Ký tự muốn kiểm tra");
+    document.write(arr);
+    alert(kiemTra(nhapVao));
+</script>
+</body>
+</html>

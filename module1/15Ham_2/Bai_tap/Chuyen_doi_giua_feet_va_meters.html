@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi giữa feet và meters</title>
+</head>
+<body>
+<p>
+    <label>feet</label>
+    <input type="number" placeholder="0"
+           oninput="feet(this.value)"
+           onchange="feet(this.value)">
+
+</p>
+<p>meters :<span id="ketQuaMeter"></span></p>
+<p>
+    <label>Meters</label>
+    <input type="number" placeholder="0"
+           oninput="meter(this.value)"
+           onchange="meter(this.value)">
+</p>
+<p>Feet :<span id="ketQuaFeet"></span></p>
+<script>
+    function feet(value) {
+        value = parseFloat(value);
+        document.getElementById("ketQuaMeter").innerHTML = value * 0.305;
+    }
+
+    function meter(viDu) {
+        viDu = parseFloat(viDu);
+        document.getElementById("ketQuaFeet").innerHTML = viDu * 3.279;
+
+    }
+</script>
+</body>
+</html>

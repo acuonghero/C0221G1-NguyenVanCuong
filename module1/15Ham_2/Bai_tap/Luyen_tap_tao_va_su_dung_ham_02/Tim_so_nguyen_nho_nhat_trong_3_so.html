@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số nguyên nhỏ nhất trong 3 số</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    for (let i = 0; i < 3 ; i++){
+        arr[i] = prompt("nhập vào ")
+    }
+
+
+    function soNhoNhat(array) {
+        let min = array[0];
+        for (let i = 0;i < array.length;i++){
+            if(array[i] < min){
+                min = array[i];
+            }
+        }return min;
+
+    }
+
+    alert(soNhoNhat(arr))
+
+</script>
+</body>
+</html>

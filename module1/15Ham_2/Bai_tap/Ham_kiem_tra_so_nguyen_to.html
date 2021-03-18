@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Hàm kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    function checkSoNguyenTo(n) {
+        let check = true;
+        if (n < 2) {
+            check = false;
+        } else {
+            for (let i = 2; i < n; i++) {
+                if (n % i == 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+
+    // let n = prompt("nhập số nguyên");
+    // alert(checkSoNguyenTo(n))
+    let n = 0;
+    while (n < 10000) {
+        n++;
+        if (checkSoNguyenTo(n)){
+            document.write(n + ",")
+        }
+
+    }
+</script>
+</body>
+</html>

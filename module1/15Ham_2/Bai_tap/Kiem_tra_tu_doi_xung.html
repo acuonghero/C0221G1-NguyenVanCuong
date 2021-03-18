@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Kiểm tra từ đối xứng</title>
+</head>
+<body>
+<script>
+    function kiemTraDoiXung(doiXung) {
+        let mang = doiXung.split('');
+        let kq = '';
+        for (let i = 0; i <= mang.length; i++) {
+            let n = mang.length;
+            if (mang[i] !== mang[n - i - 1]) {
+                kq = 'Không đối xứng';
+                break;
+            } else {
+                kq = 'đối xứng'
+            }
+        }
+        return kq
+    }
+
+    let doiXung = prompt('Nhập');
+    alert(kiemTraDoiXung(doiXung))
+</script>
+</body>
+</html>

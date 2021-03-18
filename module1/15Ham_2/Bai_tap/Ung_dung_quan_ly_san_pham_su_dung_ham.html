@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng quản lý sản phẩm sử dụng hàm</title>
+</head>
+<body>
+<h2>Add New Product</h2>
+<input type="text" id="enterName">
+<input type="button" value="Add" onclick="create()">
+<h2>Display All Product</h2>
+<h4>Product Name</h4>
+<p>Số lượng : <span id="soLuong"></span></p>
+<p id="hienThi"></p>
+
+<script>
+    let listName = ['Iphone', 'Samsung', 'Nokia'];
+    display(listName);
+
+
+    function display(list) {
+        list.sort();
+        let tablestring = '<table border="1">';
+        tablestring += '<tr>';
+        tablestring +=
+            '<th>STT</th>' +
+            '<th>Tên</th>' +
+            '<th>Sửa</th>' +
+            '<th>Xóa</th>';
+        tablestring += '</tr>';
+        for (let i = 0; i < list.length; i++) {
+            tablestring += '<tr>';
+            tablestring +=
+                '<th>' + (i + 1) + '</th>' +
+                '<th>' + list[i] + '</th>' +
+                '<th><input type="button" onclick="edit(' + i + ')" value="Sửa"></th>' +
+                '<th><input type="button" onclick="del(' + i + ')" value="Xóa"></th>';
+            tablestring += '</tr>';
+
+        }
+
+        tablestring += '</table>';
+        document.getElementById("hienThi").innerHTML = tablestring;
+        document.getElementById("soLuong").innerHTML = listName.length;
+    }
+
+    display();
+
+    function create() {
+        let newName = document.getElementById("enterName").value;
+        listName.push(newName);
+        display(listName)
+    }
+
+    function edit(index) {
+        let chinhSua = prompt("Nhập thay đổi : " + listName[index]);
+        listName[index] = chinhSua;
+        display(listName)
+    }
+
+    function del(index) {
+        listName.splice(index, 1);
+        display(listName)
+    }
+
+</script>
+</body>
+</html>

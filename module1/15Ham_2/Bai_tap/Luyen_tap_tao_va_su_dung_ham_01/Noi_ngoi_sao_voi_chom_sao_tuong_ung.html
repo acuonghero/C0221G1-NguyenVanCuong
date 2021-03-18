@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Nối ngôi sao với chòm sao tương ứng</title>
+</head>
+<body>
+<script>
+    let nameNgoiSao = prompt("Nhập tên ngôi sao");
+    let ngoiSao = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let chomSao = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+
+
+    function viTri(name) {
+       return ngoiSao.indexOf(name)
+    }
+
+
+    alert(chomSao[viTri(nameNgoiSao)])
+</script>
+</body>
+</html>

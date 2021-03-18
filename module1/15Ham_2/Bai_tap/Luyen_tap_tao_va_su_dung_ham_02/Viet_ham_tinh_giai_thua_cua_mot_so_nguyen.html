@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính giai thừa của một số nguyên</title>
+</head>
+<body>
+<script>
+    function giaiThua(so) {
+        let ketQua = 1;
+        for (let i = 1; i <= so; i++) {
+            ketQua *= i;
+        }
+        return ketQua;
+    }
+
+    let num = parseInt(prompt("nhập số nguyên"));
+    let ketQua = giaiThua(num);
+    alert(ketQua);
+</script>
+</body>
+</html>

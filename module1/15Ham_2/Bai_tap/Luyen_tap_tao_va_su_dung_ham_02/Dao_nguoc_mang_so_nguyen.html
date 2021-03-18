@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đảo ngược mảng số nguyên</title>
+</head>
+<body>
+<script>
+    let arr = [];
+    let n = parseInt(prompt("Length"));
+    for (let i = 0; i < n; i++)
+        arr[i] = prompt("nhập phần tử");
+
+    function daoNguocMang(array) {
+       let arr1 = array.reverse();
+        return arr1;
+    }
+
+    document.write(daoNguocMang(arr))
+</script>
+
+</body>
+</html>

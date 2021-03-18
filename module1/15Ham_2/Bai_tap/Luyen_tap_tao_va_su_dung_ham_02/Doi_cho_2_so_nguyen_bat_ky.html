@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Đổi chỗ 2 số nguyên bất kỳ</title>
+</head>
+<body>
+<script>
+    function doiCho(a,b) {
+        let temp = a;
+        a = b;
+        b = temp;
+        let kQ = a + "," + b;
+        return kQ;
+    }
+
+    let a = prompt("nhập vào a");
+    let b = prompt("nhập vào b");
+    document.write(a +"," + b);
+    document.write("<br>" + doiCho(a,b));
+</script>
+</body>
+</html>

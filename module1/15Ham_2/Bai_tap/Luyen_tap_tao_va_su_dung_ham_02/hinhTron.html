@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tính diện tích, hàm tính chu vi hình tròn</title>
+</head>
+<body>
+<script>
+    let banKinh = parseInt(prompt("nhập bán kính"));
+
+    function tinh(r){
+        let chuVi = (r*2*3.14).toFixed(2);
+        let dienTich = r*r*3.14;
+        let kQ = 'chu vi là : ' + chuVi + '<br> diện tích là : '+ dienTich;
+        return kQ;
+    }
+    document.write(tinh(banKinh));
+
+
+    // function chuVi(r) {
+    //     return  r*2*3.14;
+    // }
+    // function dienTich(r) {
+    //     return r*r*3.14;
+    // }
+
+    // alert(chuVi(banKinh) + dienTich(banKinh));
+
+</script>
+</body>
+</html>

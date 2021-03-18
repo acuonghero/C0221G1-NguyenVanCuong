@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tạo hàm nhận vào hai tham số</title>
+</head>
+<body>
+<script>
+    let num1 = parseInt(prompt("nhập số lần 1"));
+    let num2 = parseInt(prompt("nhập số lần 2"));
+
+    function xetSo(num1, num2) {
+        let kQ = '';
+        if (num1 <= num2) {
+            kQ = num1 + num2;
+        } else {
+            kQ = "num1 lớn hơn num2"
+        }
+        return kQ
+    }
+
+    alert(xetSo(num1, num2))
+</script>
+</body>
+</html>
