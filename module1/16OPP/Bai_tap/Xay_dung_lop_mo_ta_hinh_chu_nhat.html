@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả hình chữ nhật</title>
+</head>
+<body>
+<script>
+    class HinhChuNhat {
+        constructor(chieudai, chieurong) {
+            this.chieudai = chieudai;
+            this.chieurong = chieurong;
+        }
+
+        getchieudai() {
+            return this.chieudai;
+        }
+
+        getchieurong() {
+            return this.chieurong;
+        }
+
+        setchieudai(chieudai) {
+            this.chieudai = chieudai
+        }
+
+        setchieurong(chieurong) {
+            this.chieurong = chieurong
+        }
+
+        getChuVi() {
+            return (this.chieudai + this.chieurong) * 2;
+        }
+
+        getDienTich() {
+            return this.chieudai * this.chieurong;
+        }
+    }
+
+    let hinh = new HinhChuNhat();
+    hinh.setchieudai(10);
+    hinh.setchieurong(5);
+    let chieuDai = hinh.getchieudai();
+    let chieuRong = hinh.getchieurong();
+    let chuVi = hinh.getChuVi();
+    let dienTich = hinh.getDienTich();
+    document.write(
+        "Chiều dài là " + chieuDai + "<br>"
+        + "Chiều rộng là " + chieuRong + "<br>"
+        + "Chu vi là " + chuVi + "<br>"
+        + "Diện tích là " + dienTich + "<br><br>")
+</script>
+
+<canvas id="myCanvas" width="50" height="100" style="border:1px solid #000000"></canvas>
+</body>
+</html>

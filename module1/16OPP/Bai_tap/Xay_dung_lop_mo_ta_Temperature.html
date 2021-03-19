@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature{
+        constructor(doC) {
+            this.doC = doC;
+        }
+        getDoC(){
+            return this.doC;
+        }
+        getDoF(){
+            return this.doC*1.8+32
+        }
+        getKenvin(){
+            return this.doC+273.15
+        }
+    }
+
+
+    let temperature = new Temperature(25);
+    let doC = temperature.getDoC();
+    let doF = temperature.getDoF();
+    let keVin = temperature.getKenvin();
+    document.write(doC + " độ C = " + doF +" độ F"+ "<br>");
+    document.write(doC + " độ C = " + keVin + " kevin");
+</script>
+</body>
+</html>

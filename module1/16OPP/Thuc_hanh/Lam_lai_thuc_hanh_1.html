@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thực hành 1</title>
+</head>
+<body>
+<script>
+    class MyDate {
+        constructor(day, month, year) {
+            this.day = day;
+            this.month = month;
+            this.year = year;
+        }
+        getday() {
+            return this.day;
+        }
+        getmonth(){
+            return this.month;
+        }
+        getyear(){
+            return this.year;
+        }
+        setday(day){
+            this.day = day;
+        }
+        setmonth(month){
+            this.month = month;
+        }
+        setyear(year){
+            this.year = year;
+        }
+    }
+    let date = new MyDate(2,2,2007);
+    let day = date.getday(); // 2
+
+    let month = date.getmonth(); // 2
+
+    let year = date.getyear(); // 2007
+    alert(day + "/" + month + "/" + year);
+    date.setday(10);
+    date.setmonth(10);
+    date.setyear(2019);
+
+</script>
+</body>
+</html>
