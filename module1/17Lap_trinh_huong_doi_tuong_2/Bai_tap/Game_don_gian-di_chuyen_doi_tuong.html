@@ -7,13 +7,11 @@
 <body>
 <div id="game"></div>
 <script>
-    function Hero(image, top, left, size,up,down) {
+    function Hero(image, top, left, size) {
         this.image = image;
         this.top = top;
         this.left = left;
         this.size = size;
-        this.up = up;
-        this.down = down;
 
         this.getHeroElement = function () {
             return '<img width="' + this.size + '"' +
@@ -28,35 +26,40 @@
         };
         this.movedown = function () {
             this.top += 20;
-            console.log('ok: ' + this.up);
+            console.log('ok: ' + this.top);
         };
         this.moveleft = function () {
-            this.right -=20;
+            this.left -= 20;
             console.log('ok: ' + this.right);
 
         };
-        this.moveup = function () {
-            this.down -= 20;
+        this.movetop = function () {
+            this.top -= 20;
         }
 
     }
 
-    var hero = new Hero('pikachu.png', 20, 30, 200);
+    var hero = new Hero('pikachu.png', 0, 0, 200);
+
 
     function start() {
-        if (hero.left < window.innerWidth - hero.size) {
+        let rong = window.innerWidth - hero.size;
+        let cao = window.innerHeight - hero.size;
+
+        if (hero.left < rong && hero.top == 0) {
             hero.moveRight();
 
-        }
-        if (hero.left > window.innerWidth - hero.size){
+
+        } else if (hero.left > rong && hero.top < cao) {
             hero.movedown();
 
-        }
-        if (hero.top < window.innerHeight - hero.size){
+        } else if (hero.top == cao && hero.left > 0) {
             hero.moveleft()
+        } else if (hero.left == 0 && hero.top > 0) {
+            hero.movetop()
         }
         document.getElementById('game').innerHTML = hero.getHeroElement();
-        setTimeout(start, 5)
+        setTimeout(start, 20)
     }
 
     start();

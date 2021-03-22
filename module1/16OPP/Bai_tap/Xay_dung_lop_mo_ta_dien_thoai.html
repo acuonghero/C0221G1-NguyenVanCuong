@@ -5,16 +5,62 @@
     <title>Xây dựng lớp mô tả điện thoại</title>
 </head>
 <body>
+<h2>Điện thoại samsung</h2>
+<input type="text" id="samsung">
+<br>
+<br>
+<input type="button" value="On/Off" onclick="tatBatSamsung()">
+<input type="button" id="sentSamsung" value="Sent" onclick="gui('Samsung')">
+<input type="button" id="inboxSamsung" value="Inbox" onclick="nhan('Iphone')">
+<p id="SamsungStatus">Điện thoại đang bật</p>
+<br>
+<br>
+<h2>Điện thoại Iphone</h2>
+<input type="text" id="iphone">
+<br>
+<br>
+<input type="button" value="On/Off" onclick="tatBatIphone()">
+<input type="button" id="sentIphone" value="Sent" onclick="gui('Iphone')">
+<input type="button" id="inboxIphone" value="Inbox" onclick="nhan('Iphone')">
+<p id="IphoneStatus">Điện thoại đang bật</p>
 <script>
-    class Phone{
-        constructor(name, energy, inbox, sent, status, ) {
-            this.name = name;
-            this.energy = energy;
-            this.inbox = inbox;
-            this.sent = sent;
-            this.status = status;
+    class Phone {
+        constructor(battery, inbox, sent, trangthai, soantin) {
+            this.status = true;
+            this.battery = 100;
+            this.inbox = "";
+            this.sent = "";
+        }
+
+        getNutNguon() {
+            this.status = !this.status;
+        }
+        getBattery() {
+           return this.battery;
+        }
+        getSoanTin(tinsoan){
+            this.tinsoan = tinsoan;
+        }
+        //nhận tin nhắn
+        getTinNhan(nhantin){
+            this.inbox = nhantin;
+        }
+        getGuiTin(dt,message){
+            
+        }
+        getInbox(){
+            this.inbox;
+        }
+        getSent(){
+            this.sent;
         }
     }
+
+    let Samsung = new Phone();
+    let Iphone = new Phone();
+function gui(name) {
+
+}
 </script>
 </body>
 </html>
