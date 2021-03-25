@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>b là prefix sums của mảng a </title>
+</head>
+<body>
+<script>
+    let a = prompt("nhập vào mảng cách nhau bằng dấu cách");
+    let arrA = a.split(' ');
+    let arrB = [0];
+    for(let i=0; i<arrA.length; i++){
+        arrB[i]=0;
+        for(let j=0;j<=i;j++){
+            arrB[i]+=parseInt(arrA[j]);
+        }
+    }
+    document.write(arrA + "<br>");
+    document.write(arrB);
+</script>
+</body>
+</html>

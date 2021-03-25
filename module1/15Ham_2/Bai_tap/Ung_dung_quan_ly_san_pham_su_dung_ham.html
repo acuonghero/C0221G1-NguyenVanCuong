@@ -47,39 +47,39 @@
         document.getElementById("soLuong").innerHTML = listName.length;
     }
 
-
-    function create() {
-        let newName = document.getElementById("enterName").value;
-        if ("" === newName) {
-            return;
-        }
-        listName.push(newName);
-        display(listName)
-    }
-
-    function edit(index) {
-        let chinhSua = prompt("Nhập thay đổi : " + listName[index]);
-        listName[index] = chinhSua;
-        display(listName)
-    }
-
-    function del(index) {
-        listName.splice(index, 1);
-        display(listName)
-    }
-
-    function search() {
-        let newName = document.getElementById("enterName").value;
-        let newList = [];
-        for (let i = 0; i < listName.length; i++) {
-            if (listName[i].indexOf(newName) >= 0) {
-                newList.push(listName[i])
-            }
-        }
-
-        display(newList)
-
-    }
+    //
+    // function create() {
+    //     let newName = document.getElementById("enterName").value;
+    //     if ("" === newName) {
+    //         return;
+    //     }
+    //     listName.push(newName);
+    //     display(listName)
+    // }
+    //
+    // function edit(index) {
+    //     let chinhSua = prompt("Nhập thay đổi : " + listName[index]);
+    //     listName[index] = chinhSua;
+    //     display(listName)
+    // }
+    //
+    // function del(index) {
+    //     listName.splice(index, 1);
+    //     display(listName)
+    // }
+    //
+    // function search() {
+    //     let newName = document.getElementById("enterName").value;
+    //     let newList = [];
+    //     for (let i = 0; i < listName.length; i++) {
+    //         if (listName[i].indexOf(newName) >= 0) {
+    //             newList.push(listName[i])
+    //         }
+    //     }
+    //
+    //     display(newList)
+    //
+    // }
 
 </script>
 </body>

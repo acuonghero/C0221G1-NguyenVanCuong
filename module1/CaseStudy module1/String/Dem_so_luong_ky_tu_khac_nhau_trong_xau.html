@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>đếm số lượng kí tự khác nhau trong xâu </title>
+</head>
+<body>
+<script>
+
+    let s ="cabca" ;
+    let newXau = [];
+    for(let i=0;i<s.length;i++){
+        if(newXau.indexOf(s[i])==-1){
+            newXau.push(s[i]);
+        }
+    }
+    let count=0;
+    for (let j=0;j<newXau.length;j++){
+            count++;
+    }
+    document.write(newXau + "<br>");
+document.write(count);
+</script>
+</body>
+</html>

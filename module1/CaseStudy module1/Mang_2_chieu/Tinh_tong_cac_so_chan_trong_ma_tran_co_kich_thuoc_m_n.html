@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính tổng các số chẵn trong ma trận có kích thước m*n</title>
+</head>
+<body>
+<script>
+    let m = prompt("nhập độ dài mảng m");
+    let n = prompt("nhập độ dài mảng n");
+    let arr = [];
+    for (let i =0;i<m;i++){
+        arr[i]=[];
+        for (let j=0;j<n;j++){
+            arr[i][j]=prompt("nhập vào phần tử mảng nhỏ");
+        }
+    }
+
+    let sum = 0;
+    for (let i=0;i<arr.length;i++){
+        for(let j=0;j<arr[i].length;j++){
+            if(arr[i][j]%2==0){
+                sum+=parseInt(arr[i][j]);
+            }
+        }
+    }
+    document.write('tổng = '+sum);
+</script>
+</body>
+</html>

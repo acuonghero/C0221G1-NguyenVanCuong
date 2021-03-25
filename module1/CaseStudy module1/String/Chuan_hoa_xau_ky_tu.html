@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>chuẩn hóa xâu ký tự</title>
+</head>
+<body>
+<script>
+    let ten = 'tRuong    TaN   HAI ';
+    ten = ten.toLowerCase().split(" ");
+    let result = [];
+    for (let i = 0; i < ten.length; i++) {
+        // if (ten[i]) {
+        // ten[i] = ten[i][0].toUpperCase() + ten[i].slice(1);
+        if (ten[i].length > 0) {
+
+            result.push(ten[i][0].toUpperCase() + ten[i].slice(1));
+        }
+    }
+    alert(result.join(" "))
+</script>
+</body>
+</html>

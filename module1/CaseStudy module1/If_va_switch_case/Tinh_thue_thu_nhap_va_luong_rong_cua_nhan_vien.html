@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tính thuế thu nhập và lương ròng</title>
+</head>
+<body>
+<script>
+    let money = prompt("Nhập lương nhân viên");
+    let thue = '';
+    let thucLinh = '';
+    if(money>15){
+        thue = money*20/100;
+    }
+    else if(money>7){
+        thue = money*10/100;
+    }else {
+        thue = money*5/100;
+
+    }thucLinh = money-thue;
+    document.write("lương: " + money +"tr"+ "<br>"+ "thuế: "+ thue+"tr" +"<br>" + "thực lĩnh: " +thucLinh+"tr");
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>nguyên âm hay phụ âm</title>
+</head>
+<body>
+<script>
+    let nhapKt = prompt("nhập ký tự")
+    let mangNguyenAm = ['o', 'u', 'i', 'a', 'e','O', 'U', 'I', 'A', 'E'];
+    let kQ = '';
+    for (let i = 0; i < mangNguyenAm.length; i++)
+    if(nhapKt==mangNguyenAm[i]){
+        kQ = ' là nguyên âm';
+        break;
+    }
+    else {
+        kQ = ' là phụ âm'
+    }
+    alert(kQ);
+</script>
+</body>
+</html>

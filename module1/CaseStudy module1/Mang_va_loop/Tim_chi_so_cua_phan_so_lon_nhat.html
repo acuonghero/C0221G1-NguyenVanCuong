@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tìm chỉ số của phân số lớn nhất </title>
+</head>
+<body>
+<script>
+    let numerators = [5, 2, 5];
+    let denominators = [6, 3, 4];
+    let max = numerators[0] / denominators[0];
+    let c = 0;
+    for(let i=0;i<numerators.length;i++){
+        if(numerators[i] / denominators[i] > max){
+            max = numerators[i] / denominators[i];
+            c = i;
+        }
+    }
+    document.write(numerators[c]+"/"+denominators[c]+ " là phân số lớn nhất,");
+    document.write(" có chỉ số" + c);
+
+</script>
+</body>
+</html>
