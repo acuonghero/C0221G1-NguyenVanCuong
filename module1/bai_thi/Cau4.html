@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Điện thoại</title>
+</head>
+<body>
+<p id="display"></p>
+<input type="button" onclick="addNewProduct()" value="Add">
+<script>
+    class Phone {
+        constructor(phoneid, name, product, price) {
+            this.phoneid = phoneid;
+            this.name = name;
+            this.product = product;
+            this.price = price;
+        }
+
+        setPhoneId(phoneid) {
+            this.phoneid = phoneid;
+        }
+
+        getPhoneId() {
+            return this.phoneid;
+        }
+
+        setName(name) {
+            this.name = name;
+        }
+
+        getName() {
+            return this.name;
+        }
+
+        setProduct(product) {
+            this.product = product;
+        }
+
+        getProduct() {
+            return this.product;
+        }
+
+        setPrice(price) {
+            this.price = price;
+        }
+
+        getPrice() {
+            return this.price;
+        }
+        toString(){
+
+        }
+
+    }
+let phone = [];
+    display(phone);
+    function display(list) {
+        let tableString = "<table border='1'>\n" +
+            "    <tr>\n" +
+            "        <th>Mã điện thoại</th>\n" +
+            "        <th>Tên</th>\n" +
+            "        <th>Hãng sản xuất</th>\n" +
+            "        <th>Giá</th>\n" +
+            "    </tr>";
+        tableString+="<tr>\n" +
+            "        <th>"+getPhoneId()+"</th>\n" +
+            "        <th>"+getPhoneId()+"</th>\n" +
+            "        <th>"+getPhoneId()+"</th>\n" +
+            "        <th></th>\n" +
+            "    </tr>";
+        tableString+="</table>";
+        document.getElementById("display").innerHTML=tableString;
+    }
+    display(phone);
+
+function addNewProduct() {
+    let phoneId = prompt("Enter phone id");
+    let name = prompt("Enter name");
+    let product = prompt("Enter product");
+    let price =prompt("Enter price");
+     let phone1 = new Phone(phoneId, name, product, price);
+    phone.push(phone1);
+    display(phone);
+}
+</script>
+
+
+
+</body>
+</html>

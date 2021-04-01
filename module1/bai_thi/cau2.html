@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Câu 2</title>
+</head>
+<body>
+<script>
+    let nhap = prompt("nhập vào một chuỗi các ký tự cách nhau bằng dấu (,)");
+    mangNhap =nhap.split(',');
+    let dem = 0;
+    let mangKyTuHoa = ['Q', 'W', 'E', 'R', 'T', 'Y', 'U', 'I', 'O', 'P', 'A', 'S', 'D', 'F'
+        , 'G', 'H', 'J', 'K', 'L', 'Z', 'X', 'C', 'V', 'B', 'N', 'M'];
+    function KiemTra() {
+
+        for (let i = 0; i < mangNhap.length; i++) {
+            for (let j = 0; j < mangKyTuHoa.length; j++) {
+                if (mangNhap[i] == mangKyTuHoa[j]) {
+                    dem++;
+                    mangNhap.splice(i,1);
+                    break;
+                }
+            }
+        }
+    }
+// console.log(mangNhap);
+    KiemTra();
+    document.write("Số lượng ký tự in hoa có trong chuỗi là " + dem + "<br>");
+    document.write(mangNhap + " The String is not contain upper char");
+</script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Viết hàm tìm giá trị lớn nhất, nhỏ nhất trong mảng 2 chiều</title>
+</head>
+<body>
+<script>
+    let m = prompt("nhập độ dài mảng m");
+    let n = prompt("nhập độ dài mảng n");
+    let arr = [];
+    for (let i = 0; i < m; i++) {
+        arr[i] = [];
+        for (let j = 0; j < n; j++) {
+            arr[i][j] = prompt("nhập vào phần tử mảng nhỏ");
+        }
+    }
+
+    let max = arr[0][0];
+    let min = arr[0][0];
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i][j] > max) {
+                max = arr[i][j];
+            }
+            if (arr[i][j] < min) {
+                min = arr[i][j];
+            }
+        }
+    }
+    document.write("Max = " + max + "<br>");
+    document.write("Min = " + min);
+
+</script>
+</body>
+</html>
