@@ -6,6 +6,8 @@
 </head>
 <body>
     <script>
+
+        //tam giác vuông ở botton-left
         let num = parseInt(prompt("nhap"));
         for (let i = 1; i <= num; i++){
             for (let j = 1; j <= i; j++){
@@ -16,18 +18,17 @@
 
 
 
-
+        //tam giác vuông ở top-left
         for (let i = num; i >= 1;  i--){
             for (let j = 1; j <= i ; j++){
                 document.write("*");
             }document.write("<br>");
         }
-
        document.write("<hr>");
 
 
 
-
+        //tam giác vuông ở botton-right
         for (let i = 1 ; i <= num; i ++){
             for ( let j = 1 ; j <= num ; j++) {
                 if (j <= num - i){
@@ -44,7 +45,7 @@
 
 
 
-
+        //tam giác vuông ở top-right
         for (let i = 1;i <= num;i++){
             for (let j = 1; j <= num; j++){
                 if (j < i){

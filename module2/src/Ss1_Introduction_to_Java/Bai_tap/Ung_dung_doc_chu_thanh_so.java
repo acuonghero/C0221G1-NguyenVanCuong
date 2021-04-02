@@ -15,16 +15,14 @@ public class Ung_dung_doc_chu_thanh_so {
             strNum = arrayLessNum20[number];
         } else {
             if (number < 100) {
-                strNum += arrayMoreNum20[number % 10 - 2];
-                strNum += " " + arrayLessNum20[number % 10];
+                strNum += arrayMoreNum20[number / 10 - 2];
+                strNum += " "+ arrayLessNum20[number % 10];
             } else {
                 strNum += arrayLessNum20[number / 100] + " hundred ";
                 if (number % 100 > 20) {
                     strNum += arrayMoreNum20[(number % 100) / 10 - 2];
                     strNum += " " + arrayLessNum20[number % 10];
-                } else  if (number%100 ==0) {
-
-                }else {
+                } else  if (number%100 !=0) {
                     strNum += arrayLessNum20[number % 100];
                 }
             }
