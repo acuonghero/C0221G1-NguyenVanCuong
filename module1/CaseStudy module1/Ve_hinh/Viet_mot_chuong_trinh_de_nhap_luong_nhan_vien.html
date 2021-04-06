@@ -9,10 +9,10 @@
     let salary = parseInt(prompt("Nhập số tiền lương"));
     let tienThue;
     let thucLinh;
-    if (salary > 15) {
+    if (salary >= 15) {
         tienThue = salary * 20 / 100;
         thucLinh = salary - tienThue;
-    } else if (salary > 7) {
+    } else if (salary >= 7) {
         tienThue = salary * 10 / 100;
         thucLinh = salary - tienThue;
     } else {
