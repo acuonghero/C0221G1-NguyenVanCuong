@@ -7,13 +7,14 @@ public class Triangle extends Shape {
     protected double side2 = 1;
     protected double side3 = 1;
 
-    Triangle(){
+    Triangle() {
 
     }
-    Triangle(double side1,double side2, double side3){
-        this.side1=side1;
-        this.side2=side2;
-        this.side3=side3;
+
+    Triangle(double side1, double side2, double side3) {
+        this.side1 = side1;
+        this.side2 = side2;
+        this.side3 = side3;
     }
 
     public double getSide1() {
@@ -39,7 +40,12 @@ public class Triangle extends Shape {
     public void setSide3(double side3) {
         this.side3 = side3;
     }
-    public double getArea(){
-        return 
+
+    public double getArea() {
+        return Math.sqrt((side1 + side2 + side3) * (side1 + side2 - side3) * (side3 + side1 - side2)) / 4;
+    }
+
+    public double getperimeter() {
+        return side1 + side2 + side3;
     }
 }
