@@ -1,4 +1,4 @@
-package Ss5_Access_modifier_static_method_static_property.Thuc_hanh.Protected.Pack;
+package ss5_access_modifier_static_method_static_property.thuc_hanh.Protected.Pack;
 
 public class A {
     protected void msg() {

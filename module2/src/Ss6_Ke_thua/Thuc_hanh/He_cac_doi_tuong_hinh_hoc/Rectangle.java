@@ -1,6 +1,4 @@
-package Ss6_Ke_thua.Thuc_hanh.He_cac_doi_tuong_hinh_hoc;
-
-import java.awt.desktop.AboutEvent;
+package ss6_ke_thua.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 
 public class Rectangle extends Shape {
     private double width;

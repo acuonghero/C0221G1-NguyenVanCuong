@@ -1,4 +1,4 @@
-package Ss4_Lop_va_doi_tuong_trong_java.Bai_tap.StopWatch;
+package ss4_lop_va_doi_tuong_trong_java.bai_tap.stopwatch;
 
 import java.util.Arrays;
 

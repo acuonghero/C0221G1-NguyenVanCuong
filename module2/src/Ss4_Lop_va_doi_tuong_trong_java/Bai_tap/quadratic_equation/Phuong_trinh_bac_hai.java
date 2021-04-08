@@ -1,4 +1,4 @@
-package Ss4_Lop_va_doi_tuong_trong_java.Bai_tap.QuadraticEquation;
+package ss4_lop_va_doi_tuong_trong_java.bai_tap.quadratic_equation;
 
 public class Phuong_trinh_bac_hai {
     private double a , b, c;

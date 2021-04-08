@@ -1,4 +1,4 @@
-package Ss5_Access_modifier_static_method_static_property.Thuc_hanh.Static_Method;
+package ss5_access_modifier_static_method_static_property.thuc_hanh.Static_Method;
 
 public class Student {
     private int rollno;

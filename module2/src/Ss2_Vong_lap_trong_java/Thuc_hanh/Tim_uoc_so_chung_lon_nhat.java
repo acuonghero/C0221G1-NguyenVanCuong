@@ -1,4 +1,4 @@
-package Ss2_Vong_lap_trong_java.Thuc_hanh;
+package ss2_vong_lap_trong_java.thuc_hanh;
 
 import java.util.Scanner;
 

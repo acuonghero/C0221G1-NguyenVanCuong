@@ -1,6 +1,4 @@
-package Ss3_Mang_va_phuong_thuc_trong_java.Bai_tap;
-
-import org.w3c.dom.ls.LSOutput;
+package ss3_mang_va_phuong_thuc_trong_java.bai_tap;
 
 import java.util.Scanner;
 

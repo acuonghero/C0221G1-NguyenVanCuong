@@ -1,4 +1,4 @@
-package Ss3_Mang_va_phuong_thuc_trong_java.Thuc_hanh;
+package ss3_mang_va_phuong_thuc_trong_java.thuc_hanh;
 
 public class Tim_gia_tri_nho_nhat_trong_mang_su_dung_phuong_thuc  {
     public static int minValue(int[] array){

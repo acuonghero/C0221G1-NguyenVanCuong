@@ -1,4 +1,4 @@
-package Ss4_Lop_va_doi_tuong_trong_java.Thuc_hanh;
+package ss4_lop_va_doi_tuong_trong_java.thuc_hanh;
 
 import java.util.Scanner;
 
