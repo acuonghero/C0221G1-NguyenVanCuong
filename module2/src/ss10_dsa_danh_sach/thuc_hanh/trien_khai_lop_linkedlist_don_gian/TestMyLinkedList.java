@@ -13,6 +13,6 @@ public class TestMyLinkedList {
         ll.printList();
 
 
-        ll.
+
     }
 }
