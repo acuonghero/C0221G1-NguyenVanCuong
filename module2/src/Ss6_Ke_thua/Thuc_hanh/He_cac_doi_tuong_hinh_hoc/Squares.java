@@ -3,15 +3,15 @@ package ss6_ke_thua.thuc_hanh.he_cac_doi_tuong_hinh_hoc;
 public class Squares extends Shape {
     private double side = 1.0;
 
-    Squares() {
+    public Squares() {
 
     }
 
-    Squares(double size) {
+    public Squares(double size) {
         this.side = size;
     }
 
-    Squares(double size, String color, boolean filled) {
+   public Squares(double size, String color, boolean filled) {
         super(color, filled);
         this.side = size;
     }
