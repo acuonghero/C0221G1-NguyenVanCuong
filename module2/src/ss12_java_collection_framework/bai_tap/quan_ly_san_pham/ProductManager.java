@@ -76,8 +76,6 @@ public class ProductManager {
         productList.sort(Comparator.comparing(Product::getPrice).reversed());
         System.out.println(productList);
     }
-
-
     public static void main(String[] args) {
         int choose;
 
@@ -115,9 +113,6 @@ public class ProductManager {
                     sortDown();
                     break;
             }
-
         } while (choose != 8);
     }
-
-
 }
