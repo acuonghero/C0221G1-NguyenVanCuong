@@ -10,6 +10,10 @@ public class Palindrome {
         Queue<String> queue = new LinkedList<>();
 
         String[] string = "abcdcbaa".split("");
+        PalidromeString(stack, queue, string);
+    }
+
+    private static void PalidromeString(Stack<String> stack, Queue<String> queue, String[] string) {
         for (int i = 0; i <string.length ; i++) {
             stack.add(string[i]);
             queue.add(string[i]);

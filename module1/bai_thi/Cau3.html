@@ -23,18 +23,19 @@
         return kiemTra;
     }
 
-    for (let i = 0; i < mang.length; i++) {
-        if (soNguyenTo(mang[i])) {
-            ketQua.push(mang[i]);
-        }
 
-    }
 
     ketQua.sort(
         function (a, b) {
             return a - b;
         }
     );
+    for (let i = 0; i < mang.length; i++) {
+        if (soNguyenTo(mang[i])) {
+            ketQua.push(mang[i]);
+        }
+
+    }
     document.write(ketQua);
 </script>
 </body>
