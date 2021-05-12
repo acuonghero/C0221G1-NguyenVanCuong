@@ -8,3 +8,4 @@ create table Student(
 insert into Student (`id`,`name`,`age`,`country`)
 values ("1","Nam","18","Nha Trang");
 select * from `Student`;
+drop table Student;
