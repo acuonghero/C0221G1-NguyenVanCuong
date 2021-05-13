@@ -11,7 +11,7 @@ select * from Class;
 drop table Class;
 
 create table Teacher(
-`id` int auto_increment not null primary key,
+`id` int(1) auto_increment not null primary key,
 `name` varchar(45) null,
 `age` int null,
 `country` varchar(45) null);
