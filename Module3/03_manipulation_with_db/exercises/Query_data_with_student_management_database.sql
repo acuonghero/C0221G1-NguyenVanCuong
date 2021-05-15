@@ -24,7 +24,7 @@ VALUES (1, 1, 8, 1),
 -- Hiển thị tất cả các sinh viên có tên bắt đầu bảng ký tự ‘h’  
 select * 
 from student
-where StudentName like "%h%" or StudentName like "% h%";
+where StudentName like "h%";
 
 -- Hiển thị các thông tin lớp học có thời gian bắt đầu vào tháng 12.
 select * 
