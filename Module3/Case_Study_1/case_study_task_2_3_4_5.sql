@@ -15,7 +15,6 @@ on c.customer_id=ct.customer_id
 where c.customer_type_id = 1
 group by c.customer_name
 order by count(ct.contract_id) ASC;
--- Trường hợp này không check được đúng hay sai vì contract với accompanied_service chưa nhập được
 
 
 -- Hiển thị IDKhachHang, HoTen, TenLoaiKhach, IDHopDong, TenDichVu, NgayLamHopDong, NgayKetThuc, TongTien (Với TongTien được tính theo công thức như sau: ChiPhiThue + SoLuong*Gia, với SoLuong và Giá là từ bảng DichVuDiKem) cho tất cả các Khách hàng đã từng đặt phỏng. (Những Khách hàng nào chưa từng đặt phòng cũng phải hiển thị ra).
@@ -29,4 +28,3 @@ left join service s on co.service_id = s.service_id
 left join detailed_contract dc on co.contract_id = dc.contract_id
 left join accompanied_service ac on dc.Accompanied_service_id = ac.Accompanied_service_id
 group by c.customer_id;
--- Trường hợp này không check được đúng hay sai vì contract với accompanied_service chưa nhập được
