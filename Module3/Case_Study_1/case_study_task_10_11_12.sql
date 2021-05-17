@@ -37,8 +37,6 @@ where (
 and  year(co.start_contract_date) = 2019 ) 
 and not exists (select co.contract_id
 				from contract co
-				join service s on co.service_id = s.service_id
 				where (month(co.start_contract_date) between 1 and 6)  
-				and year(co.start_contract_date) = 2019
-				and co.service_id = s.service_id)
+				and year(co.start_contract_date) = 2019)
 group by co.contract_id;

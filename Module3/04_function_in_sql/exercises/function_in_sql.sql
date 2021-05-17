@@ -16,4 +16,3 @@ from student s
 join mark m on m.studentid = s.studentid
 group by s.studentid  
 order by avg(m.Mark) desc; 
-
