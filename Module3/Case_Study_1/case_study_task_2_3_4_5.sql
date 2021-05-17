@@ -27,4 +27,4 @@ left join contract co  on c.customer_id = co.customer_id
 left join service s on co.service_id = s.service_id
 left join detailed_contract dc on co.contract_id = dc.contract_id
 left join accompanied_service ac on dc.Accompanied_service_id = ac.Accompanied_service_id
-group by c.customer_id;
+group by c.customer_id,co.contract_id,total_money;
