@@ -161,7 +161,7 @@ select * from service;
 values (1,1,1,"2020/10/12","2020/10/15",100,0),
 (2,2,2,"2020/11/10","2020/11/15",120,0),
 (3,5,2,"2017/11/10","2018/11/15",120,0),
-(2,3,2,"2009/11/10","2009/11/15",150,0),
+(2,3,2,"2018/11/10","2009/11/15",150,0),
 (1,4,1,"2012/10/12","2013/10/15",100,0),
 (3,5,2,"2017/11/10","2018/11/15",120,0);
 select * from contract;
@@ -191,7 +191,7 @@ foreign key (Accompanied_service_id) references Accompanied_service(Accompanied_
 foreign key (contract_id) references contract(contract_id)
 ); 
 insert into detailed_contract(contract_id,Accompanied_service_id,amount)
-values (1,1,2),
+values (1,1,1),
 (2,2,3),
 (3,3,2),
 (4,4,3),
