@@ -63,7 +63,7 @@ foreign key (parts_id) references parts(parts_id)
 insert into personnel(personnel_name,levels_id,parts_id,degree_id,date_of_birth,identity_card,salary,phone_number,email,address)
 values ("Huynh Tan Khoa",1,1,1,"1999/12/05",345212345,800,0909111123,"dathuynh@gmail.com","Quang Tri"),
 ("Truong Cong Tuan",2,2,2,"1995/12/09",256765888,800,0909111123,"tuantruong@gmail.com","Da Nang"),
-("Nguyen Quoc Huy",3,3,3,"1990/12/05",137564222,800,0909111123,"huynguyen@gmail.com","Quang Ngai"),
+("Nguyen Quoc Huy",3,3,3,"1990/12/05",137564222,800,0909111123,"huynguyen@gmail.com","Hai Chau"),
 ("Duong Thanh Hau",4,4,4,"1990/12/05",534646242,800,0909111123,"haunguyen@gmail.com","Nghe An"),
 ("Nguyen Phuong Nam",5,4,5,"1990/12/05",435132665,800,0909111123,"namnguyen@gmail.com","Quang Binh"),
 ("Nguyen Cong Tin",6,4,6,"1990/12/05",435246345,800,0909111123,"tinnguyen@gmail.com","Hue");
@@ -165,12 +165,23 @@ select * from service;
  );
  insert into contract(personnel_id,customer_id,service_id,start_contract_date,end_contract_date,deposits,total_money)
 values (1,1,1,"2020/10/12","2020/10/15",100,0),
-(2,2,2,"2020/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2020/11/15",120,0),
+(2,2,2,"2019/11/10","2021/11/15",120,0),
 (3,5,2,"2017/11/10","2018/11/15",120,0),
 (2,3,2,"2018/11/10","2009/11/15",150,0),
 (1,4,1,"2012/10/12","2013/10/15",100,0),
+(1,4,1,"2019/10/12","2021/10/15",100,0),
 (3,5,2,"2017/11/10","2018/11/15",120,0);
 select * from contract;
+
  
  -- bảng dịch vụ đi kèm
  create table Accompanied_service(
@@ -198,6 +209,7 @@ foreign key (contract_id) references contract(contract_id)
 ); 
 insert into detailed_contract(contract_id,Accompanied_service_id,amount)
 values (1,1,1),
+(2,2,3),
 (2,2,3),
 (3,3,2),
 (4,4,3),

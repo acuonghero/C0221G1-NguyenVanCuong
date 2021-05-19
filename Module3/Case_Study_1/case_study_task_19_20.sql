@@ -1,7 +1,6 @@
 -- 19.	Cập nhật giá cho các Dịch vụ đi kèm được sử dụng trên 4 lần trong năm 2019 lên gấp đôi.
 use furama;
 
-
 update accompanied_service 
 set price = price*2 
 where accompanied_service_id in (

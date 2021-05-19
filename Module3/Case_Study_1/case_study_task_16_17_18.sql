@@ -14,7 +14,8 @@ where personnel_id not in (
 -- là lớn hơn 10.000.000 VNĐ
 create view total_money_to_pay as
 
-select cu.customer_name, ct.customer_type_name, month(start_contract_date) as months, co.start_contract_date, sum(s.rental_costs) as total_money 
+select cu.customer_name, ct.customer_type_name, month(start_contract_date) as months, 
+co.start_contract_date, sum(s.rental_costs) as total_money 
 from contract co 
 join service s on s.service_id = co.service_id
 join customer cu on cu.customer_id = co.customer_id
@@ -23,7 +24,8 @@ group by cu.customer_type_id
 
 union all
 
-select cu.customer_name, ct.customer_type_name, month(start_contract_date) as months, co.start_contract_date, sum(ac.price*dc.amount) as total_money
+select cu.customer_name, ct.customer_type_name, month(start_contract_date) as months,
+ co.start_contract_date, sum(ac.price*dc.amount) as total_money
 from contract co
 join detailed_contract dc on dc.contract_id = co.contract_id
 join accompanied_service ac on ac.accompanied_service_id = dc.accompanied_service_id
@@ -31,8 +33,8 @@ join customer cu on cu.customer_id = co.customer_id
 join customer_type ct on ct.customer_type_id = cu.customer_type_id
 group by cu.customer_id;
 
--- select customer_name, customer_type_name, sum(total_money) as total 
-select *
+select customer_name, customer_type_name, sum(total_money) as total 
+-- select *
 from total_money_to_pay
 where (
 	year(start_contract_date) = 2019
