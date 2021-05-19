@@ -25,7 +25,10 @@ degree_name varchar(45) null
  insert into degree(degree_name)
 values ("Trung Cap"),
 ("Cao Dang"),
-("Dai Hoc");
+("Dai Hoc"),
+("Cao Hoc"),
+("Thac Si"),
+("Tien Si");
 select * from degree;
 
  -- bảng bộ phận
@@ -60,7 +63,10 @@ foreign key (parts_id) references parts(parts_id)
 insert into personnel(personnel_name,levels_id,parts_id,degree_id,date_of_birth,identity_card,salary,phone_number,email,address)
 values ("Huynh Tan Khoa",1,1,1,"1999/12/05",345212345,800,0909111123,"dathuynh@gmail.com","Quang Tri"),
 ("Truong Cong Tuan",2,2,2,"1995/12/09",256765888,800,0909111123,"tuantruong@gmail.com","Da Nang"),
-("Nguyen Quoc Huy",3,3,3,"1990/12/05",137564222,800,0909111123,"huynguyen@gmail.com","Quang Tri");
+("Nguyen Quoc Huy",3,3,3,"1990/12/05",137564222,800,0909111123,"huynguyen@gmail.com","Quang Ngai"),
+("Duong Thanh Hau",4,4,4,"1990/12/05",534646242,800,0909111123,"haunguyen@gmail.com","Nghe An"),
+("Nguyen Phuong Nam",5,4,5,"1990/12/05",435132665,800,0909111123,"namnguyen@gmail.com","Quang Binh"),
+("Nguyen Cong Tin",6,4,6,"1990/12/05",435246345,800,0909111123,"tinnguyen@gmail.com","Hue");
 select * from personnel;
 
  -- bảng loại khách hàng

@@ -31,7 +31,8 @@ join customer cu on cu.customer_id = co.customer_id
 join customer_type ct on ct.customer_type_id = cu.customer_type_id
 group by cu.customer_id;
 
-select customer_name, customer_type_name, sum(total_money) as total
+-- select customer_name, customer_type_name, sum(total_money) as total 
+select *
 from total_money_to_pay
 where (
 	year(start_contract_date) = 2019
