@@ -11,7 +11,7 @@ where personnel_id not in (
 
 -- Task 17.	Cập nhật thông tin những khách hàng có TenLoaiKhachHang từ  Platinium lên Diamond,
 -- chỉ cập nhật những khách hàng đã từng đặt phòng với tổng Tiền thanh toán trong năm 2019 
--- là lớn hơn 10.000.000 VNĐ
+-- là lớn hơn 500usd
 update customer
 set customer_type_id = 1 
 where (customer_type_id = 1)
@@ -23,7 +23,7 @@ and customer_id in (select c_id.customer_id from (
 									join service s on s.service_id = co.service_id
 									where year(co.start_contract_date) = 2019
 									group by co.customer_id
-									having total >500) as c_id
+									having total > 500) as c_id
 									);
 
 -- 18.	Xóa những khách hàng có hợp đồng trước năm 2016 (chú ý ràng buộc giữa các bảng).
