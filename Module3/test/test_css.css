@@ -1,0 +1,71 @@
+html,body{
+    margin: 0px;
+    padding: 0px;
+}
+#header {
+    line-height: 50px;
+    width: 100%;
+    background: green;
+    display: inline-block;
+    height: 60px;
+    top: 70px;
+}
+#header .trang-chu{
+    text-align: center;
+    line-height: 45px;
+    font-size: 30px;
+    margin-left: 20px;
+    height: 60px;
+    top: 0px;
+}
+#body {
+    height: 500px;
+    background: black;
+    color: white;
+    margin-left: 70px;
+    margin-right: 70px;
+}
+#body .danh-muc .danh-muc-item {
+
+    float: left;
+    padding: 10px 20px;
+    border-align: center;
+    display: inline-block;
+}
+.item{
+    display: block;
+}
+#body .tim-kiem{
+    margin-right: 10px;
+}
+.danh-muc-tim-kiem{
+    margin-left: 100px;
+}
+#body .tim-kiem{
+
+    border-radius: 10px;
+}
+li{
+    list-style: none;
+}
+#body .danh-muc .danh-muc-item:hover{
+    background: blue;
+    font-weight: bolder;
+}
+#body .danh-muc-item:hover .items{
+    display: block;
+}
+#body .items{
+    display: none;
+    text-align: center;
+}
+#footer{
+    margin-top: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    height: 30px;
+    background: green;
+    clear: both;
+    padding: 10px;
+    text-align: center;
+}
