@@ -1,0 +1,129 @@
+#header {
+    height: 60px;
+    background: #86b7fe;
+    display: flex;
+    width: 100%;
+    border-radius: 5px;
+    position: relative;
+    z-index: 20;
+}
+
+#header .left{
+    display: flex;
+    width: 25%;
+    align-items: center;
+}
+#header .left-1{
+    padding: 0px 20px;
+}
+
+#header .center {
+    width: 50%;
+}
+#header .right{
+    width: 25%;
+    align-items: center;
+}
+#header .nav {
+    display: flex;
+    justify-content: space-around;
+}
+#header .right .nav .anh{
+    margin-top: -7px;
+}
+#header .logo1 {
+    margin-bottom: 7px;
+}
+li{
+    list-style: none;
+}
+.center .nav li:hover{
+    color: red;
+}
+
+.sup-nav{
+    display: none;
+}
+.right .nav .anh:hover .sup-nav{
+    display: block;
+    background: #86b7fe;
+    border-radius: 0px 0px 10px 10px;
+}
+.nav .anh .sup-nav li:hover{
+     color: red;
+ }
+#header .logo{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+ .logo1{
+    border-radius: 30px;
+    height: 40px;
+    width: 40px;
+}
+ .logo2{
+    width: 40px;
+    height: 40px;
+    border-radius: 30px;
+}
+#main{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    z-index: 10;
+}
+#main .left{
+    border-radius: 5px;
+    display: block;
+    background: #86b7fe;
+    width: 25%;
+    height: 500px;
+    margin-top: 10px;
+}
+#main .left ul li{
+    /*position: relative;*/
+    align-items: center;
+}
+
+#main .center {
+    border-radius: 5px;
+    margin: 10px;
+    width: 50%;
+    /*background: #86b7fe;*/
+    display: block;
+    padding: 0px 30px;
+    position: relative;
+}
+
+#main .right{
+    border-radius: 5px;
+    margin-top: 10px;
+    height: 500px;
+    width: 25%;
+    background: #86b7fe;
+    display: block;
+
+}
+
+#main .center .story ul{
+    padding: 0px 10px;
+    display: flex;
+    width: 80px;
+    height: 100px;
+}
+#main .center .story ul img {
+    align-content: space-around;
+    width: 80px;
+    height: 120px;
+    border-radius: 7px;
+}
+#main .center .story ul li{
+    align-content: space-around;
+}
+
+#main .center .news-item img{
+    margin-top: 20px;
+    border-radius: 10px;
+}
+

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body{
+            margin: 0px;
+            padding: 0px;
+        }
+        #header{
+            display: flex;
+            background: #0c4128;
+            color: #20c997;
+            font-size: 19px;
+            height: 70px;
+            position: relative;
+        }
+        #header .left{
+            width: 95%;
+
+        }
+        #header .left .items{
+            display: flex;
+            width: 80%;
+        }
+        #header .left .items li{
+            padding : 0px 20px;
+        }
+        #header .right{
+            line-height: 60px;
+            width: 5%;
+        }
+        #header .left .items li:hover{
+            color: white;
+        }
+        #header .right:hover {
+            color: white;
+        }
+        #main {
+            width : 100%;
+            display: flex;
+        }
+        #main .left{
+            width: 25%;
+            display: flex;
+            flex-direction: column;
+            background: #25cff2;
+            align-items: center;
+        }
+        #main .left a{
+            margin: 10px;
+        }
+        #main .left a:hover{
+            color: white;
+        }
+
+        #main .center{
+            width: 50%;
+            margin: 10px;
+        }
+        #main .center .document-1 p{
+            font-size: 25px;
+        }
+
+        #main .center .document-2 p{
+            font-size: 25px;
+        }
+
+        #main .right{
+            width: 25%;
+            background: #20c997;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #main .right .items{
+            margin: 20px;
+            border: solid 1px gray;
+            padding: 0px 40px 25px;
+        }
+        #main .right .items span{
+            display: flex;
+            margin-top: 25px;
+        }
+        #footer{
+            background: #0c4128;
+            height: 70px;
+            text-align: center;
+            line-height: 60px;
+            color: #20c997;
+            font-size: 19px;
+            clear: both;
+        }
+        #footer:hover{
+            color: white;
+        }
+        li{
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+<div id="header">
+    <div class="left">
+        <ul class="items">
+            <li>Logo</li>
+            <li>Home</li>
+            <li>About</li>
+            <li>Project</li>
+            <li>Contact</li>
+        </ul>
+    </div>
+    <div class="right">
+        Login
+    </div>
+</div>
+<div id="main">
+    <div class="left">
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+        <a href="#">Link</a>
+    </div>
+    <div class="center">
+        <div class="document-1">
+            <p>Biểu tình Tây Nguyên 2004</p>
+            <span>Biểu tình Tây Nguyên 2004 (còn được biết đến với tên gọi Bạo loạn Tây Nguyên 2004[1][2][3][4] hoặc Thảm sát Phục Sinh[5][6]) là một cuộc biểu tình bạo động của người Thượng xảy ra vào lễ Phục Sinh ngày 10–11 tháng 4 năm 2004 tại Tây Nguyên thuộc Việt Nam, tổng cộng khoảng 10.000–30.000 người Thượng tham gia tại Đắk Lắk, Gia Lai, Đắk Nông.</span>
+        </div>
+        <hr>
+        <div class="document-2">
+            <p>Biểu tình Tây Nguyên 2004</p>
+            <span>Biểu tình Tây Nguyên 2004 (còn được biết đến với tên gọi Bạo loạn Tây Nguyên 2004[1][2][3][4] hoặc Thảm sát Phục Sinh[5][6]) là một cuộc biểu tình bạo động của người Thượng xảy ra vào lễ Phục Sinh ngày 10–11 tháng 4 năm 2004 tại Tây Nguyên thuộc Việt Nam, tổng cộng khoảng 10.000–30.000 người Thượng tham gia tại Đắk Lắk, Gia Lai, Đắk Nông.</span>
+        </div>
+    </div>
+    <div class="right">
+        <div class="items">
+            <span>ADS</span>
+        </div>
+        <div class="items">
+            <span>ADS</span>
+        </div>
+    </div>
+</div>
+<div id="footer">Footer text</div>
+</body>
+</html>
