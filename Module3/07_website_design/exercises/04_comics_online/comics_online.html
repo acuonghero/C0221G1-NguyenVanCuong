@@ -3,149 +3,73 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../../../bootstrap_4/bootstrap.css">
     <style>
-        #header {
-            display: flex;
-            height: 60px;
-            background: #20c997;
-            margin: 10px;
-            align-items: center;
-            font-style: italic;
-            border-radius: 7px;
+        .hoat-hinh{
+            border-radius: 10px;
         }
-
-        #header .hoat-hinh {
-            color: white;
-            font-size: 28px;
-            background: red;
-            border-radius: 7px;
-            font-style: italic;
+        .row .items span:hover{
+            color: red;
         }
-
-        #header .phim {
-            margin: 10px;
-            font-size: 28px;
-        }
-
-        #nav {
-            margin: 10px;
-            background: #25cff2;
-            display: flex;
-            border-radius: 7px;
-            justify-content: center;
-        }
-
-        #nav span:hover {
-            color: blue;
-        }
-
-        #nav span {
-            margin: 10px;
-        }
-
-        #main {
-            display: flex;
-            box-sizing: border-box;
-        }
-
-        #main .left{
-            width: 25%;
-            margin: 10px;
-            border-radius: 7px;
-            background: #adb5bd;
-        }
-        #main .left div iframe{
-            margin-left: 60px;
-            padding: 10px;
-        }
-
-        #main .right{
-            display: flex;
-            flex-direction: column;
-            width: 75%;
-            margin: 10px;
-            border-radius: 7px;
-            background: #adb5bd;
-        }
-
-        #main .right .video{
-            display: flex;
-            justify-content: center;
-        }
-        #main .right .comment{
-            font-family: "Times New Roman";
-        }
-
-        #main .right .comment p{
-            font-size: 28px;
-        }
-
-        #main .right .comment pre{
-            font-size: 15px;
-        }
-
-        #footer{
-            display: flex;
-            align-items: center;
-            margin: 10px;
-            justify-content: center;
-            clear: bottom;
-            background: #20c997;
-            bottom: 0;
-            height: 50px;
-            border-radius: 7px;
-        }
-
     </style>
 </head>
 <body>
-<div id="header">
-    <span class="phim">Phim</span>
-    <span class="hoat-hinh">Hoạt Hình</span>
-</div>
-<div id="nav">
-    <span>Phim hoạt hình</span>
-    <span>|</span>
-    <span>phim hoạt hình yêu thích</span>
-    <span>|</span>
-    <span>Nhân vật yêu thích</span>
-    <span>|</span>
-    <span>Góp ý</span>
-</div>
-<div id="main">
-    <div class="left">
-        <div>
-            <iframe width="200" height="200" src="https://www.youtube.com/embed/d1gPO5I2wy0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 font-italic bg-light">
+            <span>Phim</span>
+            <span class="hoat-hinh bg-danger text-light">Hoạt Hình</span>
         </div>
+    </div>
+    <div class="row">
+        <div class="items col-12 text-center mt-2 bg-light">
+            <span>Phim hoạt hình</span>
+            <span>|</span>
+            <span>phim hoạt hình yêu thích</span>
+            <span>|</span>
+            <span>Nhân vật yêu thích</span>
+            <span>|</span>
+            <span>Góp ý</span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4 mt-2 ">
+            <div>
+                <iframe width="200" height="200" src="https://www.youtube.com/embed/d1gPO5I2wy0"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
 
-        <div>
-            <iframe width="200" height="200" src="https://www.youtube.com/embed/23a3iSaX-EQ"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
+            <div>
+                <iframe width="200" height="200" src="https://www.youtube.com/embed/23a3iSaX-EQ"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
         </div>
-    </div>
-    <div class="right">
-        <div class="video">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/wTRah8756-o"
-                    title="YouTube video player" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen></iframe>
-        </div>
-        <div class="comment">
-            <p>Doremon</p>
-            <span>Hoạt Hình Doraemon - Dây Thừng Trừng Phạt Kẻ Ác - Xem trọn bộ DORAEMON trên ỨNG DỤNG POPS Kids
+        <div class="col-8 mt-2 bg-info">
+            <div class="video m-2 embed-responsive-16by9">
+                <iframe
+                        src="https://www.youtube.com/embed/wTRah8756-o"
+                        title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowfullscreen></iframe>
+            </div>
+            <div class="comment">
+                <p>Doremon</p>
+                <span>Hoạt Hình Doraemon - Dây Thừng Trừng Phạt Kẻ Ác - Xem trọn bộ DORAEMON trên ỨNG DỤNG POPS Kids
 Ứng dụng POPS Kids là app giáo dục, giải trí hàng đầu cho trẻ em với nội dung an toàn và đa dạng do POPS Worldwide phát triển. Ứng dụng được thiết kế đơn giản và dễ sử dụng nhất với những nội dung dựa trên nhu cầu của các bạn nhỏ qua các chuyên mục âm nhạc, giải trí và giáo dục.Với kho nội dung đa dạng, thường xuyên được cập nhật và kiểm soát chặt chẽ, POPS Kids là ngôi nhà giải trí bổ ích, an toàn cho bé và bố mẹ yên tâm khi trẻ trải nghiệm ứng dụng.</span>
+            </div>
         </div>
     </div>
-</div>
-<div id="footer">
-    2017 - Thiết kế web bới trang Hoạt hình
+    <div class="row">
+        <div class="col-12 text-center bg-light">
+            2017 - Thiết kế web bới trang Hoạt hình
+        </div>
+    </div>
 </div>
 </body>
 </html>

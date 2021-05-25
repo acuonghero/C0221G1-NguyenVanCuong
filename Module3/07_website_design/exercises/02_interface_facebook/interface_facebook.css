@@ -52,21 +52,7 @@ li{
 .nav .anh .sup-nav li:hover{
      color: red;
  }
-#header .logo{
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-}
- .logo1{
-    border-radius: 30px;
-    height: 40px;
-    width: 40px;
-}
- .logo2{
-    width: 40px;
-    height: 40px;
-    border-radius: 30px;
-}
+
 #main{
     position: absolute;
     display: flex;

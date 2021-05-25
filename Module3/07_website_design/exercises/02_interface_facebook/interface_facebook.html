@@ -3,92 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <title>facebook</title>
-    <link rel="stylesheet" href="interface_facebook.css">
+    <style>
+        .logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 30px;
+        }
+
+        .logo1 {
+            border-radius: 30px;
+            height: 40px;
+            width: 40px;
+        }
+
+        .main img {
+            width: 100px;
+        }
+    </style>
+    <link rel="stylesheet" href="../../../bootstrap_4/bootstrap.css">
 </head>
 <body>
-<div id="header">
-    <div class="left">
-        <div class="left-1">
-            <img class="logo" src="fb.png"/>
-        </div>
-        <div class="left-2">
-            <input style="width: 250px; border-radius: 7px"class="input" type="search">
+<div class="container-fluid d-flex bg-info ml-lg-3">
+    <div class="col-3">
+        <div class="row">
+            <div class="col-12 d-flex align-items-center">
+                <div class="left-1">
+                    <img class="logo " src="fb.png"/>
+                </div>
+                <div class="left-2 m-2">
+                    <input style="width: 250px; border-radius: 7px" class="input" type="search">
+                </div>
+            </div>
+
         </div>
     </div>
-    <div class="center">
-        <ul class="nav">
-            <li>Home</li>
-            <li>Watch</li>
-            <li>Marketplace</li>
-            <li>Group</li>
-            <li>Game</li>
-        </ul>
+    <div class="col-6 d-flex align-items-center justify-content-center">
+        <div class="row">
+            <div class="col">
+                Home
+            </div>
+            <div class="col">
+                Watch
+            </div>
+            <div class="col">
+                Marketplace
+            </div>
+            <div class="col">
+                Group
+            </div>
+            <div class="col">
+                Game
+            </div>
+        </div>
     </div>
-    <div class="right">
-        <ul class="nav">
-            <li class="anh"><img class="logo1" src="msg.png"/></li>
-            <li class="anh"><img class="logo1" src="chuong.jpg"/></li>
-            <li class="anh"><img class="logo1" src="chinh mui ten.png"/>
-                <ul class="sup-nav">
-                    <li>Lối tắt</li>
-                    <li>Bảo mật</li>
-                    <li>Trợ giúp</li>
-                    <li>Trợ năng</li>
-                    <li>Đăng xuất</li>
-                </ul>
-            </li>
-        </ul>
+    <div class="col-3">
+        <div class="row">
+            <div class="col"><img class="logo1" src="msg.png"/></div>
+            <div class="col"><img class="logo1" src="chuong.jpg"/></div>
+            <div class="col"><img class="logo1" src="chinh mui ten.png"/></div>
+        </div>
     </div>
 </div>
-<div id="main">
-    <div class="left">
-        <ul>
-            <li>Account name</li>
-            <li>Bạn bè</li>
-            <li>Trang</li>
-            <li>Nhóm</li>
-        </ul>
+<div class="container-fluid d-flex mt-2">
+    <div class="col-3 bg-info d-flex flex-column align-items-center ">
+        <div class="row">Account name</div>
+        <div class="row"> Bạn bè</div>
+        <div class="row">Trang</div>
+        <div class="row">Nhóm</div>
     </div>
-    <div class="center">
-        <div class="story">
-            <ul>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-                <li><img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt=""></li>
-            </ul>
-        </div>
-        <div class="news">
-            <div class="news-item">
-                <img src="news.jpg" height="725" width="739"/>
-                <pre>Thích                                                        Bình luận                                        Chia sẻ</pre>
+    <div class="col-6">
+        <div class="row">
+            <div class="main col-12 d-flex ">
+                <img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt="">
+                <img src="https://i.pinimg.com/736x/a2/6b/d3/a26bd3b88f30608733ab7cdc630066e6.jpg" alt="">
             </div>
-            <div class="news-item">
-                <img src="news.jpg" height="725" width="739"/>
-                <pre>Thích                                          Bình luận                                        Chia sẻ</pre>
+            <div class="col-12 ml-3 mt-2">
+                <div class="row"><img src="news.jpg" height="700" width="600"/></div>
+                <div class="row"><img src="news.jpg" height="700" width="600"/></div>
             </div>
         </div>
     </div>
-    <div class="right">
-        <p>Danh sách online</p>
-        <div>
-            <ul>
-                <li>Nguyễn Văn A</li>
-                <li>Nguyễn Văn A</li>
-                <li>Nguyễn Văn A</li>
-                <li>Nguyễn Văn A</li>
-                <li>Nguyễn Văn A</li>
-                <li>Nguyễn Văn A</li>
-                <li>Nguyễn Văn A</li>
-                <li>Nguyễn Văn A</li>
-            </ul>
-        </div>
+    <div class="col-3 bg-info d-flex flex-column align-items-center">
+        <div class="row">Danh sách online</div>
+        <div class="row">Nguyễn Văn A</div>
+        <div class="row">Nguyễn Văn A</div>
+        <div class="row">Nguyễn Văn A</div>
+        <div class="row">Nguyễn Văn A</div>
+        <div class="row">Nguyễn Văn A</div>
+        <div class="row">Nguyễn Văn A</div>
     </div>
+</div>
 </div>
 </body>
 </html>
