@@ -19,7 +19,7 @@
   <input type="text" name="list-price" placeholder="USD"/><br/>
   <label>Discount Percent</label><br/>
   <input type="text" name="discount-percent" placeholder="0.00"/><br/>
-  <input type = "submit" id = "submit" value = "Caculator"/>
+  <input type = "submit" id= "submit" value = "Caculator"/>
 </form>
 </body>
 </html>
