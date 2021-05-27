@@ -6,17 +6,18 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
-
-@WebServlet(name = "ProductDiscountCalculatorServlet", value = "/calculator")
-public class ProductDiscountCalculatorServlet extends HttpServlet {
+@WebServlet(name = "CurrencyConverterServlet",value ="/converter")
+public class CurrencyConverterServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        float listPrice = Float.parseFloat(request.getParameter("list-price"));
-        float discountPercent = Float.parseFloat(request.getParameter("discount-percent"));
-        double discountAmount = listPrice * discountPercent * 0.01;
+        float rate = Float.parseFloat(request.getParameter("rate"));
+        float usd = Float.parseFloat(request.getParameter("usd"));
 
-        request.setAttribute("result",discountAmount);
-        RequestDispatcher requestDispatcher = request.getRequestDispatcher("result.jsp");
+        float vnd = rate * usd;
+        request.setAttribute("rate",rate);
+        request.setAttribute("usd",usd);
+        request.setAttribute("vnd",vnd);
+        RequestDispatcher requestDispatcher =request.getRequestDispatcher("converter.jsp");
         requestDispatcher.forward(request,response);
     }
 
