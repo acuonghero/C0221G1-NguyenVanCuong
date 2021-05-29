@@ -51,8 +51,8 @@ public class ProductServlet extends HttpServlet {
 
         Product product = new Product(id, productName, status, price ,model);
         iProductService.save(product);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("view/product/create.jsp");
-        request.setAttribute("message", "New product was created");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/create.jsp");
+        request.setAttribute("message", "San pham moi da duoc tao");
         try {
             dispatcher.forward(request, response);
         } catch (ServletException e) {
@@ -87,7 +87,7 @@ public class ProductServlet extends HttpServlet {
         Product product = iProductService.findById(id);
         RequestDispatcher dispatcher;
         if(product == null){
-            dispatcher = request.getRequestDispatcher("error-404.jsp");
+            dispatcher = request.getRequestDispatcher("view/error-404.jsp");
         } else {
             this.iProductService.remove(id);
             try {
