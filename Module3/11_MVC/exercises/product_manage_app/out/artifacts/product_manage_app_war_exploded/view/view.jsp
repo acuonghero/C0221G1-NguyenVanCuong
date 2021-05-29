@@ -14,19 +14,19 @@
         <td>${products.getId()}</td>
     </tr>
     <tr>
-        <td>Name: </td>
+        <td>Product name: </td>
         <td>${products.getProductName()}</td>
     </tr>
     <tr>
-        <td>Price: </td>
+        <td>Status: </td>
         <td>${products.getStatus()}</td>
     </tr>
     <tr>
-        <td>Describe: </td>
+        <td>Price: </td>
         <td>${products.getPrice()}</td>
     </tr>
     <tr>
-        <td>Producer: </td>
+        <td>Model: </td>
         <td>${products.getModel()}</td>
     </tr>
 </table>

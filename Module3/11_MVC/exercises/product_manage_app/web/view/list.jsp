@@ -5,6 +5,7 @@
   <title>Product List</title>
 </head>
 <body>
+
 <h1>Products</h1>
 <p>
   <a href="/products?action=create">Create new product</a>
@@ -16,10 +17,12 @@
     <td>Status</td>
     <td>Price</td>
     <td>Model</td>
+    <td>Edit</td>
+    <td>Delete</td>
   </tr>
   <c:forEach items='${products}' var="product">
     <tr>
-      <td><a href="/customers?action=view&id=${product.getId()}">${product.getId()}</a></td>
+      <td><a href="/products?action=view&id=${product.getId()}">${product.getId()}</a></td>
       <td>${product.getProductName()}</td>
       <td>${product.getStatus()}</td>
       <td>${product.getPrice()}</td>
@@ -29,5 +32,11 @@
     </tr>
   </c:forEach>
 </table>
+<br>
+<form action="/products?action=search" method="post">
+  <input type="text" name="name" placeholder="product name">
+  <input type="submit" value="Search">
+</form>
+
 </body>
 </html>

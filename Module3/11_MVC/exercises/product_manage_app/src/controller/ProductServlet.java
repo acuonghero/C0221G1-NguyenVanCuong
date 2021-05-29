@@ -15,16 +15,17 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "ProductServlet",urlPatterns = {"","/products"})
+@WebServlet(name = "ProductServlet", urlPatterns = {"", "/products"})
 public class ProductServlet extends HttpServlet {
     // tạo đối tượng để tương tác với repónitỏy
-        IProductService iProductService = new ProductServiceImpl();
+    IProductService iProductService = new ProductServiceImpl();
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        if(action == null){
+        if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             case "create":
                 createProduct(request, response);
                 break;
@@ -35,11 +36,12 @@ public class ProductServlet extends HttpServlet {
                 deleteProduct(request, response);
                 break;
             case "search":
-                searchProduct(request,response);
+                searchProduct(request, response);
             default:
                 break;
         }
     }
+
     private void createProduct(HttpServletRequest request, HttpServletResponse response) {
         int size = iProductService.getMapSize();
         int id = size + 1;
@@ -49,7 +51,7 @@ public class ProductServlet extends HttpServlet {
         String model = request.getParameter("model");
 
 
-        Product product = new Product(id, productName, status, price ,model);
+        Product product = new Product(id, productName, status, price, model);
         iProductService.save(product);
         RequestDispatcher dispatcher = request.getRequestDispatcher("view/create.jsp");
         request.setAttribute("message", "San pham moi da duoc tao");
@@ -64,17 +66,18 @@ public class ProductServlet extends HttpServlet {
 
 
     private void searchProduct(HttpServletRequest request, HttpServletResponse response) {
-        String name = request.getParameter("productName");
-        List<Product> productList = this.iProductService.findAll();
+        String name = request.getParameter("name");
+        List<Product> productList = iProductService.findAll();
         List<Product> products = new ArrayList<>();
-        for (Product product : productList){
-            if (product.getProductName().contains(name)){
+
+        for (Product product : productList) {
+            if (product.getProductName().contains(name)) {
                 products.add(product);
             }
         }
-        request.setAttribute("products",products);
+        request.setAttribute("products", products);
         try {
-            request.getRequestDispatcher("view/list.jsp").forward(request,response);
+            request.getRequestDispatcher("view/list.jsp").forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -82,11 +85,12 @@ public class ProductServlet extends HttpServlet {
         }
     }
 
+
     private void deleteProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = iProductService.findById(id);
         RequestDispatcher dispatcher;
-        if(product == null){
+        if (product == null) {
             dispatcher = request.getRequestDispatcher("view/error-404.jsp");
         } else {
             this.iProductService.remove(id);
@@ -111,8 +115,8 @@ public class ProductServlet extends HttpServlet {
         product.setPrice(price);
         product.setModel(model);
         product.setStatus(status);
-        iProductService.update(id,product);
-        request.setAttribute("product",product);
+        iProductService.update(id, product);
+        request.setAttribute("product", product);
         request.setAttribute("message", "San pham da duoc cap nhat");
         dispatcher = request.getRequestDispatcher("view/edit.jsp");
 
@@ -127,10 +131,10 @@ public class ProductServlet extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         String action = request.getParameter("action");
-        if(action == null){
+        if (action == null) {
             action = "";
         }
-        switch (action){
+        switch (action) {
             case "create":
                 showCreateForm(request, response);
                 break;
@@ -141,7 +145,7 @@ public class ProductServlet extends HttpServlet {
                 showDeleteForm(request, response);
                 break;
             case "view":
-                viewProduct(request,response);
+                viewProduct(request, response);
             default:
                 listProducts(request, response);
                 break;
@@ -165,9 +169,9 @@ public class ProductServlet extends HttpServlet {
     private void viewProduct(HttpServletRequest request, HttpServletResponse response) {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = iProductService.findById(id);
-        request.setAttribute("products",product);
+        request.setAttribute("products", product);
         try {
-            request.getRequestDispatcher("view/view.jsp").forward(request,response);
+            request.getRequestDispatcher("view/view.jsp").forward(request, response);
         } catch (ServletException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -179,7 +183,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = iProductService.findById(id);
         RequestDispatcher dispatcher;
-        if(product == null){
+        if (product == null) {
             dispatcher = request.getRequestDispatcher("view/error-404.jsp");
         } else {
             request.setAttribute("product", product);
@@ -198,7 +202,7 @@ public class ProductServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("id"));
         Product product = iProductService.findById(id);
         RequestDispatcher dispatcher;
-        if(product == null){
+        if (product == null) {
             dispatcher = request.getRequestDispatcher("view/error-404.jsp");
         } else {
             request.setAttribute("product", product);

@@ -5,14 +5,14 @@
     <title>Deleting product</title>
 </head>
 <body>
-<h1>Delete customer</h1>
+<h1>Delete product</h1>
 <p>
     <a href="/products">Back to product list</a>
 </p>
 <form method="post">
-<%--    <h3>Are you sure?</h3>--%>
+    <h3>Are you sure?</h3>
     <fieldset>
-        <legend>Customer information</legend>
+        <legend>Product information</legend>
         <table>
             <tr>
                 <td>Product Name:</td>
@@ -27,10 +27,15 @@
                 <td>${product.price}</td>
             </tr>
             <tr>
+                <td>Model:</td>
+                <td>${product.model}</td>
+            </tr>
+            <tr>
                 <td><input type="submit" value="Delete product"></td>
-                <td><a href="/products">Back to product list</a></td>
             </tr>
         </table>
+        <br>
+        <td><a href="/products">Back to product list</a></td>
     </fieldset>
 </form>
 </body>
