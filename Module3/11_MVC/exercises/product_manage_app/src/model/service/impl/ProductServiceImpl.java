@@ -2,6 +2,7 @@ package model.service.impl;
 
 import model.bean.Product;
 import model.repository.ProductRepository;
+import model.service.IProductService;
 
 import java.util.List;
 

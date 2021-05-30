@@ -1,4 +1,4 @@
-package model.service.impl;
+package model.service;
 
 import model.bean.Product;
 

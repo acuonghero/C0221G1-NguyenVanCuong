@@ -2,7 +2,7 @@ package controller;
 
 
 import model.bean.Product;
-import model.service.impl.IProductService;
+import model.service.IProductService;
 import model.service.impl.ProductServiceImpl;
 
 import javax.servlet.RequestDispatcher;

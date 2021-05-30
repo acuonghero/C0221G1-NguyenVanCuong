@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Title</title>
+    <link rel="stylesheet" href="../bootstrap_4/bootstrap.min.css">
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            top: 0;
+            height: 80px;
+        }
+        main .body div div:nth-child(1) {
+            min-height: 455px;
+        }
+
+        footer .container-fluid div {
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header container-fluid">
+        <div class="row">
+            <div class="col header d-flex bg-info justify-content-between">
+                <div class="ml-4 d-flex align-items-center">Logo</div>
+                <div class="mr-4 d-flex align-items-center">account</div>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-12 pl-0 pr-0">
+                <nav class="navbar navbar-expand-sm navbar-light bg-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarTogglerDemo03"
+                            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+                        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Employee</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Customer</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Service</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Contract</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <form>
+                            <div class="d-flex align-items-end position-relative">
+                                <!--end of col-->
+                                <div>
+                                    <input class="form-control form-control-sm form-control-borderless pl-4"
+                                           type="search"
+                                           placeholder="Search">
+                                </div>
+                                <div class="position-absolute" style="left:5px; bottom: 3px">
+                                   <a href="#"><i class="fa fa-search"></i></a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <div class="body container-fluid bg-primary">
+        <div class="row">
+            <div class="col-12 bg-primary col-md-3 col-lg-3">
+                <div>sfe</div>
+            </div>
+            <div class="col-12 col-md-9 col-lg-9 bg-info">
+                <div>eat</div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container-fluid">
+        <div class="row footer bg-danger">
+            <div class="col-lg-12">Footer</div>
+        </div>
+    </div>
+</footer>
+
+<script src="../bootstrap_4/jquery-3.6.0.min.js"></script>
+<script src="../bootstrap_4/bootstrap.min.js"></script>
+</body>
+</html>
