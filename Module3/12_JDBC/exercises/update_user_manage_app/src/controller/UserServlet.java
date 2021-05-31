@@ -49,7 +49,7 @@ public class UserServlet extends HttpServlet {
     private void searchUser(HttpServletRequest request, HttpServletResponse response) {
             String country = request.getParameter("timKiem");
             List<User> list = userDAO.findByCountry(country);
-            request.setAttribute("list", list);
+            request.setAttribute("listUser", list);
             RequestDispatcher dispatcher = request.getRequestDispatcher("view/list.jsp");
             try {
                 dispatcher.forward(request, response);
