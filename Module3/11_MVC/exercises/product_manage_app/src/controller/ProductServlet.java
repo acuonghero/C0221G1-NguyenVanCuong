@@ -2,8 +2,8 @@ package controller;
 
 
 import model.bean.Product;
-import model.service.IProductService;
 import model.service.impl.ProductServiceImpl;
+import model.service.itf.IProductService;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;

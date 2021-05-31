@@ -1,4 +1,4 @@
-package model.service;
+package model.service.itf;
 
 import model.bean.Product;
 
