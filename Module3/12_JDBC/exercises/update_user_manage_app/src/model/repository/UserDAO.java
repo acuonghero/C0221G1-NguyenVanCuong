@@ -175,8 +175,8 @@ public class UserDAO implements IUserDAO {
                 int id = rs.getInt("id");
                 String name = rs.getString("name");
                 String email = rs.getString("email");
-                String country = rs.getString("country");
-                users.add(new User(id, name, email, country));
+                String country1 = rs.getString("country");
+                users.add(new User(id, name, email, country1));
             }
 
 
