@@ -4,6 +4,15 @@
 <html>
 <head>
     <title>User Management Application</title>
+    <style>
+        .form{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 50px;
+            background: bisque;
+        }
+    </style>
 </head>
 <body>
 <center>
@@ -36,11 +45,14 @@
         </c:forEach>
     </table>
 </div>
+<div class="form">
     <a href="/user?action=sort">Sort By Name</a>
-<form action="/user?action=search" method="post">
-    <input type="text" name="timKiem">
-    <br>
-    <button>search</button>
-</form>
+    <form action="/user?action=search" method="post">
+        <input type="text" name="timKiem">
+        <br>
+        <button>search</button>
+    </form>
+</div>
+
 </body>
 </html>

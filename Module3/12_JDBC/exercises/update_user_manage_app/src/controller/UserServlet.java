@@ -1,7 +1,7 @@
 package controller;
 
 import model.bean.User;
-import model.repository.UserDAO;
+import model.service.impl.UserServiceImpl;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -10,18 +10,16 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
-import java.sql.Connection;
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet(name = "UserServlet",urlPatterns = {"","/user"})
+@WebServlet(name = "UserServlet",urlPatterns = {"","/users"})
 public class UserServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
-    private UserDAO userDAO;
+    private UserServiceImpl userDAO;
 
     public void init() {
-        userDAO = new UserDAO();
+        userDAO = new UserServiceImpl();
     }
 
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
@@ -147,7 +145,7 @@ public class UserServlet extends HttpServlet {
 
         User book = new User(id, name, email, country);
         userDAO.updateUser(book);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/edit.jsp");
+        RequestDispatcher dispatcher = request.getRequestDispatcher("view/edit.jsp");
         dispatcher.forward(request, response);
     }
 
