@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="encapsulation_library_java:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/encapsulation_library_java_jar</output-path>
+    <root id="archive" name="encapsulation_library_java.jar">
+      <element id="module-output" name="encapsulation_library_java" />
+    </root>
+  </artifact>
+</component>
