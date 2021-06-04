@@ -13,7 +13,6 @@
     <title>List</title>
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
 
-
     <style>
         table{
             border-radius: 7px;
@@ -45,44 +44,46 @@
                 <td>${customer.getCustomerAddress()}</td>
                 <td>
                     <a href="/customer?action=edit&id=${customer.getCustomerId()}" class="btn btn-primary btn-sm">Edit</a>
-               <button type="button" class="btn btn-primary" onclick="sendDataToModal('${customer.getCustomerId()}','${customer.getCustomerName()}')" data-toggle="modal" data-target="#exampleModalLong">
-                    Delete
-                </button>
+                    <button type="button" onclick="sendData('${customer.customerId}','${customer.customerName}')" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#delete">
+                        Delete
+                    </button>
                 </td>
             </tr>
         </c:forEach>
         </tbody>
     </table>
-    <div class="modal" id="myModal">
-        <div class="modal-dialog">
-            <div class="modal-content">
-
-                <!-- Modal Header -->
+</div>
+<%--modal--%>
+<div class="modal fade" id="delete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <form action="/customer" method="post">
                 <div class="modal-header">
-                    <h4 class="modal-title">Modal Heading</h4>
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
-
-                <!-- Modal body -->
                 <div class="modal-body">
-                    Modal body..
+                   Bạn có muốn xóa khách hàng có tên : <span id="customerName"></span>
                 </div>
-
-                <!-- Modal footer -->
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Ok</button>
+                    <input type="hidden" id="customerId" name="idDelete">
                 </div>
-            </div>
+            </form>
         </div>
     </div>
 </div>
 <script>
-    function sendDataToModal(id, name) {
-        document.getElementById("idStudent").value=id;
-        document.getElementById("nameStudent").innerText=name
+    function sendData(id, name) {
+        document.getElementById("customerId").value=id;
+        document.getElementById("customerName").innerText=name;
     }
 </script>
-<script src="../../bootstrap/bootstrap.min.js"></script>
 <script src="../../bootstrap/jquery-3.6.0.min.js"></script>
+<script src="../../bootstrap/popper.min.js"></script>
+<script src="../../bootstrap/bootstrap.min.js"></script>
 </body>
 </html>

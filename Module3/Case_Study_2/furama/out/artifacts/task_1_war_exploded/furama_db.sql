@@ -110,20 +110,21 @@ select * from customer_type;
  customer_id int auto_increment primary key,
  customer_type_id int,
  customer_name varchar(45) ,
- customer_date_of_birth date,
+ customer_day_of_birth varchar(45),
+ customer_gender varchar(45),
  customer_identity_card varchar(45),
  customer_phone_number varchar(45),
  customer_email varchar(45),
  customer_address varchar(45),
  foreign key (customer_type_id) references Customer_type(customer_type_id)
  );
-insert into customer (customer_type_id,customer_name,customer_date_of_birth,customer_identity_card,customer_phone_number,customer_email,customer_address)
-values (1,"Nguyen Cuong","1997/09/18",222999887,0988333222,"nguyencuong@gmail.com","Quang Binh"),
-(2,"Phan Khanh","1990/07/18",234876345,0222123854,"phankhanh@gmail.com","Da nang"),
-(3,"Huynh Tan","1995/06/18",123098324,0333867534,"huynhtan@gmail.com","Hue"),
-(4,"Tran Yen","1999/09/18",325654345,0575424234,"tranyen@gmail.com","Hoi An"),
-(5,"Trinh Cong Son","1997/07/18",754253564,0122354642,"trinhson@gmail.com","Vinh"),
-(4,"Nguyen Thang","1989/06/18",856345236,0333456234,"nguyenthang@gmail.com","Quang Binh");
+insert into customer (customer_type_id,customer_name,customer_day_of_birth,customer_gender,customer_identity_card,customer_phone_number,customer_email,customer_address)
+values (1,"Nguyen Cuong","1997/09/18","male",222999887,0988333222,"nguyencuong@gmail.com","Quang Binh"),
+(2,"Phan Khanh","1990/07/18","male",234876345,0222123854,"phankhanh@gmail.com","Da nang"),
+(3,"Huynh Tan","1995/06/18","male",123098324,0333867534,"huynhtan@gmail.com","Hue"),
+(4,"Tran Yen","1999/09/18","female",325654345,0575424234,"tranyen@gmail.com","Hoi An"),
+(5,"Trinh Cong Son","1997/07/18","male",754253564,0122354642,"trinhson@gmail.com","Vinh"),
+(4,"Nguyen Thang","1989/06/18","male",856345236,0333456234,"nguyenthang@gmail.com","Quang Binh");
  
  
  -- bảng kiểu cho thuê 

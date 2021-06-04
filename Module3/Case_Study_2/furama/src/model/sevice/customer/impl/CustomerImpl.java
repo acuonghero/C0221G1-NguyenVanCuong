@@ -1,23 +1,18 @@
 package model.sevice.customer.impl;
 
 import model.bean.Customer;
-import model.repository.UserRepository;
+import model.repository.CustomerRepository;
 import model.sevice.customer.ICustomer;
-
-import java.sql.SQLException;
 import java.util.List;
 
 public class CustomerImpl implements ICustomer {
-    UserRepository userRepository = new UserRepository();
+    CustomerRepository customerRepository = new CustomerRepository();
 
-//    @Override
-//    public void insertCustomer(Customer customer) throws SQLException {
-//        userRepository.insertCustomer(customer);
-//    }
+
 
     @Override
-    public void insertCustomer(Customer customer) throws SQLException {
-
+    public void insertCustomer(Customer customer) {
+         customerRepository.insertCustomer(customer);
     }
 
     @Override
@@ -25,28 +20,20 @@ public class CustomerImpl implements ICustomer {
         return null;
     }
 
-    //    @Override
-//    public Customer selectCustomer(int id) {
-//        return userRepository.selectCustomer(id);
-//    }
-//
+
     @Override
     public List<Customer> selectAllCustomer() {
-        return userRepository.selectAllCustomer();
+        return customerRepository.selectAllCustomer();
     }
 
     @Override
-    public boolean deleteCustomer(int id) throws SQLException {
-        return false;
+    public boolean deleteCustomer(int id) {
+        return customerRepository.deleteCustomer(id);
     }
 
-    @Override
-    public boolean updateUser(Customer customer) throws SQLException {
-        return false;
-    }
 
     @Override
-    public List<Customer> sortAllCustomer() throws SQLException {
+    public List<Customer> sortAllCustomer(){
         return null;
     }
 
@@ -54,24 +41,16 @@ public class CustomerImpl implements ICustomer {
     public List<Customer> findByName(String name) {
         return null;
     }
-//
-//    @Override
-//    public boolean deleteCustomer(int id) throws SQLException {
-//        return userRepository.deleteCustomer(id);
-//    }
-//
-//    @Override
-//    public boolean updateUser(Customer customer) throws SQLException {
-//        return userRepository.updateUser(customer);
-//    }
 
-//    @Override
-//    public List<Customer> sortAllCustomer() throws SQLException {
-//        return userRepository.sortAllCustomer();
-//    }
-//
-//    @Override
-//    public List<Customer> findByName(String name) {
-//        return userRepository.findByName(name);
-//    }
+    @Override
+    public Customer selectById(int id) {
+        return customerRepository.selectById(id);
+    }
+
+    @Override
+    public void updateCustomer(int id,Customer customer) {
+        customerRepository.updateCustomer(id,customer);
+    }
+
+
 }

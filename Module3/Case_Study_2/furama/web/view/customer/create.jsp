@@ -26,22 +26,30 @@
                 <fieldset>
 
                     <!-- Form Name -->
-                    <center><legend>Create customer</legend></center>
+                    <center>
+                        <legend>Create customer</legend>
+                    </center>
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="client-name">Type id</label>
+                        <label class="col-md-4 control-label">Type id</label>
                         <div class="col-md-4">
-                            <input id="client-name" name="client-name" type="text" placeholder="your client's type id" class="form-control input-md">
-                            <!--                            <span class="help-block">Full name of your customer</span>-->
+                            <select name="customer-type-id">
+                                <option value="1">Diamond</option>
+                                <option value="2">Platinium</option>
+                                <option value="3">Gold</option>
+                                <option value="4">Silver</option>
+                                <option value="5">Member</option>
+                            </select>
                         </div>
                     </div>
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="client-name">Name</label>
+                        <label class="col-md-4 control-label">Name</label>
                         <div class="col-md-4">
-                            <input id="client-name6" name="client-name" type="text" placeholder="your client's name" class="form-control input-md">
+                            <input id="client-name6" name="client-name" type="text" placeholder="your client's name"
+                                   class="form-control input-md">
                             <span class="help-block">Full name of your customer</span>
                         </div>
                     </div>
@@ -52,7 +60,8 @@
                         <div class="col-md-4">
                             <div class="input-group">
                                 <span class="input-group-addon">@</span>
-                                <input id="client-email" name="client-email" class="form-control" placeholder="yourname@yourdomain.com" type="text">
+                                <input id="client-email" name="client-email" class="form-control"
+                                       placeholder="yourname@yourdomain.com" type="text">
                             </div>
                             <p class="help-block">Email of your client</p>
                         </div>
@@ -60,45 +69,49 @@
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="client-name">Date of birth</label>
+                        <label class="col-md-4 control-label">Day of birth</label>
                         <div class="col-md-4">
-                            <input id="client-name1" name="client-name" type="text" placeholder="your client's date of birth" class="form-control input-md">
+                            <input id="client-name1" name="client-day-of-birth" type="text" placeholder="yyyy/mm/dd"
+                                   class="form-control input-md">
                             <span class="help-block">Full birthday of your customer</span>
                         </div>
                     </div>
 
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="client-name">Gender</label>
+                        <label class="col-md-4 control-label">Gender</label>
                         <div class="col-md-4">
-                            <select name="gender">
-                                <option value="">Male</option>
-                                <option value="">Female</option>
-                                <option value="">Other</option>
+                            <select name="client-gender">
+                                <option value="male">Male</option>
+                                <option value="female">Female</option>
+                                <option value="other">Other</option>
                             </select>
                         </div>
                     </div>
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="client-name">Identity card</label>
+                        <label class="col-md-4 control-label">Identity card</label>
                         <div class="col-md-4">
-                            <input id="client-name2" name="client-name" type="text" placeholder="your client's identity card" class="form-control input-md">
+                            <input id="client-name2" name="client-identity-card" type="text"
+                                   placeholder="your client's identity card" class="form-control input-md">
                             <span class="help-block">Full identity card</span>
                         </div>
                     </div>
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="client-name">Phone number</label>
+                        <label class="col-md-4 control-label">Phone number</label>
                         <div class="col-md-4">
-                            <input id="client-name3" name="client-name" type="text" placeholder="your client's phone number" class="form-control input-md">
+                            <input id="client-name3" name="client-phone-number" type="text"
+                                   placeholder="your client's phone number" class="form-control input-md">
                             <span class="help-block">Number only</span>
                         </div>
                     </div>
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label" for="client-name">Address</label>
+                        <label class="col-md-4 control-label">Address</label>
                         <div class="col-md-4">
-                            <input id="client-name4" name="client-name" type="text" placeholder="your client's address" class="form-control input-md">
+                            <input id="client-name4" name="client-address" type="text"
+                                   placeholder="your client's address" class="form-control input-md">
                             <span class="help-block">Input province only</span>
                         </div>
                     </div>
@@ -107,9 +120,18 @@
                         <label class="col-md-4 control-label" for="btn-save"></label>
                         <div class="col-md-4">
                             <button id="btn-save" name="btn-save" class="btn btn-success">Create</button>
+
                         </div>
                     </div>
                 </fieldset>
+            </form>
+            <form action="/customer" class="form-horizontal">
+                <div class="form-group">
+                    <label class="col-md-4 control-label" for="btn-save"></label>
+                    <div class=" col-md-4">
+                        <button class="btn btn-sm btn-primary">Back to list</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

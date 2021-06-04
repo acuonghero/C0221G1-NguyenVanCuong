@@ -5,6 +5,7 @@ public class Customer {
     private int customerTypeId;
     private String customerName;
     private String customerDayOfBirth;
+    private String customerGender;
     private String customerIdentityCard;
     private String customerPhoneNumber;
     private String customerEmail;
@@ -13,19 +14,38 @@ public class Customer {
     public Customer() {
     }
 
-    public Customer(int customerTypeId, String customerName, String customerDayOfBirth, String customerIdentityCard, String customerPhoneNumber, String customerEmail, String customerAddress) {
+    public Customer(int customerTypeId, String customerName, String customerDayOfBirth,String customerGender ,String customerIdentityCard, String customerPhoneNumber, String customerEmail, String customerAddress) {
         this.customerTypeId = customerTypeId;
         this.customerName = customerName;
         this.customerDayOfBirth = customerDayOfBirth;
+        this.customerGender = customerGender;
         this.customerIdentityCard = customerIdentityCard;
         this.customerPhoneNumber = customerPhoneNumber;
         this.customerEmail = customerEmail;
         this.customerAddress = customerAddress;
     }
 
-    public Customer(int customerId, int customerTypeId, String customerName, String customerDayOfBirth, String customerIdentityCard, String customerPhoneNumber, String customerEmail, String customerAddress) {
+    public Customer(int customerId, int customerTypeId, String customerName, String customerPhoneNumber, String customerAddress) {
         this.customerId = customerId;
         this.customerTypeId = customerTypeId;
+        this.customerName = customerName;
+        this.customerPhoneNumber = customerPhoneNumber;
+        this.customerAddress = customerAddress;
+    }
+
+    public Customer(int customerId, int customerTypeId, String customerName, String customerDayOfBirth, String customerGender, String customerIdentityCard, String customerPhoneNumber, String customerEmail, String customerAddress) {
+        this.customerId = customerId;
+        this.customerTypeId = customerTypeId;
+        this.customerName = customerName;
+        this.customerDayOfBirth = customerDayOfBirth;
+        this.customerGender = customerGender;
+        this.customerIdentityCard = customerIdentityCard;
+        this.customerPhoneNumber = customerPhoneNumber;
+        this.customerEmail = customerEmail;
+        this.customerAddress = customerAddress;
+    }
+
+    public Customer(String customerName, String customerDayOfBirth, String customerIdentityCard, String customerPhoneNumber, String customerEmail, String customerAddress) {
         this.customerName = customerName;
         this.customerDayOfBirth = customerDayOfBirth;
         this.customerIdentityCard = customerIdentityCard;
@@ -97,4 +117,13 @@ public class Customer {
     public void setCustomerAddress(String customerAddress) {
         this.customerAddress = customerAddress;
     }
+
+    public String getCustomerGender() {
+        return customerGender;
+    }
+
+    public void setCustomerGender(String customerGender) {
+        this.customerGender = customerGender;
+    }
+
 }

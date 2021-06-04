@@ -14,9 +14,13 @@ public interface ICustomer {
 
     public boolean deleteCustomer(int id) throws SQLException;
 
-    public boolean updateUser(Customer customer) throws SQLException;
+//    public boolean updateCustomer(int id,Customer customer) throws SQLException;
 
     public List<Customer> sortAllCustomer() throws SQLException;
 
     public List<Customer> findByName(String name);
+
+    public Customer selectById(int id);
+
+    void updateCustomer(int id,Customer customer);
 }

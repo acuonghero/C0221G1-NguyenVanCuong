@@ -26,7 +26,6 @@ public class UserRepository {
     BaseRepository baseRepository = new BaseRepository();
     public void insertUser(User user) throws SQLException {
         System.out.println(INSERT_USERS_SQL);
-        // try-with-resource statement will auto close the connection.
         try (Connection connection = baseRepository.getConnection();
              PreparedStatement preparedStatement = connection.prepareStatement(INSERT_USERS_SQL)) {
             preparedStatement.setString(1, user.getName());
@@ -92,7 +91,8 @@ public class UserRepository {
 
     public boolean deleteUser(int id) throws SQLException {
         boolean rowDeleted;
-        try (Connection connection = baseRepository.getConnection(); PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
+        try (Connection connection = baseRepository.getConnection();
+             PreparedStatement statement = connection.prepareStatement(DELETE_USERS_SQL);) {
             statement.setInt(1, id);
             rowDeleted = statement.executeUpdate() > 0;
         }

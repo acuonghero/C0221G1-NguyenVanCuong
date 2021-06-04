@@ -5,19 +5,25 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class BaseRepository {
-    private String jdbcURL = "jdbc:mysql://localhost:3306/furama_db?useSSL=false";
-    private String jdbcUsername = "root";
-    private String jdbcPassword = "12345678";
     protected Connection getConnection() {
+        // Khai báo URL (port mysql://localhost:3306 + tên database: manager_students(thay đổi)
+        final String URL = "jdbc:mysql://localhost:3306/furama_db?useSSL=false";
+        // khai báo user: root (mặt định của mysql)
+        final String USER = "root";
+        // khai báo password (lúc bạn cài đặt mysql server)
+        final String PASSWORD = "12345678";
         Connection connection = null;
         try {
-            Class.forName("com.mysql.jdbc.Driver");
-            connection = DriverManager.getConnection(jdbcURL, jdbcUsername, jdbcPassword);
-        } catch (SQLException e) {
-            // TODO Auto-generated catch block
-            e.printStackTrace();
+            // Khai báo Driver của mysql: không đổi
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            try {
+                // tạo 1 kết nối
+                connection = DriverManager.getConnection(URL, USER, PASSWORD);
+                return connection;
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
         } catch (ClassNotFoundException e) {
-            // TODO Auto-generated catch block
             e.printStackTrace();
         }
         return connection;
