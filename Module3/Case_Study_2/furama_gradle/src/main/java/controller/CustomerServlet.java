@@ -51,10 +51,9 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void deleteCustomer(HttpServletRequest request, HttpServletResponse response) {
-        boolean check = false;
         int id = Integer.parseInt(request.getParameter("idDelete"));
         System.out.println("id cura ewfe" + id);
-        check = customer.deleteCustomer(id);
+         customer.deleteCustomer(id);
         try {
             response.sendRedirect("/customer");
         } catch (IOException e) {

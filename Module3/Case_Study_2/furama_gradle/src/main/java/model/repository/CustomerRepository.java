@@ -89,6 +89,7 @@ public class CustomerRepository {
             preparedStatement.setInt(1, id);
             ResultSet rs = preparedStatement.executeQuery();
 
+
             while (rs.next()) {
                 int customerId = rs.getInt("customer_id");
                 int customerTypeId = rs.getInt("customer_type_id");
@@ -100,6 +101,7 @@ public class CustomerRepository {
                 String customerEmail = rs.getString("customer_Email");
                 String customerAddress = rs.getString("customer_Address");
                 customer = new Customer(customerId, customerTypeId, customerName, customerDayOfBirth, customerGender, customerIdentityCard, customerPhoneNumber, customerEmail, customerAddress);
+
             }
         } catch (SQLException e) {
             e.printStackTrace();
