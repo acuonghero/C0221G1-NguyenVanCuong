@@ -40,4 +40,14 @@ public class EmployeeImpl implements IEmployee {
     public void deleteEmployee(int id) {
         employeeRepository.deleteEmployee(id);
     }
+
+    @Override
+    public Employee findEmployee(int id) {
+        return employeeRepository.findEmployee(id);
+    }
+
+    @Override
+    public void updateEmployee(int id, Employee employee) {
+        employeeRepository.updateEmployee(id,employee);
+    }
 }

@@ -14,4 +14,6 @@ public interface IEmployee {
     List<Employee> selectAllEmployee();
     void insertEmployee(Employee employee);
     void deleteEmployee(int id);
+    Employee findEmployee(int id);
+    void updateEmployee(int id,Employee employee);
 }

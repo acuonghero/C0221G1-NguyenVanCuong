@@ -37,8 +37,33 @@ public class employeeServlet extends HttpServlet {
                 case "create":
                     insertEmployee(request, response);
                     break;
+                case "edit":
+                    updateEmployee(request, response);
+                    break;
             }
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void updateEmployee(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        String name = request.getParameter("name");
+        String birthday = request.getParameter("birthday");
+        String idCard = request.getParameter("id-card");
+        String salary = request.getParameter("salary");
+        String phone = request.getParameter("phone-number");
+        String email = request.getParameter("email");
+        String address = request.getParameter("address");
+        int position = Integer.parseInt(request.getParameter("position"));
+        int educationDegree = Integer.parseInt(request.getParameter("educationDegree"));
+        int division = Integer.parseInt(request.getParameter("division"));
+        String username = request.getParameter("username");
+        Employee employees = new Employee(name,birthday,idCard,salary,phone,email,address,position,educationDegree,division,username);
+        employee.updateEmployee(id,employees);
+        try {
+            response.sendRedirect("/employee");
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
@@ -76,7 +101,7 @@ public class employeeServlet extends HttpServlet {
         }
     }
 
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+    protected void doGet(HttpServletRequest request, HttpServletResponse response) {
         String action = request.getParameter("action");
         System.out.println("doget =" + action);
         if (action == null) {
@@ -87,12 +112,34 @@ public class employeeServlet extends HttpServlet {
                 case "create":
                     showCreateForm(request, response);
                     break;
-
+                case "edit":
+                    showEditForm(request, response);
+                    break;
                 default:
                     showEmployeeList(request,response);
                     break;
             }
         } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void showEditForm(HttpServletRequest request, HttpServletResponse response) {
+        int id = Integer.parseInt(request.getParameter("id"));
+        List<Position> positionList = employee.selectPosition();
+        request.setAttribute("positions", positionList);
+        List<EducationDegree> educationDegreeList = employee.selectEducation();
+        request.setAttribute("educations", educationDegreeList);
+        List<Division> divisionList = employee.selectDivision();
+        request.setAttribute("divisions", divisionList);
+        Employee employees = employee.findEmployee(id);
+        request.setAttribute("employee",employees);
+        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/employee/update.jsp");
+        try {
+            dispatcher.forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
             e.printStackTrace();
         }
     }
