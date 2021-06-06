@@ -63,9 +63,6 @@
             border: solid 1px white;
         }
 
-        /*main .head{*/
-        /*    border: solid 1px;*/
-        /*}*/
 
         main .content{
             border: solid 1px;
@@ -100,19 +97,19 @@
                     <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                         <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Home<span class="sr-only">(current)</span></a>
+                                <a class="nav-link" href="/home">Home<span class="sr-only">(current)</span></a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Employee</a>
+                                <a class="nav-link" href="/employee">Employee</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="/customer">Customer</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Service</a>
+                                <a class="nav-link" href="/service">Service</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="#">Contract</a>
+                                <a class="nav-link" href="/contract">Contract</a>
                             </li>
                         </ul>
                     </div>

@@ -52,18 +52,12 @@ public class CustomerServlet extends HttpServlet {
         int id = Integer.parseInt(request.getParameter("idDelete"));
         System.out.println("id cura ewfe" + id);
         customer.deleteCustomer(id);
-
-        List<Customer> customerList = customer.selectAllCustomer();
-
-        request.setAttribute("customer", customerList);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
         try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect("/customer");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     private void updateCustomer(HttpServletRequest request, HttpServletResponse response) {
@@ -99,14 +93,12 @@ public class CustomerServlet extends HttpServlet {
 
         Customer newCustomer = new Customer(customerTypeId, customerName, customerDayOfBirth, customerGender, customerIdentityCard, customerPhoneNumber, customerEmail, customerAddress);
         customer.insertCustomer(newCustomer);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/view/customer/list.jsp");
         try {
-            dispatcher.forward(request, response);
-        } catch (ServletException e) {
-            e.printStackTrace();
+            response.sendRedirect("/customer");
         } catch (IOException e) {
             e.printStackTrace();
         }
+
     }
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response) {
