@@ -25,4 +25,9 @@ public class ServiceImpl implements IService {
     public List<RentType> selectRentType() {
         return serviceRepository.selectRentType();
     }
+
+    @Override
+    public List<Service> selectAllService() {
+        return serviceRepository.selectAllService();
+    }
 }

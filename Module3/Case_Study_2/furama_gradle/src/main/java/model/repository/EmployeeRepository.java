@@ -201,4 +201,35 @@ public class EmployeeRepository {
             e.printStackTrace();
         }
     }
+
+    public List<Employee> SearchByName(String name) {
+        String query = "select * \n" +
+                "from employee\n" +
+                "where employee_name like ?;";
+        List<Employee> employeeList = new ArrayList<>();
+        try{
+            Connection connection = baseRepository.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1,"%"+name+"%");
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                int ids = rs.getInt("employee_id");
+                String names = rs.getString("employee_name");
+                String birthday = rs.getString("employee_birthday");
+                String idCard = rs.getString("employee_id_card");
+                String salary = rs.getString("employee_salary");
+                String phone = rs.getString("employee_phone");
+                String email = rs.getString("employee_email");
+                String address = rs.getString("employee_address");
+                int position = rs.getInt("position_id");
+                int educationDegree = rs.getInt("education_degree_id");
+                int division = rs.getInt("division_id");
+                String username = rs.getString("username");
+                employeeList.add(new Employee(ids, names, birthday, idCard, salary, phone, email, address, position, educationDegree, division, username));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return employeeList;
+    }
 }

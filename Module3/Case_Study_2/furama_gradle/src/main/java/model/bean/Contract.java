@@ -13,6 +13,10 @@ public class Contract {
     public Contract() {
     }
 
+    public Contract(int contractId) {
+        this.contractId = contractId;
+    }
+
     public Contract(String contractStartDate, String contractEndDate, double contractDeposit, double contractTotalMoney, int employeeId, int customerId, int serviceId) {
         this.contractStartDate = contractStartDate;
         this.contractEndDate = contractEndDate;

@@ -12,7 +12,7 @@
     <meta charset="UTF-8">
     <title>List</title>
     <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
-
+    <link rel="stylesheet" href="../../bootstrap/dataTables.bootstrap.min.css">
     <style>
         table{
             border-radius: 7px;
@@ -23,7 +23,12 @@
 <div class="container">
     <h1 class="text-center ">Employee list</h1>
     <a class="btn btn-primary btn-sm mb-2" href="/employee?action=create">Create new employee</a>
-    <table class="table list-group-item-info ">
+    <form action="/employee?action=search" method="post">
+        <h4>Search by name</h4>
+        <input type="text" class="col-sm-4 col-md-4" name="findName">
+        <button class="btn-primary">Search</button>
+    </form>
+    <table class="table list-group-item-info" id="tableEmployee">
         <thead>
         <tr>
             <th scope="col">Id</th>
@@ -83,7 +88,19 @@
     }
 </script>
 <script src="../../bootstrap/jquery-3.6.0.min.js"></script>
+<script src="../../bootstrap/jquery.dataTables.min.js"></script>
+<script src="../../bootstrap/dataTables.bootstrap4.min.js"></script>
 <script src="../../bootstrap/popper.min.js"></script>
 <script src="../../bootstrap/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $('#tableEmployee').dataTable({
+            "dom": 'lrtip',
+            "lengthChange": false,
+            "pageLength": 5,
+
+        });
+    });
+</script>
 </body>
 </html>

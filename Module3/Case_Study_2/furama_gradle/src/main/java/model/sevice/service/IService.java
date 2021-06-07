@@ -10,4 +10,5 @@ public interface IService {
     void insert(Service service);
     List<ServiceType> selectServiceType();
     List<RentType> selectRentType();
+    List<Service> selectAllService();
 }

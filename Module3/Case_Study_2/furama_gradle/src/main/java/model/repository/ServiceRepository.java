@@ -75,4 +75,22 @@ public class ServiceRepository {
         }
         return rentTypes;
     }
+
+    public List<Service> selectAllService() {
+        List<Service> serviceList = new ArrayList<>();
+        String query = "select * from service;";
+        try{
+            Connection connection = baseRepository.getConnection();
+            PreparedStatement preparedStatement = connection.prepareStatement(query);
+            ResultSet rs = preparedStatement.executeQuery();
+            while (rs.next()){
+                int id = rs.getInt("service_id");
+                String name = rs.getString("service_name");
+                serviceList.add(new Service(id,name));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return serviceList;
+    }
 }

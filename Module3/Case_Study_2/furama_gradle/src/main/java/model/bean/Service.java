@@ -16,6 +16,11 @@ public class Service {
     public Service() {
     }
 
+    public Service(int serviceId, String serviceName) {
+        this.serviceId = serviceId;
+        this.serviceName = serviceName;
+    }
+
     public Service(String serviceName, int serviceArea, double serviceCost, int serviceMaxPeople, int rentTypeId, int serviceTypeId, String standardRoom, String descriptionOtherConvenience, double poolArea, int numberOfFloors) {
         this.serviceName = serviceName;
         this.serviceArea = serviceArea;

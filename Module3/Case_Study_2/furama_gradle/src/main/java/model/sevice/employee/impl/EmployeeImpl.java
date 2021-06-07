@@ -50,4 +50,9 @@ public class EmployeeImpl implements IEmployee {
     public void updateEmployee(int id, Employee employee) {
         employeeRepository.updateEmployee(id,employee);
     }
+
+    @Override
+    public List<Employee> SearchByName(String name) {
+         return employeeRepository.SearchByName(name);
+    }
 }
