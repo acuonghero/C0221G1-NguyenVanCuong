@@ -84,19 +84,78 @@ public class CustomerServlet extends HttpServlet {
     }
 
     private void insertCustomer(HttpServletRequest request, HttpServletResponse response) {
-        int customerTypeId = Integer.parseInt(request.getParameter("customer-type-id"));
-        String customerName = request.getParameter("client-name");
-        String customerDayOfBirth = request.getParameter("client-day-of-birth");
-        String customerGender = request.getParameter("client-gender");
-        String customerIdentityCard = request.getParameter("client-identity-card");
-        String customerPhoneNumber = request.getParameter("client-phone-number");
-        String customerEmail = request.getParameter("client-email");
-        String customerAddress = request.getParameter("client-address");
-
-        Customer newCustomer = new Customer(customerTypeId, customerName, customerDayOfBirth, customerGender, customerIdentityCard, customerPhoneNumber, customerEmail, customerAddress);
-        customer.insertCustomer(newCustomer);
+//        int customerTypeId = Integer.parseInt(request.getParameter("customer-type-id"));
+////        String customerName = request.getParameter("client-name");
+////        String customerDayOfBirth = request.getParameter("client-day-of-birth");
+////        String customerGender = request.getParameter("client-gender");
+////        String customerIdentityCard = request.getParameter("client-identity-card");
+////        String customerPhoneNumber = request.getParameter("client-phone-number");
+////        String customerEmail = request.getParameter("client-email");
+////        String customerAddress = request.getParameter("client-address");
+////
+////        Customer newCustomer = new Customer(customerTypeId, customerName, customerDayOfBirth, customerGender, customerIdentityCard, customerPhoneNumber, customerEmail, customerAddress);
+////        customer.insertCustomer(newCustomer);
+////        try {
+////            response.sendRedirect("/customer");
+////        } catch (IOException e) {
+////            e.printStackTrace();
+////        }
+//        String customerCode = request.getParameter("code");
+//        if (customerCode == null){
+//            customerCode = "";
+//        }
+        String name = request.getParameter("client-name");
+        if (name == null){
+            name = "";
+        }
+        int typeCustomer = Integer.parseInt(request.getParameter("customer-type-id"));
+        String date = request.getParameter("client-day-of-birth");
+        if (date == null){
+            date = "";
+        }
+        String gender = request.getParameter("client-gender");
+        String email = request.getParameter("client-email");
+        if (email == null){
+            email = "";
+        }
+        String idCard = request.getParameter("client-identity-card");
+        if (idCard == null){
+            idCard = "";
+        }
+        String phone = request.getParameter("client-phone-number");
+        if (phone == null){
+            phone = "";
+        }
+        String address = request.getParameter("client-address");
+        if (address == null){
+            address = "";
+        }
+        Customer customers = new Customer(typeCustomer,name,date,gender,idCard,
+                phone,email,address);
+        try{
+            List<String> errList = customer.insertInto(customers);
+            int checkFull = 0;
+            boolean check = false;
+            for (String string : errList){
+                if (string.equals("")){
+                    checkFull++;
+                }
+            }
+            if (checkFull == 6){
+                check = true;
+            }
+            List<CustomerType> customerTypeList = customer.selectCustomerType();
+            request.setAttribute("customerType", customerTypeList);
+            for (int i = 0;i<errList.size();i++){
+                request.setAttribute("err"+(i+1),errList.get(i));
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         try {
-            response.sendRedirect("/customer");
+            request.getRequestDispatcher("/view/customer/create.jsp").forward(request,response);
+        } catch (ServletException e) {
+            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }

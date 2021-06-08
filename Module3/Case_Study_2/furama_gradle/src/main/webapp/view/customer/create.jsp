@@ -13,6 +13,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create</title>
+    <style>
+        small{
+            color: red;
+        }
+    </style>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="http://fontawesome.io/assets/font-awesome/css/font-awesome.css" rel="stylesheet" media="screen">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
@@ -58,6 +63,7 @@
                         <div class="col-md-4">
                             <input id="client-name6" name="client-name" type="text" placeholder="your client's name"
                                    class="form-control input-md">
+                            <small>${err1}</small>
                             <span class="help-block">Full name of your customer</span>
                         </div>
                     </div>
@@ -71,6 +77,7 @@
                                 <input id="client-email" name="client-email" class="form-control"
                                        placeholder="yourname@yourdomain.com" type="text">
                             </div>
+                            <small>${err3}</small>
                             <p class="help-block">Email of your client</p>
                         </div>
                     </div>
@@ -79,8 +86,9 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Day of birth</label>
                         <div class="col-md-4">
-                            <input id="client-name1" name="client-day-of-birth" type="text" placeholder="yyyy/mm/dd"
+                            <input id="client-name1" name="client-day-of-birth" type="date"
                                    class="form-control input-md">
+                            <small>${err2}</small>
                             <span class="help-block">Full birthday of your customer</span>
                         </div>
                     </div>
@@ -102,6 +110,7 @@
                         <div class="col-md-4">
                             <input id="client-name2" name="client-identity-card" type="text"
                                    placeholder="your client's identity card" class="form-control input-md">
+                            <small>${err4}</small>
                             <span class="help-block">Full identity card</span>
                         </div>
                     </div>
@@ -111,6 +120,7 @@
                         <div class="col-md-4">
                             <input id="client-name3" name="client-phone-number" type="text"
                                    placeholder="your client's phone number" class="form-control input-md">
+                            <small>${err5}</small>
                             <span class="help-block">Number only</span>
                         </div>
                     </div>
@@ -120,6 +130,7 @@
                         <div class="col-md-4">
                             <input id="client-name4" name="client-address" type="text"
                                    placeholder="your client's address" class="form-control input-md">
+                            <small>${err6}</small>
                             <span class="help-block">Input province only</span>
                         </div>
                     </div>

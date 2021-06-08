@@ -7,7 +7,6 @@ import java.sql.SQLException;
 import java.util.List;
 
 public interface ICustomer {
-    public void insertCustomer(Customer customer) throws SQLException;
 
     public Customer selectCustomer(int id);
 
@@ -26,4 +25,6 @@ public interface ICustomer {
     void updateCustomer(int id, Customer customer);
 
     List<CustomerType> selectCustomerType() throws SQLException;
+
+    List<String> insertInto(Customer customer);
 }

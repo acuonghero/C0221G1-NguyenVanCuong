@@ -25,7 +25,7 @@
                         <label class="col-md-4 control-label">Start Date</label>
                         <div class="col-md-4">
                             <div class="input-group">
-                            <input id="client-name" name="startDate" type="text" placeholder="yyyy/mm/dd" class="form-control input-md">
+                            <input id="client-name" name="startDate" type="date" class="form-control input-md">
                         </div>
                         </div>
                     </div>
@@ -35,7 +35,7 @@
                         <label class="col-md-4 control-label">End Date</label>
                         <div class="col-md-4">
                             <div class="input-group">
-                            <input name="endDate" type="text" placeholder="yyyy/mm/dd" class="form-control input-md">
+                            <input name="endDate" type="date" class="form-control input-md">
                         </div>
                         </div>
                     </div>
