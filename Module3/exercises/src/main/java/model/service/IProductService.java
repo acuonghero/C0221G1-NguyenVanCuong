@@ -1,22 +1,24 @@
 package model.service;
 
+import model.bean.Category;
+import model.bean.Product;
 import model.bean.Student;
 
 import java.util.List;
 import java.util.Map;
 
-public interface IStudentService {
-    List<Student> selectAllStudent();
+public interface IProductService {
+    List<Product> selectAllProduct();
 
-    List<Student> findStudentName(String name);
+    List<Product> findProductName(String name);
 
-    boolean deleteStudent(int id);
+    boolean deleteProduct(int id);
 
     Map<String,String> validateCreate(Student student);
 
-    void insertStudent(Student student);
+    void insertProduct(Product product);
 
     Student selectStudentById(int id);
 
-    Map<String, String> validateUpdate(int id, Student student);
+    List<Category> seclectAllCategory();
 }

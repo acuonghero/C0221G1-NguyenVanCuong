@@ -16,11 +16,11 @@ public class CustomerImpl implements ICustomer {
     public List<String> insertInto(Customer customer){
         List<String> errList = new ArrayList<>();
         errList.add(Validate.checkName(customer.getCustomerName()));
-        errList.add(Validate.checkDay(customer.getCustomerDayOfBirth()));
+        errList.add(customer.getCustomerDayOfBirth());
         errList.add(Validate.checkEmail(customer.getCustomerEmail()));
         errList.add(Validate.checkIdCard(customer.getCustomerIdentityCard()));
         errList.add(Validate.checkPhoneNumber(customer.getCustomerPhoneNumber()));
-        errList.add(Validate.checkName(customer.getCustomerAddress()));
+        errList.add(customer.getCustomerAddress());
         int checkFull = 0;
         for (String string : errList){
             if (string.equals("")){

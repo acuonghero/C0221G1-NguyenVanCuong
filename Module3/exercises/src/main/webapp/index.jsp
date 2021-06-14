@@ -1,0 +1,183 @@
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Title</title>
+  <link rel="stylesheet" href="../../bootstrap/bootstrap.min.css">
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      top: 0;
+      height: 90px;
+      color: white;
+      font-family: "Times New Roman";
+    }
+
+    main {
+      position: relative;
+      background-color: #1d2124;
+      color: white;
+      height: 100%;
+
+    }
+
+    main .hot-line {
+      height: 80px;
+      border: solid 1px white;
+    }
+
+    main .hot-line h5 {
+      /*width: px;*/
+      border-radius: 3px;
+    }
+
+    main div div div div .h5 {
+      justify-content: center;
+      background: #c69500;
+    }
+    main div div div .text-chuyen-muc{
+      display: flex;
+      margin-top: 35px;
+      background: #1d2124;
+      margin-left: 30px;
+      justify-content: center;
+    }
+
+    main div div div .chuyen-muc{
+      margin-top: 50px;
+      border: solid 1px white;
+    }
+
+
+    main .content{
+      border: solid 1px;
+    }
+    main .content-1{
+      border-left: solid 5px ;
+    }
+
+    footer .content{
+      color: white;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="header container-fluid bg-info ">
+    <div class="row">
+      <div class="col-12 text-center"><h1>Product Management</h1></div>
+<%--      <div class="col-12 text-center"><h6>Đặt phòng khách sạn Đà Nẵng</h6>--%>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 pl-0 pr-0">
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse"
+                  data-target="#navbarTogglerDemo03"
+                  aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+              <li class="nav-item">
+                <a class="nav-link" href="">Home<span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/product">Product</a>
+              </li>
+<%--              <li class="nav-item">--%>
+<%--                <a class="nav-link" href="/customer">Customer</a>--%>
+<%--              </li>--%>
+<%--              <li class="nav-item">--%>
+<%--                <a class="nav-link" href="/service?action=create">Service</a>--%>
+<%--              </li>--%>
+<%--              <li class="nav-item">--%>
+<%--                <a class="nav-link" href="/contract">Contract</a>--%>
+<%--              </li>--%>
+            </ul>
+          </div>
+          <div>
+            <form>
+              <div class="d-flex position-relative pt-3">
+                <div>
+                  <input class="form-control form-control-sm form-control-borderless pl-4"
+                         type="search"
+                         placeholder="Search">
+                </div>
+                <div class="position-absolute" style="left:5px; bottom: 7px">
+                  <a href="#"><i class="fa fa-search"></i></a>
+                </div>
+              </div>
+            </form>
+          </div>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<%--<main>--%>
+<%--  <div class="body container position-relative">--%>
+<%--    <div class="row">--%>
+<%--      <div class="col-12 col-md-4 col-lg-3 container">--%>
+<%--        <div class="row hot-line mt-4">--%>
+<%--          <div class="col-12 justify-content-center mt-4 ">--%>
+<%--            <h5 class="h5 align-items-center text-center h-50">Liên hệ đặt phòng</h5>--%>
+<%--          </div>--%>
+<%--        </div>--%>
+<%--        <div class="row text-center position-absolute" >--%>
+<%--          <div class="col-12 text-chuyen-muc" >--%>
+<%--            <h5 class="">Chuyên mục</h5>--%>
+<%--          </div>--%>
+<%--        </div>--%>
+
+<%--        <div class="row chuyen-muc">--%>
+
+<%--          <div class="col-12 mt-5">--%>
+<%--            <span>Du lịch Đà Nẵng</span>--%>
+<%--            <hr color="white">--%>
+<%--          </div>--%>
+<%--          <div class="col-12">--%>
+<%--            <span>Khuyến mãi</span>--%>
+<%--            <hr color="white">--%>
+<%--          </div>--%>
+<%--          <div class="col-12"><span>Tiện ích Furama</span>--%>
+<%--            <hr color="white">--%>
+<%--          </div>--%>
+<%--          <div class="col-12 mb-3"><span>Tin tức Furama Đà Nẵng</span></div>--%>
+<%--        </div>--%>
+<%--      </div>--%>
+<%--      <div class="col-12 col-md-7 col-lg-8 content mt-4">--%>
+<%--        <div class="col-12 head container-fluid mt-5">--%>
+<%--          <h4 class="text-center">FURAMA RESORT &amp; VILLAS ĐÀ NẴNG</h4>--%>
+<%--        </div>--%>
+<%--        <div class="col-12 content-1 border-success mt-5">--%>
+<%--          <blockquote>Giữa lòng thành phố Đà Nẵng, khu nghỉ dưỡng <strong>Furama Resort &amp; Villas Đà Nẵng</strong> hiện lên tựa một ‘’<em>ốc đảo xanh</em>’’ làm mê đắm lòng người. Và rồi khi dừng chân tại nơi đây, bạn tựa như lạc vào một không gian mang đậm đà nét văn hóa Việt pha lẫn với sự hiện đại cùng với sự du lịch thời thượng xứng tầm đẳng cấp 5 sao quốc tế.</blockquote>--%>
+<%--        </div>--%>
+<%--        <div class="col-12 mb-4 mt-5 align-items-md-center border-success">--%>
+<%--          <img class="col-12 col-md-12 col-lg-12" style="border: 1px solid orange; padding: 5px; width: 700px" src="https://cdn1.ivivu.com/iVivu/2019/11/28/13/furama-resort-da-nang-1-cr-800x450.jpg">--%>
+<%--        </div>--%>
+<%--      </div>--%>
+<%--    </div>--%>
+<%--  </div>--%>
+<%--</main>--%>
+
+<footer>
+  <div class="container-fluid col-lg-12 text-center content bg-info ">
+    <span>Product management</span>
+  </div>
+</footer>
+<script src="../../bootstrap/jquery-3.6.0.min.js"></script>
+<script src="../../bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

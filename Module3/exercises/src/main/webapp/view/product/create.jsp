@@ -15,12 +15,12 @@
         <div class="col-lg-12">
 
             <form class="form-horizontal bg-info" style="border-radius: 7px" id="form-edit-client"
-                  action="/student?action=create" method="post">
+                  action="/product?action=create" method="post">
                 <fieldset>
 
                     <!-- Form Name -->
                     <center>
-                        <legend>Create Student</legend>
+                        <legend>Create Product</legend>
                     </center>
                     <h3>${msg}</h3>
 
@@ -29,27 +29,17 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Name</label>
                         <div class="col-md-4">
-                            <input id="client-name" name="name" type="text" class="form-control input-md" value="${student.studentName}">
+                            <input id="client-name" name="name" type="text" class="form-control input-md" value="${product.name}">
                         </div>
                         <small style="color: red">${name}</small>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Gender</label>
-                        <div class="col-md-4">
-                            <select name="gender" class="form-control">
-                                <option value="Male">Male</option>
-                                <option value="Female">Female</option>
-                                <option value="Other">Other</option>
-                            </select>
-                        </div>
-                    </div>
 
                     <!--Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Birthday</label>
+                        <label class="col-md-4 control-label">Price</label>
                         <div class="col-md-4">
-                            <input name="birthday" type="date" class="form-control input-md" value="${student.studentBirthday}">
+                            <input name="price" type="text" class="form-control input-md" value="${product.price}">
                         </div>
                         <small style="color: red">${birthday}</small>
                     </div>
@@ -57,32 +47,42 @@
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Phone Number</label>
+                        <label class="col-md-4 control-label">Color</label>
                         <div class="col-md-4">
-                            <input name="phone" type="text" class="form-control input-md" value="${student.studentPhone}">
+                            <input name="color" type="text" class="form-control input-md" value="${product.color}">
                         </div>
                         <small style="color: red">${phone}</small>
                     </div>
 
 
-                    <!-- Prepended text-->
+                    <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Email</label>
+                        <label class="col-md-4 control-label">Quantity</label>
                         <div class="col-md-4">
-                            <div class="input-group">
-                                <span class="input-group-addon">@</span>
-                                <input name="email" class="form-control"
-                                       placeholder="yourname@yourdomain.com" type="email" value="${student.studentEmail}">
-                            </div>
+                            <input name="quantity" type="text" class="form-control input-md" value="${product.quantity}">
                         </div>
-                        <small style="color: red">${email}</small>
+                        <small style="color: red">${addresss}</small>
                     </div>
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Address</label>
+                        <label class="col-md-4 control-label">Describtion</label>
                         <div class="col-md-4">
-                            <input name="address" type="text" class="form-control input-md" value="${student.studentAddress}">
+                            <input name="describtion" type="text" class="form-control input-md" value="${product.describtion}">
+                        </div>
+                        <small style="color: red">${addresss}</small>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Category</label>
+                        <div class="col-md-4">
+                            <select name="category" class="form-control">
+                                <c:forEach items="${category}" var="category">
+                                    <option value="${category.id}">${category.name}</option>
+                                </c:forEach>
+                            </select>
+<%--                            <input name="address" type="text" class="form-control input-md" value="${product.category}">--%>
                         </div>
                         <small style="color: red">${addresss}</small>
                     </div>

@@ -1,4 +1,4 @@
--- Tạo bảng
+
 drop database if exists furama_db;
 create database furama_db;
 use furama_db;
@@ -87,9 +87,31 @@ foreign key (username) references `user`(username));
  foreign key (division_id) references division(division_id),
  foreign key (username) references `user`(username)
 );
+insert into employee (employee_name,position_id,education_degree_id,division_id,employee_birthday,employee_id_card,employee_salary,employee_phone,employee_email,employee_address,username)
+values("nguyen hoang",2,3,2,"1997/04/05","23876578123",800,"273659137957","askjfhd@gmail.com","quang binh","cuong2"),
+("nguyen anh",4,3,2,"1997/04/05","23876578123",800,"273659137957","askjfhd@gmail.com","quang binh","cuong2"),
+("nguyen nam",3,1,2,"1997/04/05","23876578123",800,"273659137957","askjfhd@gmail.com","quang binh","cuong2"),
+("nguyen kim",1,3,3,"1997/04/05","23876578123",800,"273659137957","askjfhd@gmail.com","quang binh","cuong2"),
+("nguyen huy",2,2,2,"1997/04/05","23876578123",800,"273659137957","askjfhd@gmail.com","quang binh","cuong2");
 
+select * 
+from employee
+where employee_name like "%m%"; 
 
-
+select * from employee;
+update employee
+set employee_name=?,
+position_id=?,
+education_degree_id=?,
+division_id=?,
+employee_birthday=?,
+employee_id_card=?,
+employee_salary=?,
+employee_phone=?,
+employee_email=?,
+employee_address=?,
+username=?
+where employee_id=?;
 
  -- bảng loại khách hàng
  create table Customer_type(
@@ -126,21 +148,34 @@ values (1,"Nguyen Cuong","1997/09/18","male",222999887,0988333222,"nguyencuong@g
 (5,"Trinh Cong Son","1997/07/18","male",754253564,0122354642,"trinhson@gmail.com","Vinh"),
 (4,"Nguyen Thang","1989/06/18","male",856345236,0333456234,"nguyenthang@gmail.com","Quang Binh");
  
+ select * from customer;
+ 
+ -- select * from customer where customer_id=1;
+ 
  
  -- bảng kiểu cho thuê 
 create table rent_type(
 rent_type_id int auto_increment primary key,
-rent_type_cost int,
+rent_type_cost double,
 rent_type_name varchar(45) null
 );
+insert into rent_type(rent_type_cost,rent_type_name)
+values (1200,"Nam"),
+(150,"Thang"),
+(10,"Ngay"),
+(2,"Gio");
+select * from rent_type;
 
 -- bảng loại dịch vụ
 create table service_type(
 service_type_id int auto_increment primary key,
 service_type_name varchar(45) null
 );
-
-
+insert into service_type(service_type_name)
+values  ("Binh dan"),
+("Trung cap"),
+("Cao cap");
+select * from service_type;
   -- bảng dịch vụ 
  create table service(
  service_id int auto_increment primary key,
@@ -158,6 +193,14 @@ service_type_name varchar(45) null
  foreign key (service_type_id) references service_type(service_type_id)
  );
 
+insert into service(service_name,service_area,number_of_floors,service_max_people,service_costs,rent_type_id,service_type_id,standard_room,description_other_convernience,pool_area)
+values ("Villa",40,3,10,200,3,2,"binh dan","khong co",100),
+("House",30,2,6,200,3,2,"binh dan","khong co",200),
+("Room",20,0,4,100,1,2,"binh dan","khong co",300),
+("Villa",40,4,14,250,3,1,"binh dan","khong co",350),
+("House",30,2,6,200,3,2,"binh dan","khong co",250),
+("Room",20,0,4,100,1,1,"binh dan","khong co",400);
+ select * from service;
  
   -- bảng hợp đồng
  create table contract(
@@ -169,12 +212,11 @@ service_type_name varchar(45) null
  employee_id int,
  customer_id int,
  service_id int,
- 
  foreign key(employee_id) references employee(employee_id),
  foreign key(customer_id) references customer(customer_id),
  foreign key(service_id) references service(service_id)
  );
-
+select * from contract;
 
  
  -- bảng dịch vụ đi kèm

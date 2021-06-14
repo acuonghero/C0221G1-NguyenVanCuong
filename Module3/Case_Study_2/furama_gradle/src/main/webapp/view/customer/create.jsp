@@ -130,7 +130,6 @@
                         <div class="col-md-4">
                             <input id="client-name4" name="client-address" type="text"
                                    placeholder="your client's address" class="form-control input-md">
-                            <small>${err6}</small>
                             <span class="help-block">Input province only</span>
                         </div>
                     </div>

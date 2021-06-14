@@ -31,10 +31,6 @@ public class CustomerRepository {
         return customerTypeList;
     }
 
-    public static void main(String[] args) throws SQLException {
-        CustomerRepository customerRepository = new CustomerRepository();
-        System.out.println("ket qua "+customerRepository.selectCustomerType().size());
-    }
 
     public List<Customer> selectAllCustomer() {
         List<Customer> customers = new ArrayList<>();

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Update</title>
+    <title>Create</title>
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
     <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" type="text/css" rel="stylesheet">
 </head>
@@ -15,12 +15,12 @@
         <div class="col-lg-12">
 
             <form class="form-horizontal bg-info" style="border-radius: 7px" id="form-edit-client"
-                  action="/student?action=update&id=${student.studentId}" method="post">
+                  action="/product?action=create" method="post">
                 <fieldset>
 
                     <!-- Form Name -->
                     <center>
-                        <legend>Update Student</legend>
+                        <legend>Create Product</legend>
                     </center>
                     <h3>${msg}</h3>
 
@@ -29,27 +29,17 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label">Name</label>
                         <div class="col-md-4">
-                            <input id="client-name" name="name" type="text" class="form-control input-md" value="${student.studentName}">
+                            <input id="client-name" name="name" type="text" class="form-control input-md" value="${product.name}">
                         </div>
                         <small style="color: red">${name}</small>
                     </div>
 
-                    <div class="form-group">
-                        <label class="col-md-4 control-label">Gender</label>
-                        <div class="col-md-4">
-                            <select name="gender" class="form-control">
-                                <c:forEach items="${gender}" var="gender">
-                                    <option value="gender" ${gender==student.studentGender? "selected" : ""}>${gender}</option>
-                                </c:forEach>
-                            </select>
-                        </div>
-                    </div>
 
                     <!--Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Birthday</label>
+                        <label class="col-md-4 control-label">Price</label>
                         <div class="col-md-4">
-                            <input name="birthday" type="date" class="form-control input-md" value="${student.studentBirthday}">
+                            <input name="price" type="text" class="form-control input-md" value="${product.price}">
                         </div>
                         <small style="color: red">${birthday}</small>
                     </div>
@@ -57,32 +47,42 @@
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Phone Number</label>
+                        <label class="col-md-4 control-label">Color</label>
                         <div class="col-md-4">
-                            <input name="phone" type="text" class="form-control input-md" value="${student.studentPhone}">
+                            <input name="color" type="text" class="form-control input-md" value="${product.color}">
                         </div>
                         <small style="color: red">${phone}</small>
                     </div>
 
 
-                    <!-- Prepended text-->
+                    <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Email</label>
+                        <label class="col-md-4 control-label">Quantity</label>
                         <div class="col-md-4">
-                            <div class="input-group">
-                                <span class="input-group-addon">@</span>
-                                <input name="email" class="form-control"
-                                       placeholder="yourname@yourdomain.com" type="email" value="${student.studentEmail}">
-                            </div>
+                            <input name="quantity" type="text" class="form-control input-md" value="${product.quantity}">
                         </div>
-                        <small style="color: red">${email}</small>
+                        <small style="color: red">${addresss}</small>
                     </div>
 
                     <!-- Text input-->
                     <div class="form-group">
-                        <label class="col-md-4 control-label">Address</label>
+                        <label class="col-md-4 control-label">Describtion</label>
                         <div class="col-md-4">
-                            <input name="address" type="text" class="form-control input-md" value="${student.studentAddress}">
+                            <input name="describtion" type="text" class="form-control input-md" value="${product.describtion}">
+                        </div>
+                        <small style="color: red">${addresss}</small>
+                    </div>
+
+                    <!-- Text input-->
+                    <div class="form-group">
+                        <label class="col-md-4 control-label">Category</label>
+                        <div class="col-md-4">
+                            <select name="category" class="form-control">
+                                <c:forEach items="${category}" var="category">
+                                    <option value="${category.id}">${category.name}</option>
+                                </c:forEach>
+                            </select>
+                            <%--                            <input name="address" type="text" class="form-control input-md" value="${product.category}">--%>
                         </div>
                         <small style="color: red">${addresss}</small>
                     </div>
@@ -92,7 +92,7 @@
                     <div class="form-group">
                         <label class="col-md-4 control-label"></label>
                         <div class="col-md-4">
-                            <button id="btn-save" name="btn-save" class="btn btn-success ">Update</button>
+                            <button id="btn-save" name="btn-save" class="btn btn-success ">Create</button>
                         </div>
                     </div>
                     <div class="form-group">

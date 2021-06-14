@@ -41,7 +41,6 @@ public class ContractServlet extends HttpServlet {
                 case "create":
                     insertContract(request, response);
                     break;
-
             }
         } catch (Exception e) {
             e.printStackTrace();
