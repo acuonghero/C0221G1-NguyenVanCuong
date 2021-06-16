@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @Controller
-public class Calculate {
+public class CalculateController {
     @GetMapping
     public String show(){
         return "show";
