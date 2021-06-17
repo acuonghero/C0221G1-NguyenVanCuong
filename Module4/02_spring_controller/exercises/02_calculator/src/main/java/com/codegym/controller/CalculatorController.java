@@ -14,7 +14,7 @@ import java.util.Map;
 public class CalculatorController {
     @Autowired
     ICalculatorService calculatorService;
-    @GetMapping
+    @GetMapping(value = "")
     public String showFormCalculator(){
         return "form";
     }

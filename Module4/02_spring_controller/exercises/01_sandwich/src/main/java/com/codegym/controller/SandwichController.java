@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class SandwichController {
-    @GetMapping
+    @GetMapping(value = "")
     public String showForm(){
         return "form";
     }
