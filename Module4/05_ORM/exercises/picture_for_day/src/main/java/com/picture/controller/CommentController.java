@@ -29,7 +29,7 @@ public class CommentController {
         commentService.save(comment);
         return "redirect:/";
     }
-    
+
     @GetMapping(value = "/comment/{id}/like")
     public String updateComment(@PathVariable int id){
         commentService.like((long) id);
