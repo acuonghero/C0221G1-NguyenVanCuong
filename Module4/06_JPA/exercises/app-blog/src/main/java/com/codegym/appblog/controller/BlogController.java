@@ -2,7 +2,9 @@ package com.codegym.appblog.controller;
 
 import com.codegym.appblog.model.entity.Blog;
 
+import com.codegym.appblog.model.entity.Category;
 import com.codegym.appblog.model.service.IBlogService;
+import com.codegym.appblog.model.service.ICategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import org.springframework.data.domain.Page;
@@ -23,16 +25,22 @@ import java.util.Optional;
 public class BlogController {
     @Autowired
     IBlogService blogService;
+    @Autowired
+    ICategoryService categoryService;
 
     @GetMapping(value = "/blog")
     public String showBlog (Model model,@PageableDefault(value = 1) Pageable pageable){
+        Iterable<Category> categories = categoryService.findAll();
         Page<Blog> blogList = blogService.findAll(pageable);
         model.addAttribute("blog",blogList);
+        model.addAttribute("category",categories);
         return "form";
     }
     @GetMapping(value = "/create")
     public String showCreateForm (Model model){
+        Iterable<Category> categories =categoryService.findAll();
         model.addAttribute("blog",new Blog());
+        model.addAttribute("category",categories);
         return "create";
     }
     @PostMapping(value = "/create")

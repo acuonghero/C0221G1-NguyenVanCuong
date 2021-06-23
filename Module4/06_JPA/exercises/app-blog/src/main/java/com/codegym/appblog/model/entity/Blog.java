@@ -1,17 +1,18 @@
 package com.codegym.appblog.model.entity;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity(name = "blogs")
 public class Blog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private long id;
+    private Long id;
     private String name;
     private String content;
+    @ManyToOne(targetEntity = Category.class)
+    @JoinColumn(name = "category_id", referencedColumnName = "id")
+
+    private Category category;
 
     public Blog() {
     }
@@ -21,19 +22,35 @@ public class Blog {
         this.content = content;
     }
 
-    public Blog(long id, String name, String content) {
+    public Blog(String name, String content, Category category) {
+        this.name = name;
+        this.content = content;
+        this.category = category;
+    }
+
+    public Blog(Long id, String name, String content, Category category) {
         this.id = id;
         this.name = name;
         this.content = content;
+        this.category = category;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(long id) {
+    public void setId(Long id) {
         this.id = id;
     }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
+    }
+
 
     public String getName() {
         return name;

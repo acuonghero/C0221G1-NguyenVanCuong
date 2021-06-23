@@ -7,7 +7,7 @@
 <body>
 <h1>Create Blog</h1>
 <p>
-  <a th:href="@{/}">Blog List</a>
+  <a th:href="@{/blog}">Blog List</a>
 </p>
 
 <th:block th:if="${mes}">
@@ -24,6 +24,14 @@
     <tr>
       <td>Content:</td>
       <td><input type="text" th:field="*{content}"/></td>
+    </tr>
+    <tr>
+      <td>Category:</td>
+      <td>
+      <select th:field="*{category}">
+        <option th:each="c : ${category}" th:value="${c.id}" th:text="${c.name}"></option>
+      </select>
+      </td>
     </tr>
     <tr>
       <td></td>
