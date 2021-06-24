@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2d724550-89c6-4a25-ba12-32fb16cabdc1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../../03_views_&amp;_thymeleaf/exercises/01_product_management/.idea/01_product_management.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03_views_&amp;_thymeleaf/exercises/01_product_management/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../03_views_&amp;_thymeleaf/exercises/01_product_management/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../01_Spring_MVC_Overview/practices/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../01_Spring_MVC_Overview/practices/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../02_spring_controller/practices/03_customer_management" beforeDir="false" afterPath="$PROJECT_DIR$/../../02_spring_controller/practices/03_customer_management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../03_views_&amp;_thymeleaf/exercises/01_product_management/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../03_views_&amp;_thymeleaf/exercises/01_product_management/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05_ORM/practices/customer-management" beforeDir="false" afterPath="$PROJECT_DIR$/../../05_ORM/practices/customer-management" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/build.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/gradle/wrapper/gradle-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/gradle/wrapper/gradle-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/gradlew" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/gradlew.bat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/settings.gradle" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/Application.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/controller/CustomerController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/controller/ProvinceController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/model/Customer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/model/Province.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/repository/ICustomerRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/repository/IProvinceRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/service/CustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/service/ICustomerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/service/IGeneralService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/service/IProvinceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/java/com/codegym/service/ProvinceService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/customer/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/customer/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/customer/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/customer/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/province/create.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/province/delete.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/province/edit.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/province/list.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/main/resources/templates/province/view.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../practices/src/test/java/com/codegym/ApplicationTests.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
+  </component>
+  <component name="ProjectId" id="1uNvbT8YLPb7tPaRG94fmEyQFuJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showVisibilityIcons" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ProductManagementApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="product_management.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.codegym.ProductManagementApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2d724550-89c6-4a25-ba12-32fb16cabdc1" name="Default Changelist" comment="" />
+      <created>1624518933958</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1624518933958</updated>
+      <workItem from="1624518935695" duration="1074000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

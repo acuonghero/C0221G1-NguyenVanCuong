@@ -29,7 +29,7 @@ public class BlogController {
     ICategoryService categoryService;
 
     @GetMapping(value = "/blog")
-    public String showBlog (Model model,@PageableDefault(value = 1) Pageable pageable){
+    public String showBlog (Model model,@PageableDefault(value = 2) Pageable pageable){
         Iterable<Category> categories = categoryService.findAll();
         Page<Blog> blogList = blogService.findAll(pageable);
         model.addAttribute("blog",blogList);
@@ -71,7 +71,7 @@ public class BlogController {
         return "redirect:/blog";
     }
     @GetMapping("/search")
-    public ModelAndView search(@RequestParam("search") Optional<String> searchs, Pageable pageable){
+    public ModelAndView search(@RequestParam("search") Optional<String> searchs,@PageableDefault(value = 2) Pageable pageable){
         Page<Blog> blogPage;
         if(searchs.isPresent()){
             blogPage = blogService.findAllByNameContaining(searchs.get(),pageable);
