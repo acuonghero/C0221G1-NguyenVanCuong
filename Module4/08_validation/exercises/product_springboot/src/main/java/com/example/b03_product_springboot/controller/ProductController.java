@@ -35,7 +35,6 @@ public class ProductController {
         return modelAndView;
     }
 
-
     @GetMapping(value = "/create")
     public String showCreateForm(Model model) {
         model.addAttribute("productDto", new ProductDto());

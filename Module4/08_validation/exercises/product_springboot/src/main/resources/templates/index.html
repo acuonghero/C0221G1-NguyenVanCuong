@@ -55,7 +55,7 @@
 </div>
 
 <p>
-    <span th:each="pageNo : ${#numbers.sequence(0, products.totalPages -1)}" >
+    <span th:each="pageNo : ${#numbers.sequence(0, products.totalPages -1)}">
         <a th:href="@{'/product'(page = ${pageNo})}" th:text="${pageNo}"></a>
     </span>
 </p>
