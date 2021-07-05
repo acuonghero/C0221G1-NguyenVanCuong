@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create customer type</title>
+</head>
+<body>
+<h1>Create customer type</h1>
+<th:block th:if="${msg}">
+    <p style="color: green" th:text="${msg}"></p>
+</th:block>
+<form action="/customer-type/create" th:object="${customerTypeDto}" method="post">
+    <table>
+        <tr>
+            <td>Customer Type:</td>
+            <td><input type="text" th:field="*{name}"/></td>
+            <td><span style="color: red" th:errors="*{name}"></span></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" value="Create customer type"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
