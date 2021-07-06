@@ -29,7 +29,7 @@
         </tr>
         <tr>
             <td>Birthday:</td>
-            <td><input type="text" th:field="*{birthday}"/></td>
+            <td><input type="date" th:field="*{birthday}"/></td>
             <td><span style="color: red" th:errors="*{birthday}"></span></td>
         </tr>
         <tr>
@@ -38,7 +38,7 @@
                 <select th:field="*{gender}">
                     <option value="0">Male</option>
                     <option value="1">Female</option>
-                    <option value="1">Other</option>
+                    <option value="2">Other</option>
                 </select>
             </td>
         </tr>
@@ -54,7 +54,7 @@
         </tr>
         <tr>
             <td>Email:</td>
-            <td><input type="text" th:field="*{email}"/></td>
+            <td><input type="email" th:field="*{email}"/></td>
             <td><span style="color: red" th:errors="*{email}"></span></td>
         </tr>
         <tr>

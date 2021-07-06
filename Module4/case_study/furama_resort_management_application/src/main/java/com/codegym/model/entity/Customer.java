@@ -3,7 +3,6 @@ package com.codegym.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
-import java.util.Date;
 @Entity
 @Data
 public class Customer {
@@ -11,13 +10,21 @@ public class Customer {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String name;
-    private Date birthday;
+    private String birthday;
     private Integer gender;
     private String idCard;
     private String phone;
     private String email;
     private String address;
+    private boolean flag;
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(targetEntity = CustomerType.class)
     private CustomerType customerType;
+    public CustomerType getCustomerType() {
+        return customerType;
+    }
+
+    public void setCustomerType(CustomerType customerType) {
+        this.customerType = customerType;
+    }
 }

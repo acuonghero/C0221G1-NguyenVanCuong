@@ -32,4 +32,9 @@ public class CustomerService implements ICustomerService {
     public void remove(Long id) {
         customerRepository.deleteById(id);
     }
+
+    @Override
+    public Page<Customer> findCustomerByNameContaining(String search, Pageable pageable) {
+        return customerRepository.findCustomerByNameContaining(search,pageable);
+    }
 }
