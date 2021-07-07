@@ -20,6 +20,7 @@ public class Employee {
     private String phone;
     private String email;
     private String address;
+    private boolean flag=true;
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Position position;

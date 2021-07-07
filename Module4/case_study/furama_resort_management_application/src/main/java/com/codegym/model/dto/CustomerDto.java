@@ -16,7 +16,6 @@ public class CustomerDto{
     private String phone;
     @NotBlank(message = "Please in email !!!")
     private String email;
-    private boolean flag;
     @NotBlank(message = "Please in address !!!")
     private String address;
     private CustomerType customerType;

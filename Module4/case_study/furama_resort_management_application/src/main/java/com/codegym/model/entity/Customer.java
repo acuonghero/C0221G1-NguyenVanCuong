@@ -16,7 +16,7 @@ public class Customer {
     private String phone;
     private String email;
     private String address;
-    private boolean flag;
+    private boolean flag=true;
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(targetEntity = CustomerType.class)
     private CustomerType customerType;

@@ -64,52 +64,52 @@ public class EmployeeController {
         return modelAndView;
     }
 
-//
-//    @GetMapping({"","/list"})
-//    public ModelAndView showCustomerList(@RequestParam("search") Optional<String> search, @PageableDefault(value = 3) Pageable pageable){
-//        Page<Customer> customers = customerService.findCustomerByNameContaining(search.orElse(""), pageable);
-//        ModelAndView modelAndView = new ModelAndView("customer/list");
-//        modelAndView.addObject("customers", customers);
-//        modelAndView.addObject("search", search.orElse(""));
-//        return modelAndView;
-//    }
-//
-//    @GetMapping("/edit/{id}")
-//    public ModelAndView showEditForm(@PathVariable Long id) {
-//        Optional<Customer> customer = customerService.findById(id);
-//        CustomerDto customerDto = new CustomerDto();
-//        if (customer.isPresent()) {
-//            BeanUtils.copyProperties(customer.get(),customerDto);
-//            ModelAndView modelAndView = new ModelAndView("/customer/edit");
-//            modelAndView.addObject("customerDto", customerDto);
-//            return modelAndView;
-//        }
-//        else {
-//            ModelAndView modelAndView = new ModelAndView("customer/error.404");
-//            return modelAndView;
-//        }
-//    }
-//
-//    @PostMapping("/update")
-//    public ModelAndView updateCustomer(@Valid @ModelAttribute("customerDto") CustomerDto customerDto, BindingResult bindingResult) {
-//        if(bindingResult.hasErrors()){
-//            return new ModelAndView("customer/edit");
-//        }
-//        Customer customer = new Customer();
-//        BeanUtils.copyProperties(customerDto,customer);
-//        customerService.save(customer);
-//        return new ModelAndView("customer/edit","msg","Update customer successfully");
-//    }
-//
-//    @PostMapping("/delete")
-//    public String showDeleteForm(@RequestParam Long id, RedirectAttributes redirectAttributes) {
-//        Optional<Customer> customer = customerService.findById(id);
-//        if(customer.get()==null){
-//            return "customer/error.404";
-//        }
-//        customer.get().setFlag(true);
-//        customerService.save(customer.get());
-//        redirectAttributes.addFlashAttribute("msg","Delete successfully");
-//        return "redirect:/customer";
-//    }
+
+    @GetMapping(value = {"","/list"})
+    public ModelAndView showEmployeeList(@RequestParam("search") Optional<String> search, @PageableDefault(value = 3) Pageable pageable){
+        Page<Employee> employees = employeeService.findCustomerByNameContaining(search.orElse(""), pageable);
+        ModelAndView modelAndView = new ModelAndView("employee/list");
+        modelAndView.addObject("employees", employees);
+        modelAndView.addObject("search", search.orElse(""));
+        return modelAndView;
+    }
+
+    @GetMapping("/edit/{id}")
+    public ModelAndView showEditForm(@PathVariable Long id) {
+        Optional<Employee> employee = employeeService.findById(id);
+        EmployeeDto employeeDto = new EmployeeDto();
+        if (employee.isPresent()) {
+            BeanUtils.copyProperties(employee.get(),employeeDto);
+            ModelAndView modelAndView = new ModelAndView("/employee/edit");
+            modelAndView.addObject("employeeDto", employeeDto);
+            return modelAndView;
+        }
+        else {
+            ModelAndView modelAndView = new ModelAndView("customer/error.404");
+            return modelAndView;
+        }
+    }
+
+    @PostMapping("/update")
+    public ModelAndView updateCustomer(@Valid @ModelAttribute("employeeDto") EmployeeDto employeeDto, BindingResult bindingResult) {
+        if(bindingResult.hasErrors()){
+            return new ModelAndView("employee/edit");
+        }
+        Employee employee = new Employee();
+        BeanUtils.copyProperties(employeeDto,employee);
+        employeeService.save(employee);
+        return new ModelAndView("employee/edit","msg","Update customer successfully");
+    }
+
+    @PostMapping("/delete")
+    public String deleteEmployee(@RequestParam Long id, RedirectAttributes redirectAttributes) {
+        Optional<Employee> employee = employeeService.findById(id);
+        if(employee.get()==null){
+            return "customer/error.404";
+        }
+        employee.get().setFlag(false);
+        employeeService.save(employee.get());
+        redirectAttributes.addFlashAttribute("msg","Delete successfully");
+        return "redirect:/employee";
+    }
 }

@@ -2,18 +2,23 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
-    <title>Create customer</title>
+    <title>Edit employee</title>
 </head>
 <body>
-<h1>Create Employee</h1>
+<h1>Edit Employee</h1>
 <p>
-    <a href="/employee/list">Back to employee list</a>
+    <a href="/employee">Back to employee list</a>
 </p>
 <th:block th:if="${msg}">
     <p style="color: green" th:text="${msg}"></p>
 </th:block>
-<form action="/employee/create" th:object="${employeeDto}" method="post">
+<form action="/employee/update" th:object="${employeeDto}" method="post">
     <table>
+        <tr>
+            <td>
+                <input type="text" th:field="*{id}" hidden>
+            </td>
+        </tr>
         <tr>
             <td>Name:</td>
             <td><input type="text" th:field="*{name}"/></td>
@@ -74,7 +79,7 @@
             </td>
         </tr>
         <tr>
-            <td><input type="submit" value="Create customer"></td>
+            <td><input type="submit" value="Update"></td>
         </tr>
     </table>
 </form>

@@ -11,72 +11,70 @@
 <span th:text="${msg}"></span>
 <a class="btn btn-primary btn-sm mb-2" href="/customer/create">Create new Customer</a>
 <h1>Customer List</h1>
-<form>
-    <span>Search by name</span>
-    <input name="search" type="text"/>
-    <input type="submit" value="Search"/>
-</form>
-<table border="1" class="table list-group-item-info ">
-    <tr>
-      <th scope="col">No</th>
-      <th scope="col">Name</th>
-      <th scope="col">Customer Type</th>
-      <th scope="col">Birthday</th>
-      <th scope="col">Gender</th>
-      <th scope="col">Id Card</th>
-      <th scope="col">Phone Number</th>
-      <th scope="col">Email</th>
-      <th scope="col">Address</th>
-      <th scope="col">Action</th>
-    </tr>
-    <th:block th:each="c,row : ${customers}">
+<div class="container">
+    <form>
+        <span>Search by name</span>
+        <input name="search" type="text"/>
+        <input type="submit" value="Search"/>
+    </form>
+    <table border="1" class="table list-group-item-info ">
         <tr>
-            <td th:text="${row.count}"></td>
-            <td hidden th:text="${c.id}"></td>
-            <td th:text="${c.name}"></td>
-            <td th:text="${c.customerType.name}"></td>
-            <td th:text="${c.birthday}"></td>
-            <th:block th:switch="${c.gender}">
-                <div th:case="0">
-                    <td th:text="Male"></td>
-                </div>
-                <div th:case="1">
-                    <td th:text="Female"></td>
-                </div>
-                <div th:case="2">
-                    <td th:text="Other"></td>
-                </div>
-            </th:block>
-            <td th:text="${c.idCard}"></td>
-            <td th:text="${c.phone}"></td>
-            <td th:text="${c.email}"></td>
-            <td th:text="${c.address}"></td>
-            <td>
-                <a class="btn btn-primary btn-sm" th:href="@{/customer/edit/__${c.id}__ }">edit</a>
-<!--                <button type="button" onclick="sendData(${c.id},${c.name})" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#delete">-->
-<!--                    Delete-->
-<!--                </button>-->
-                <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
-                        th:data-parameter1="${c.id}" th:data-parameter2="${c.name}"
-                        onclick="showModal(this.getAttribute('data-parameter1'),this.getAttribute('data-parameter2'))">
-                    Delete
-                </button>
-                <input type="hidden" id="customerId" name="id">
-            </td>
+            <th scope="col">No</th>
+            <th scope="col">Name</th>
+            <th scope="col">Customer Type</th>
+            <th scope="col">Birthday</th>
+            <th scope="col">Gender</th>
+            <th scope="col">Id Card</th>
+            <th scope="col">Phone Number</th>
+            <th scope="col">Email</th>
+            <th scope="col">Address</th>
+            <th scope="col">Action</th>
         </tr>
-    </th:block>
-</table>
-<div>
-    <a th:href="@{'/customer'(page=${customers.number - 1},search=${search})}" th:if="${customers.hasPrevious()}">Previous</a>
-<!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
-    <span th:each="p : ${#numbers.sequence(0,customers.totalPages -1)}" th:if="${customers.hasContent()}">
+        <th:block th:each="c,row : ${customers}">
+            <tr>
+                <td th:text="${row.count}"></td>
+                <td hidden th:text="${c.id}"></td>
+                <td th:text="${c.name}"></td>
+                <td th:text="${c.customerType.name}"></td>
+                <td th:text="${c.birthday}"></td>
+                <th:block th:switch="${c.gender}">
+                    <div th:case="0">
+                        <td th:text="Male"></td>
+                    </div>
+                    <div th:case="1">
+                        <td th:text="Female"></td>
+                    </div>
+                    <div th:case="2">
+                        <td th:text="Other"></td>
+                    </div>
+                </th:block>
+                <td th:text="${c.idCard}"></td>
+                <td th:text="${c.phone}"></td>
+                <td th:text="${c.email}"></td>
+                <td th:text="${c.address}"></td>
+                <td>
+                    <a class="btn btn-primary btn-sm" th:href="@{/customer/edit/__${c.id}__ }">edit</a>
+                    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal"
+                            th:data-parameter1="${c.id}" th:data-parameter2="${c.name}"
+                            onclick="showModal(this.getAttribute('data-parameter1'),this.getAttribute('data-parameter2'))">
+                        Delete
+                    </button>
+                </td>
+            </tr>
+        </th:block>
+    </table>
+    <div>
+        <a th:href="@{'/customer'(page=${customers.number - 1},search=${search})}" th:if="${customers.hasPrevious()}">Previous</a>
+        <!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
+        <span th:each="p : ${#numbers.sequence(0,customers.totalPages -1)}" th:if="${customers.hasContent()}">
           <a class="btn btn-outline-dark" style="text-decoration: none"
              th:href="@{'/customer'(page=${p},search=${search})}"
              th:text="${p +1}"
              th:if="${(p >(customers.number)-2)&&(p <(customers.number+2))}"
           ></a>
     </span>
-    <a th:href="@{'/customer'(page=${customers.number + 1},search=${search})}" th:if="${customers.hasNext()}">Next</a>
+        <a th:href="@{'/customer'(page=${customers.number + 1},search=${search})}" th:if="${customers.hasNext()}">Next</a>
+    </div>
 </div>
 <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog">
@@ -106,14 +104,6 @@
         document.getElementById("customerName").innerText=name;
     }
 </script>
-
-<!--<script type="text/javascript">-->
-<!--    function showModal(id,name){-->
-<!--        document.getElementById("customer_id").value = id;-->
-<!--        document.getElementById("customerName").innerText = name;-->
-<!--    }-->
-<!--</script>-->
-
 
 <script src="/jquery-3.6.0.min.js"></script>
 <script src="/popper.min.js"></script>

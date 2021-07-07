@@ -98,7 +98,7 @@ public class CustomerController {
         if(customer.get()==null){
             return "customer/error.404";
         }
-        customer.get().setFlag(true);
+        customer.get().setFlag(false);
         customerService.save(customer.get());
         redirectAttributes.addFlashAttribute("msg","Delete successfully");
         return "redirect:/customer";

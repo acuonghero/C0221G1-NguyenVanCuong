@@ -32,4 +32,9 @@ public class EmployeeService implements IEmployeeService {
     public void remove(Long id) {
         employeeRepository.deleteById(id);
     }
+
+    @Override
+    public Page<Employee> findCustomerByNameContaining(String search, Pageable pageable) {
+        return employeeRepository.findCustomerByNameContaining(search,pageable);
+    }
 }
