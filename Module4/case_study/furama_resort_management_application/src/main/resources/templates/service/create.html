@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
   <meta charset="UTF-8">
-  <title>Create customer</title>
+  <title>Create Service</title>
 </head>
 <body>
 <h1>Create Service</h1>
@@ -13,55 +13,64 @@
 <form action="/service/create" th:object="${serviceDto}" method="post">
   <table>
     <tr>
-      <td>Customer Type:</td>
-      <td>
-        <select th:field="*{customerType}">
-          <option th:each="c : ${customerType}" th:value="${c.id}" th:text="${c.name}"></option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Name:</td>
+      <td>Service Name:</td>
       <td><input type="text" th:field="*{name}"/></td>
       <td><span style="color: red" th:errors="*{name}"></span></td>
+
     </tr>
     <tr>
-      <td>Birthday:</td>
-      <td><input type="date" th:field="*{birthday}"/></td>
-      <td><span style="color: red" th:errors="*{birthday}"></span></td>
+      <td>Area:</td>
+      <td><input type="text" th:field="*{area}"/></td>
+      <td><span style="color: red" th:errors="*{area}"></span></td>
     </tr>
     <tr>
-      <td>Gender:</td>
+      <td>Cost:</td>
+      <td><input type="text" th:field="*{cost}"/></td>
+      <td><span style="color: red" th:errors="*{cost}"></span></td>
+    </tr>
+    <tr>
+      <td>Max People:</td>
+      <td><input type="text" th:field="*{maxPeople}"/></td>
+      <td><span style="color: red" th:errors="*{maxPeople}"></span></td>
+    </tr>
+    <tr>
+      <td>Rent type:</td>
       <td>
-        <select th:field="*{gender}">
-          <option value="0">Male</option>
-          <option value="1">Female</option>
-          <option value="2">Other</option>
+        <select th:field="*{rentType}">
+          <option th:each="r : ${rentType}" th:value="${r.id}" th:text="${r.name}"></option>
         </select>
       </td>
     </tr>
     <tr>
-      <td>Id Card:</td>
-      <td><input type="text" th:field="*{idCard}"/></td>
-      <td><span style="color: red" th:errors="*{idCard}"></span></td>
+      <td>Service Type:</td>
+      <td>
+        <select th:field="*{serviceType}">
+          <option th:each="s : ${serviceType}" th:value="${s.id}" th:text="${s.name}"></option>
+        </select>
+      </td>
     </tr>
     <tr>
-      <td>Phone Number:</td>
-      <td><input type="text" th:field="*{phone}"/></td>
-      <td><span style="color: red" th:errors="*{phone}"></span></td>
+      <td>Standard Room:</td>
+      <td><input type="text" th:field="*{standardRoom}"/></td>
+      <td><span style="color: red" th:errors="*{standardRoom}"></span></td>
     </tr>
     <tr>
-      <td>Email:</td>
-      <td><input type="email" th:field="*{email}"/></td>
-      <td><span style="color: red" th:errors="*{email}"></span></td>
+      <td>Description Other Convenience:</td>
+      <td><input type="text" th:field="*{descriptionOtherConvenience}"/></td>
+      <td><span style="color: red" th:errors="*{descriptionOtherConvenience}"></span></td>
     </tr>
     <tr>
-      <td>Address:</td>
-      <td><input type="text" th:field="*{address}"/></td>
-      <td><span style="color: red" th:errors="*{address}"></span></td>
+      <td>Pool Area:</td>
+      <td><input type="text" th:field="*{poolArea}"/></td>
+      <td><span style="color: red" th:errors="*{poolArea}"></span></td>
     </tr>
     <tr>
-      <td><input type="submit" value="Create customer"></td>
+      <td>Number Of Floor:</td>
+      <td><input type="text" th:field="*{numberOfFloor}"/></td>
+      <td><span style="color: red" th:errors="*{numberOfFloor}"></span></td>
+    </tr>
+    <tr>
+      <td><input type="submit" value="Create Service"></td>
     </tr>
   </table>
 </form>

@@ -1,10 +1,14 @@
 package com.codegym.model.entity;
 
 import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
+
 import javax.persistence.*;
 
 @Entity
-@Data
+@Getter
+@Setter
 public class Service {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,20 +24,8 @@ public class Service {
     @ManyToOne(targetEntity = ServiceType.class)
     @JoinColumn(referencedColumnName = "id")
     private ServiceType serviceType;
-
-    public RentType getRentType() {
-        return rentType;
-    }
-
-    public void setRentType(RentType rentType) {
-        this.rentType = rentType;
-    }
-
-    public ServiceType getServiceType() {
-        return serviceType;
-    }
-
-    public void setServiceType(ServiceType serviceType) {
-        this.serviceType = serviceType;
-    }
+    private String standardRoom;
+    private String descriptionOtherConvenience;
+    private Double poolArea;
+    private Integer numberOfFloor;
 }
