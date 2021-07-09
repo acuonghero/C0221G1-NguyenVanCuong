@@ -3,6 +3,8 @@ package com.codegym.model.entity;
 import lombok.Data;
 
 import javax.persistence.*;
+import java.util.List;
+
 @Entity
 @Data
 public class Customer {
@@ -20,11 +22,6 @@ public class Customer {
     @JoinColumn(referencedColumnName = "id")
     @ManyToOne(targetEntity = CustomerType.class)
     private CustomerType customerType;
-    public CustomerType getCustomerType() {
-        return customerType;
-    }
-
-    public void setCustomerType(CustomerType customerType) {
-        this.customerType = customerType;
-    }
+    @OneToMany(mappedBy = "customer")
+    List<Contract> contractList;
 }

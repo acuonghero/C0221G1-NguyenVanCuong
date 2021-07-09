@@ -66,7 +66,7 @@
         <a th:href="@{'/employee'(page=${employees.number - 1},search=${search})}" th:if="${employees.hasPrevious()}">Previous</a>
         <!--    <span th:text="${customers.number + 1}"></span>/<span th:text="${customers.totalPages}"></span>-->
         <span th:each="p : ${#numbers.sequence(0,employees.totalPages -1)}" th:if="${employees.hasContent()}">
-          <a class="btn btn-outline-dark" style="text-decoration: none"
+          <a  class="btn" style="text-decoration: none"
              th:href="@{'/employee'(page=${p},search=${search})}"
              th:text="${p +1}"
              th:if="${(p >(employees.number)-2)&&(p <(employees.number+2))}"

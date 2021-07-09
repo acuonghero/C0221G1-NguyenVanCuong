@@ -10,6 +10,7 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 
+import java.util.List;
 import java.util.Optional;
 @Service
 public class ServiceImpl implements IService {
@@ -35,5 +36,10 @@ public class ServiceImpl implements IService {
     @Override
     public void remove(Long id) {
         serviceRepository.deleteById(id);
+    }
+
+    @Override
+    public List<com.codegym.model.entity.Service> findAll() {
+        return (List<com.codegym.model.entity.Service>) serviceRepository.findAll();
     }
 }

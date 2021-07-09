@@ -5,6 +5,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Getter
@@ -28,4 +29,6 @@ public class Service {
     private String descriptionOtherConvenience;
     private Double poolArea;
     private Integer numberOfFloor;
+    @OneToMany(mappedBy = "service")
+    List<Contract> contractList;
 }

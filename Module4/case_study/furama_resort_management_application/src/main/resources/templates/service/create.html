@@ -1,78 +1,165 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-  <meta charset="UTF-8">
-  <title>Create Service</title>
+    <meta charset="UTF-8">
+    <title>Create Service</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <style>
+        body {
+            margin: 0;
+            font-size: .9rem;
+            font-weight: 400;
+            line-height: 1.6;
+            color: #212529;
+            text-align: left;
+            background-color: #f5f8fa;
+        }
+
+
+        .my-form {
+            padding-top: 1.5rem;
+            padding-bottom: 1.5rem;
+        }
+
+        .my-form .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+
+
+        .login-form .row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+    </style>
 </head>
 <body>
-<h1>Create Service</h1>
-<p>
-  <a href="/service/list">Back to Service list</a>
-</p>
-  <p style="color: green" th:text="${msg}"></p>
-<form action="/service/create" th:object="${serviceDto}" method="post">
-  <table>
-    <tr>
-      <td>Service Name:</td>
-      <td><input type="text" th:field="*{name}"/></td>
-      <td><span style="color: red" th:errors="*{name}"></span></td>
 
-    </tr>
-    <tr>
-      <td>Area:</td>
-      <td><input type="text" th:field="*{area}"/></td>
-      <td><span style="color: red" th:errors="*{area}"></span></td>
-    </tr>
-    <tr>
-      <td>Cost:</td>
-      <td><input type="text" th:field="*{cost}"/></td>
-      <td><span style="color: red" th:errors="*{cost}"></span></td>
-    </tr>
-    <tr>
-      <td>Max People:</td>
-      <td><input type="text" th:field="*{maxPeople}"/></td>
-      <td><span style="color: red" th:errors="*{maxPeople}"></span></td>
-    </tr>
-    <tr>
-      <td>Rent type:</td>
-      <td>
-        <select th:field="*{rentType}">
-          <option th:each="r : ${rentType}" th:value="${r.id}" th:text="${r.name}"></option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Service Type:</td>
-      <td>
-        <select th:field="*{serviceType}">
-          <option th:each="s : ${serviceType}" th:value="${s.id}" th:text="${s.name}"></option>
-        </select>
-      </td>
-    </tr>
-    <tr>
-      <td>Standard Room:</td>
-      <td><input type="text" th:field="*{standardRoom}"/></td>
-      <td><span style="color: red" th:errors="*{standardRoom}"></span></td>
-    </tr>
-    <tr>
-      <td>Description Other Convenience:</td>
-      <td><input type="text" th:field="*{descriptionOtherConvenience}"/></td>
-      <td><span style="color: red" th:errors="*{descriptionOtherConvenience}"></span></td>
-    </tr>
-    <tr>
-      <td>Pool Area:</td>
-      <td><input type="text" th:field="*{poolArea}"/></td>
-      <td><span style="color: red" th:errors="*{poolArea}"></span></td>
-    </tr>
-    <tr>
-      <td>Number Of Floor:</td>
-      <td><input type="text" th:field="*{numberOfFloor}"/></td>
-      <td><span style="color: red" th:errors="*{numberOfFloor}"></span></td>
-    </tr>
-    <tr>
-      <td><input type="submit" value="Create Service"></td>
-    </tr>
-  </table>
-</form>
+<p style="color: green" th:text="${msg}"></p>
+
+
+<main class="my-form">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header justify-content-center">Create Service</div>
+                    <p>
+                        <a href="/service/list">Back to Service list</a>
+                    </p>
+                    <div class="card-body">
+                        <form action="/service/create" th:object="${serviceDto}" method="post">
+                            <div class="form-group row">
+                                <label class="col-md-4 col-form-label text-md-right">Permanent
+                                    Address</label>
+                                <div class="col-md-6">
+                                    <select class="form-control" id="selectServiceType" th:field="*{serviceType}" onchange="display()">
+                                        <option th:each="s : ${serviceType}" th:value="${s.id}" th:text="${s.name}"></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group row">
+                                <label for="full_name" class="col-md-4 col-form-label text-md-right">Service
+                                    Name:</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="full_name" class="form-control" th:field="*{name}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">Area:</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="email_address" class="form-control" th:field="*{area}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="user_name" class="col-md-4 col-form-label text-md-right">Cost:</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="user_name" class="form-control"th:field="*{cost}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label for="phone_number" class="col-md-4 col-form-label text-md-right">Max People:</label>
+                                <div class="col-md-6">
+                                    <input type="text" id="phone_number" class="form-control" th:field="*{maxPeople}">
+                                </div>
+                            </div>
+
+                            <div class="form-group row">
+                                <label class="col-md-4 col-form-label text-md-right">Rent Type</label>
+                                <div class="col-md-6">
+                                    <select class="form-control" th:field="*{rentType}">
+                                        <option th:each="r : ${rentType}" th:value="${r.id}" th:text="${r.name}"></option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+
+                            <div id="standardRoom" class="form-group row">
+                                <label class="col-md-4 col-form-label text-md-right">Standard Room:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" th:field="*{standardRoom}">
+                                </div>
+                            </div>
+                            <div id="description" class="form-group row">
+                                <label class="col-md-4 col-form-label text-md-right">Description:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" th:field="*{descriptionOtherConvenience}">
+                                </div>
+                            </div>
+                            <div id="poolArea" class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">Pool Area:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" th:field="*{poolArea}">
+                                </div>
+                            </div>
+                            <div id="numberOfFloor" class="form-group row">
+                                <label for="email_address" class="col-md-4 col-form-label text-md-right">Number Of Floor:</label>
+                                <div class="col-md-6">
+                                    <input type="text" class="form-control" th:field="*{numberOfFloor}">
+                                </div>
+                            </div>
+                            <div class="col-md-6 offset-md-4">
+                                <button type="submit" class="btn btn-primary">
+                                    Create
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+
+<script>
+    display()
+
+    function display() {
+        let id = document.getElementById('serviceType').value;
+        if (id == 1) {
+            document.getElementById("standardRoom").style.display = 'block';
+            document.getElementById("description").style.display = 'block';
+            document.getElementById("poolArea").style.display = 'block';
+            document.getElementById("numberOfFloor").style.display = 'block';
+        } else if (id == 2) {
+            document.getElementById("standardRoom").style.display = 'block';
+            document.getElementById("description").style.display = 'block';
+            document.getElementById("poolArea").style.display = 'none';
+            document.getElementById("numberOfFloor").style.display = 'block';
+        } else {
+            document.getElementById("standardRoom").style.display = 'none';
+            document.getElementById("description").style.display = 'none';
+            document.getElementById("poolArea").style.display = 'none';
+            document.getElementById("numberOfFloor").style.display = 'none';
+        }
+    }
+</script>
+
 </body>
 </html>

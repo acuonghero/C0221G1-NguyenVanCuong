@@ -31,7 +31,8 @@ public class Employee {
     @JoinColumn(referencedColumnName = "id")
     private Division division;
     @ManyToOne(targetEntity = User.class)
-//    @JoinColumn(referencedColumnName = "id")
     @JoinColumn(name = "username",referencedColumnName = "userName")
     private User user;
+    @OneToMany(mappedBy = "employee")
+    List<Contract> contractList;
 }
