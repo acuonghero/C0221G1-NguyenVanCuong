@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+<!--<h1>Edit</h1>-->
+<p>
+    <a href="/using-service/">Back to list</a>
+</p>
+<th:block th:if="${msg}">
+    <p th:text="${msg}"></p>
+</th:block>
+<form th:action="@{/using-service/update}" th:object="${contract}" method="post">
+    <input th:type="hidden" name="id" th:field="*{id}">
+    <table>
+        <tr>
+            <td>Start Date:</td>
+            <td><input type="text" th:field="*{startDate}"/></td>
+<!--            <td><span style="color: red" th:errors="*{name}"></span></td>-->
+        </tr>
+        <tr>
+            <td>End Date:</td>
+            <td><input type="date" th:field="*{endDate}"/></td>
+<!--            <td><span style="color: red" th:errors="*{birthday}"></span></td>-->
+        </tr>
+        <tr>
+            <td>Deposit:</td>
+            <td><input type="text" th:field="*{deposit}"/></td>
+            <!--            <td><span style="color: red" th:errors="*{birthday}"></span></td>-->
+        </tr>
+        <tr>
+            <td>Total Money:</td>
+            <td><input type="text" th:field="*{totalMoney}" readonly/></td>
+<!--            <td><span style="color: red" th:errors="*{idCard}"></span></td>-->
+        </tr>
+        <tr>
+            <td>Employee:</td>
+            <td>
+                <select th:field="*{employee}">
+                    <option th:each="e : ${employee}" th:value="${e.id}" th:text="${e.name}"></option>
+                </select>
+            </td>
+            <!--            <td><span style="color: red" th:errors="*{idCard}"></span></td>-->
+        </tr>
+        <tr>
+            <td>Customer:</td>
+            <td>
+                <select th:field="*{customer}">
+                    <option th:each="c : ${customer}" th:value="${c.id}" th:text="${c.name}"></option>
+                </select>
+            </td>
+            <!--            <td><span style="color: red" th:errors="*{idCard}"></span></td>-->
+        </tr>
+        <tr>
+            <td>Service:</td>
+            <td>
+                <select th:field="*{service}">
+                    <option th:each="s : ${service}" th:value="${s.id}" th:text="${s.name}"></option>
+                </select>
+            </td>
+            <!--            <td><span style="color: red" th:errors="*{idCard}"></span></td>-->
+        </tr>
+
+        <tr>
+            <td><input type="submit" value="Update"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

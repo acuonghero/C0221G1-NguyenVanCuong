@@ -30,4 +30,5 @@ public class Contract {
     private Service service;
     @OneToMany(mappedBy = "contract")
     List<ContractDetail> contractDetailList;
+    private boolean flag=true;
 }

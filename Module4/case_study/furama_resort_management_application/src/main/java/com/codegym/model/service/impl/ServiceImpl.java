@@ -20,6 +20,7 @@ public class ServiceImpl implements IService {
 
     @Override
     public Page<com.codegym.model.entity.Service> findAll(Pageable pageable) {
+
         return serviceRepository.findAll(pageable);
     }
 

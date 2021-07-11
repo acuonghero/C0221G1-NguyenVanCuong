@@ -30,9 +30,9 @@ public class Employee {
     @ManyToOne
     @JoinColumn(referencedColumnName = "id")
     private Division division;
-    @ManyToOne(targetEntity = User.class)
-    @JoinColumn(name = "username",referencedColumnName = "userName")
-    private User user;
+//    @ManyToOne(targetEntity = AppUser.class)
+//    @JoinColumn(name = "username",referencedColumnName = "userName")
+//    private AppUser user;
     @OneToMany(mappedBy = "employee")
     List<Contract> contractList;
 }

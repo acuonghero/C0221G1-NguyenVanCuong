@@ -3,7 +3,7 @@ package com.codegym.model.dto;
 import com.codegym.model.entity.Division;
 import com.codegym.model.entity.EducationDegree;
 import com.codegym.model.entity.Position;
-import com.codegym.model.entity.User;
+import com.codegym.model.entity.AppUser;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -29,5 +29,5 @@ public class EmployeeDto {
     private Position position;
     private EducationDegree educationDegree;
     private Division division;
-    private User user;
+    private AppUser user;
 }

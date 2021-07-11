@@ -99,7 +99,7 @@
                 <a class="nav-link" href="/customer">Customer</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="/service">Service</a>
+                <a class="nav-link" href="/service/create">Service</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="/contract">Contract</a>
@@ -114,9 +114,21 @@
                          type="search"
                          placeholder="Search">
                 </div>
+
                 <div class="position-absolute" style="left:5px; bottom: 3px">
                   <a href="#"><i class="fa fa-search"></i></a>
                 </div>
+              </div>
+              <div>
+                <th:block th:if="${#request.userPrincipal==null}">
+<!--                  <a href="/login"> <button> Login </button></a>-->
+                  <a class="btn" href="/login">login</a>
+                </th:block>
+
+                <th:block th:if="${#request.userPrincipal!=null}">
+                  <span th:text="${#request.userPrincipal.name}"></span>
+                  <a class="btn" href="/logout">Log out</a>
+                </th:block>
               </div>
             </form>
           </div>
