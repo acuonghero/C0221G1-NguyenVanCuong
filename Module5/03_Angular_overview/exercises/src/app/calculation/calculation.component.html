@@ -1,0 +1,14 @@
+<input type="text" placeholder="number 1" #num1>
+<br>
+<input type="text" placeholder="number 2" #num2>
+<br>
+<select #cal>
+  <option value="+">+</option>
+  <option value="-">-</option>
+  <option value="*">*</option>
+  <option value="/">/</option>
+</select>
+<br>
+<input type="button" (click)="Calculation(num1.value, num2.value, cal.value)" value="Cal">
+<hr>
+{{result}}

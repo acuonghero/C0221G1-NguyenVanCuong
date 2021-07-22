@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Create product</title>
+</head>
+<body>
+<h1>Create Question</h1>
+<p>
+    <a href="/question/list">Back to Question list</a>
+</p>
+<th:block th:if="${msg}">
+    <p style="color: green" th:text="${msg}"></p>
+</th:block>
+<form action="/question/create" th:object="${questionDto}" method="post">
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" th:field="*{title}"/></td>
+            <td><span style="color: red" th:errors="*{title}"></span></td>
+        </tr>
+        <tr>
+            <td>Question:</td>
+            <td><input type="text" th:field="*{question}"/></td>
+            <td><span style="color: red" th:errors="*{question}"></span></td>
+        </tr>
+        <tr>
+            <td>Question Type:</td>
+            <td>
+                <select th:field="*{questionType}">
+                    <option th:each="c : ${questionType}" th:value="${c.id}" th:text="${c.name}"></option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td><input type="submit" value="Create question"></td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>

@@ -8,6 +8,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -19,6 +20,7 @@ public class EmployeeDto {
     private String birthday;
     @NotBlank(message = "Please input id card !!!")
     private String idCard;
+    @NotNull
     private Double salary;
     @NotBlank(message = "Please input phone !!!")
     private String phone;

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>View</title>
+</head>
+<body>
+<h1>View</h1>
+<p>
+    <a href="/question/">Back to question list</a>
+</p>
+    <input th:type="hidden" name="id" th:field="*{id}">
+<th:block th:object="${question}">
+    <table>
+        <tr>
+            <td>Title:</td>
+            <td><input type="text" th:field="*{title}" readonly/></td>
+        </tr>
+        <tr>
+            <td>Question:</td>
+            <td><input type="text" th:field="*{question}" readonly/></td>
+        </tr>
+        <tr>
+            <td>Date:</td>
+            <td><input type="text" th:field="*{date}" readonly/></td>
+        </tr>
+<!--        <tr>-->
+<!--            <td>Question Type:</td>-->
+<!--            <td>-->
+<!--&lt;!&ndash;            <td><input type="text" th:field="*{question}"/></td>&ndash;&gt;-->
+<!--            </td>-->
+<!--        </tr>-->
+    </table>
+</th:block>
+
+</body>
+</html>

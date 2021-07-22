@@ -34,7 +34,7 @@
         </tr>
         <th:block th:each="c,row : ${customers}">
             <tr>
-                <td th:text="${row.count}"></td>
+                <td th:text="${row.count+customers.number*customers.size}"></td>
                 <td hidden th:text="${c.id}"></td>
                 <td th:text="${c.name}"></td>
                 <td th:text="${c.customerType.name}"></td>

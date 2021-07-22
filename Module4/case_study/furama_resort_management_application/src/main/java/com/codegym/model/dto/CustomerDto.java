@@ -2,6 +2,8 @@ package com.codegym.model.dto;
 import com.codegym.model.entity.CustomerType;
 import lombok.Data;
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Pattern;
+
 @Data
 public class CustomerDto{
     private Long id;
@@ -13,6 +15,7 @@ public class CustomerDto{
     @NotBlank(message = "Please in id card !!!")
     private String idCard;
     @NotBlank(message = "Please in phone number !!!")
+    @Pattern(regexp = "")
     private String phone;
     @NotBlank(message = "Please in email !!!")
     private String email;
