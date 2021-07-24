@@ -3,20 +3,16 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CalculationComponent } from './calculation/calculation.component';
-import { AngularColorPickerAppComponent } from './angular-color-picker-app/angular-color-picker-app.component';
-import {FormsModule} from '@angular/forms';
+import { NameCardComponent } from './name-card/name-card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CalculationComponent,
-    AngularColorPickerAppComponent
+    NameCardComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
-    FormsModule
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
