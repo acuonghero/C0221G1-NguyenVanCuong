@@ -1,0 +1,19 @@
+<h2>Countdown Timer</h2>
+<!--<div class="group-actions">-->
+  <input [(ngModel)]="times">
+<!--  <button (click)="child.start()">Start</button>-->
+<!--  <button (click)="child.stop()">Stop</button>-->
+<!--  <button (click)="child.reset()">Reset</button>-->
+<!--</div>-->
+<app-countdown-timer #child (finish)="display($event)"  [seconds]="times"></app-countdown-timer>
+{{msg}}
+<br>
+{{number}}
+<!--<h3>count parent : {{countParent}}</h3>-->
+<!--<app-test (CountChange)="countChangeHandle($event)"></app-test>-->
+<!--<button (click)="child.increment()">increment</button>-->
+<!--<button (click)="child.decrement()">decrement</button>-->
+<!--<h3>count parent : {{child.count}}</h3>-->
+<!--<app-test #child ></app-test>-->
+<!--<app-rating-bar-component></app-rating-bar-component>-->
+

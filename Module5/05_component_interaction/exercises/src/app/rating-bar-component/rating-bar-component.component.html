@@ -1,0 +1,7 @@
+{{choice}}
+<div style="display: flex">
+  <div *ngFor="let num of arr" >
+    <div style="width: 50px; height: 50px;" (mouseover)="mounseOver(num)" [ngStyle]="{background: choice>=num?'pink':'gray'}">
+    </div>
+  </div >
+</div>
