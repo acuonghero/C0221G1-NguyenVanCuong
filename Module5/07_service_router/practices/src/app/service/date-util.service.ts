@@ -1,4 +1,5 @@
 import {Injectable} from '@angular/core';
+import {differenceInYears, addYears, differenceInMonths, addMonths, differenceInDays} from 'date-fns';
 
 @Injectable({
   providedIn: 'root'
@@ -7,6 +8,7 @@ export class DateUtilService {
 
   constructor() {
   }
+
   getDiffToNow(diff: string | number | Date): string {
     const result: string[] = [];
     const now = new Date();
