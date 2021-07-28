@@ -13,7 +13,6 @@ export class RegisterComponent implements OnInit {
     country: new FormControl(''),
     phone: new FormControl('')
   });
-
   constructor() {
   }
 

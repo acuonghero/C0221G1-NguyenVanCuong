@@ -1,8 +1,12 @@
 <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
-  <input type="email" formControlName="email">
-  <input type="text" formControlName="password">
-  <input type="text" formControlName="country">
-  <input type="number" formControlName="phone">
+  <input type="email" placeholder="email" formControlName="email">
+  <br>
+  <input type="text" placeholder="password" formControlName="password">
+  <br>
+  <input type="text" placeholder="country" formControlName="country">
+  <br>
+  <input type="number" placeholder="phone" formControlName="phone">
+  <br>
   <button type="submit">Register</button>
 </form>
-{{registerForm.value|json}}
+
