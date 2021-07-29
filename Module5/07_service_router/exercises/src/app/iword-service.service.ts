@@ -1,11 +1,13 @@
-import {Injectable} from '@angular/core';
+import { Injectable } from '@angular/core';
 
 export interface IWord {
   key: string;
   meaning: string;
 }
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class DictionaryService {
   private words: IWord[] = [
     {
