@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="main">
+    <div class="main-center">
+      <h5 class="text-center">Create Customer</h5>
+      <form action="" [formGroup]="createForm" (ngSubmit)="create()">
+
+        <div class="form-group">
+          <label>Name</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-user fa" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" formControlName="name" placeholder="input name">
+            <div *ngFor="let m of msg.name">
+              <small *ngIf="getValidateCreate('name',m)">{{m.msg}}</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Birthday</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-envelope fa" aria-hidden="true"></i></span>
+            <input type="date" formControlName="birthday"><br>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Gender</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-users fa" aria-hidden="true"></i></span>
+            <select class="form-control " formControlName="gender">
+              <option value="" selected disabled>--Please select--</option>
+              <option value="0">Female</option>
+              <option value="1">Male</option>
+              <option value="3">Other</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <input type="text" class="form-control" formControlName="email" placeholder="Input email">
+            <div *ngFor="let m of msg.email">
+              <small *ngIf="getValidateCreate('email',m)">{{m.msg}}</small>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Customer Type</label>
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock fa-lg" aria-hidden="true"></i></span>
+            <select class="form-control" formControlName="customerType">
+              <option value="" selected disabled>--Please select--</option>
+              <option *ngFor="let ct of customerTypes" [ngValue]="ct">{{ct.name}}</option>
+              <div *ngFor="let m of msg.customerType">
+                <small *ngIf="getValidateCreate('customerType',m)">{{m.msg}}</small>
+              </div>
+            </select>
+          </div>
+        </div>
+
+        <input type="submit" value="Create" [disabled]="!createForm.valid">
+
+      </form>
+    </div><!--main-center"-->
+  </div><!--main-->
+</div><!--container-->
